@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+{% block content %}
+
+<head>
+    <title>Blog_List</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'assets/css/blog_list.css' %}">
+</head>
+
+<body>
+    <div class="background-container background_container_bl_tej"
+        style="background-image: url('{{ content.background_image.url }}');">
+
+        <div class="content_on_bl_tej">
+            <h5 class="card_title1_bl_tej">{{ content.title1|safe }}</h5>
+            <h5 class="card_title2_bl_tej">{{ content.title2 }}</h5>
+            <p class="card_text1_bl_tej">{{ content.text }}</p>
+            <div class="subscribe_bl_tej">
+                <input type="email" placeholder="Synchroni@gmail.com">
+                <button type="submit">{{content.button_text }}</button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text_center_bl_tej">
+        <div class="row align-items-start">
+            <div class="col-2">
+                <div class="class1_bl_tej">
+                    <ul>
+                        <li class="all_blogs_bl_tej">All Blogs</li>
+                        <hr>
+                        <li><a href="#">Apache</a></li>
+                        <li><a href="#">Databases</a></li>
+                        <li><a href="#">Docker</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">Kubernetes</a></li>
+                        <li><a href="#">Linux Basics</a></li>
+                        <li><a href="#">MySQL</a></li>
+                        <li><a href="#">Python</a></li>
+                        <li><a href="#">React</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Ubuntu</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-10">
+                <div class="class2_bl_tej">
+                    <div class="class2_search_display_bl_tej">
+                        <div>
+                            <h1>{{content.popular_blog_title}}</h1>
+                            <p>{{content.popular_blog_mini_title}}</p>
+                        </div>
+                        <div class="search_bl_tej">
+                            <img src="{% static 'assets/images/blog_list_images/ri_search-line.png' %}"
+                                alt="Search Icon" class="search-icon_bl_tej">
+                            <input type="text" placeholder="Search...">
+                        </div>
+                    </div>
+                    <div class="cards_1_bl_tej">
+                        {% for blog in blogs|slice:":3" %}
+                        <div class="card card_1_bl_tej">
+                            <img src="{{ blog.image_url }}" class="card-img-top card_img_top_bl_tej" alt="Blog Image"
+                                height="300px">
+                            <div class="card-body card_body_bl_tej">
+                                <small>{{ content.blog_author }}</small><br />
+                                <small>{{ content.publish_date|date:"d.m.Y" }}</small>
+                                <h5 class="card-title card_1_title_bl_tej">{{ blog.heading }}</h5>
+                                <p class="card-text card_1_text_bl_tej">{{ blog.truncated_description }}</p>
+                                <div class="more_bl_tej">
+                                    <a href="{% url 'blog_detail' blog.pk %}">
+                                        <button type="button">More <img
+                                                src="{% static 'assets/images/blog_list_images/arrow-right.png' %}"
+                                                width="30%"></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="crack_up_bl_tej">
+            <h1>Discover resources for all your<br /> career needs.</h1>
+            <p>Unlock Tools and Opportunities to Boost Your Career Growth</p>
+            <div class="under_line_bl_tej">
+                <p>See DataWorks's Courses</p>
+            </div>
+            <div class="underline_bl_tej"></div>
+            <img src="{% static 'assets/images/blog_list_images/Vector.png' %}" height="10px">
+        </div>
+        <img src="{% static 'assets/images/blog_list_images/image 5.png' %}" class="crack_bl_tej" width="100%">
+        <div class="grid_bl_tej">
+            <ul>
+                {% for course in courses %}
+                <li><a href="{% url 'course_detail' course.id %}">{{ course.title }}</a></li>
+                {% empty %}
+                <li>No courses available</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="more3_bl_tej">
+            <button type="submit">Know More<img src="{% static 'assets/images/blog_list_images/arrow-right.png' %}"
+                    width="8%"></button>
+        </div>
+        <img src="{% static 'assets/images/blog_list_images/image 6.png' %}" class="crack_bl_tej" width="100%">
+    </div>
+    <div class="top_trends_bl_tej">
+        <h1>Top Trends</h1>
+        <p>Stay Ahead with the Latest Trends and Insights</p>
+        <div class="cards_bl_tej">
+            {% for blog in blogs %}
+            <div class="card card_bl_tej">
+                <img src="{{ blog.image_url }}" class="card-img-top-trends" alt="Blog Image">
+                <div class="card-body card_1_body_bl_tej">
+                    <small>{{ content.blog_author }}</small><br />
+                    <small>{{ content.publish_date|date:"d.m.Y" }}</small>
+                    <h5 class="card-title card_title_bl_tej">{{ blog.heading }}</h5>
+                    <p class="card-text card_text_bl_tej">{{ blog.truncated_description }}</p>
+                    <a href="{% url 'blog_detail' blog.pk %}" class="btn btn-primary cards_btn_bl_tej">
+                        Know More <img src="{% static 'assets/images/blog_list_images/Line 3.png' %}"
+                            class="cards_btn_bl_tej_img" width="10%">
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="read_more_blogs_bl_tej">
+        <h1>Read more blogs</h1>
+        <p>Dive Deeper into Our Latest Articles and Insights</p>
+        {% for blog in blogs %}
+        <div class="blogs_bl_tej">
+            <div>
+                <img src="{{ blog.image_url }}" class="blogs_img_bl_tej">
+            </div>
+            <div class="box_in_bl_tej">
+                <div class="text_in_bl_tej">
+                    <div class="text_bl_tej"><small>UI/UX Design</small></div>
+                    <div class="text_bl_tej"><small>Blog</small></div>
+                </div>
+                <h1>{{ blog.heading }}</h1>
+                <p>{{ blog.truncated_description }}</p>
+                <a href="{% url 'blog_detail' blog.pk %}" class="btn btn-primary blogs_btn_bl_tej">Know More <img
+                        src="{% static 'assets/images/blog_list_images/Line 3.png' %}" class="blogs_btn_bl_tej_img"
+                        width="10%"></a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="lovetohear_bl_tej">
+        <h1>we would love to hear from you</h1>
+        <p>We are all exited to work with you and see you growing</p>
+        <input type="email" placeholder="Enter your mail id or mobile number"><br />
+        <button type="submit">Get in touch</button>
+    </div>
+</body>
+{% endblock %}
+
+</html>

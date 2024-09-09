@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AI Fundamentals dataworks</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'assets/css/course_detail.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+
+</script>
+
+<body class="course_details_page">
+    <div class="entirepage">
+        <div class="Ai_page">
+            <nav class="navbar">
+                <img class="img" src="{% static 'assets/course_page_images/data_works.png' %}" height="52" width="260">
+                <ul class="menu">
+                    <li class="menu-item" id="bb"><a href="#">Courses <i class="fa-solid fa-angle-down"></i></a>
+                        <div class="mega-menu">
+                            <!-- first column -->
+                            <div class="align">
+                                <div class="menu-column">
+                                    <p>Foundations</p>
+                                    <ul class="up">
+                                        <li><a href="#">AI Fundametals</a></li>
+                                        <li><a href="#">IT Essential</a></li>
+                                        <li><a href="#">Chat GPT</a></li>
+                                        <li><a href="#">Cloud Computing</a></li>
+                                        <li><a href="#">Data Engineering Basis</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- second column -->
+                            <div class="aligna">
+                                <div class="menu-column">
+                                    <p>Job-Oriented</p>
+                                    <ul class="down">
+                                        <li><a href="#">Cloud Data Engineering & Analytics Program</a></li>
+                                        <li><a href="#">Cloud Coumputing</a></li>
+                                        <li><a href="#">Cyber Security Practitionar Mastery</a></li>
+                                        <li><a href="#">Full Stack Development</a></li>
+                                        <li><a href="#">Full Stack AI Engineering</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- third column -->
+                            <div class="alignb">
+                                <div class="menu-column">
+                                    <p>Career Advancer</p>
+                                    <ul class="left">
+                                        <li><a href="#">Genarative AI</a></li>
+                                        <li><a href="#">Prompt Engineering</a></li>
+                                        <li><a href="#">Leadership Program in Cyber Security</a></li>
+                                        <li><a href="#">Leadership Program in AI & Cloud</a></li>
+                                        <li><a href="#">Elite Data Architect Program</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- section two -->
+                    <section>
+                        <li class="menu-item" id="cc"><a href="#">Enterprise <i class="fa-solid fa-angle-down"></i></a>
+                            <div class="mega-menus">
+                                <div class="menu-columns">
+                                    <ul>
+                                        <li><a href="#">Corporate Ls</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </section>
+                    <!-- section third -->
+                    <section>
+                        <li class="menu-item" id="dd"><a href="#">Resources <i class="fa-solid fa-angle-down"></i></a>
+                            <div class="mega-menus">
+                                <div class="menu-columns">
+                                    <ul>
+                                        <li><a href="#">Blog</a></li>
+                                        <li><a href="#">Tutorials</a></li>
+                                        <li><a href="#">Practice Test</a></li>
+                                        <li><a href="#">interview Questions</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </section>
+                    <!-- section four -->
+                    <section>
+                        <li class="menu-item" id="ee">
+                            <a href="#">Contact Us</a>
+                        </li>
+                    </section>
+                </ul>
+            </nav>
+            <div class="home">
+                <span class="span1">Home </span><span class="span2"><img
+                        src="{% static 'assets/course_page_images/right.png' %}" height="8px"
+                        width="-500px"></span><span class="span3"> Courses</span><span class="span4"><img
+                        src="{% static 'assets/course_page_images/right.png' %}" height="8px"
+                        width="-500px"></span><span class="span5"></span>
+                Foundations<img src="{% static 'assets/course_page_images/right.png' %}" height="8px"
+                    width="-500px"></span><span class="span6"> AI Fundamentals</span>
+            </div>
+            <div class="Ai_main">
+                <div class="heading-line"></div>
+                <div class="Ai_heading">
+                    <h2>{{course.title}}</h2>
+                </div>
+                <div class="Ai_para">
+                    <p>{{course.description}}</p>
+                    <div class="Ai_img">
+                        <img src="{% static 'assets/course_page_images/ai funda.png' %}" zheight="200" width="380">
+                    </div>
+                </div>
+                <div class="buttonstar">
+                    <div class="stars">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <p class="starpara">4.8(130 Ratings)</p>
+                    </div>
+                    <button class="Ai_button">Download Brochure</button>
+                </div>
+            </div>
+        </div>
+        <div class="Ai_subh">
+            <h3>Course info</h3>
+        </div>
+
+        <section>
+
+            <div class="course_info">
+                <div class="course_para">
+                    <h3>What I will learn?</h3>
+                </div>
+                <hr>
+                <div class="courseul">
+                    <ul>
+                        {% for objective in course.objectives.splitlines %}
+                        {% if objective.strip %}
+                        <li>{{ objective.strip }}</li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="form-container">
+                    <div class="form_head">
+                        <p>Upskill for Your Dream Job</p>
+                    </div>
+                    <form action="#" method="post">
+                        <input type="text" placeholder="Full Name" id="full-name" name="full-name" required><br>
+                        <input type="tel" placeholder="Mobile Number" id="mobile-number" name="mobile-number"
+                            required><br>
+                        <input type="email" placeholder="Email Address" id="email" name="email" required><br>
+                        <input type="message" placeholder="Your Message" name="message" rows="4"
+                            required></textarea><br>
+                        <button type="submit" class="enroll-button">Enroll Now</button>
+                    </form>
+                </div>
+
+
+                <!-- <div class="img-gif">
+                    <img src="{% static 'assets/course_page_images/gif.gif' %}" height="385" width="350">
+                </div> -->
+
+                <div class="img-gif">
+                    <img src="C:\Users\ramya\Downloads\10747050_4546193 1.png" height="75" width="80" style="margin-left:100px;margin-top:10px">
+                    <h4>Job Search Assistance Until You Succeed</h4>
+                    <div>
+                    <img src="C:\Users\ramya\Downloads\image (2).png" height="20px" width="25px"><span>Resume Preparation</span>
+                    </div><br>
+                    <div>
+                    <img src="C:\Users\ramya\Downloads\image (3).png" height="20px" width="25px"><span>LinkedIn Profile Optimization</span>
+                    </div><br>
+                    <div> 
+                    <img src="C:\Users\ramya\Downloads\image (4).png" height="20px" width="25px"><span>Skill Assessment</span>
+                    </div><br>
+                    <div>
+                    <img src="C:\Users\ramya\Downloads\strategy_6920737.png" height="20px" width="25px"><span>Job Search Strategy</span>
+                    </div><br>
+                    <div>
+                    <img src="C:\Users\ramya\Downloads\communcation_16941703.png" height="20px" width="25px"><span>Mock Interviews</span> 
+                    </div><br>
+                    <div>
+                    <img src="C:\Users\ramya\Downloads\image (5).png" height="20px" width="25px"><span>Portfolio Development</span> 
+                    </div> 
+               </div>
+            </div>
+        </section>
+        <section class="course_content">
+            <h2>Course Content</h2>
+        </section>
+
+        <section>
+            <div>
+                <div class="accordion" id="accordionExample">
+                    {% for content in course_contents %}
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading{{ forloop.counter }}">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse{{ forloop.counter }}" aria-expanded="false"
+                                aria-controls="collapse{{ forloop.counter }}">
+                                {{ forloop.counter }}. {{ content.heading }}
+                            </button>
+                        </h2>
+                        <div id="collapse{{ forloop.counter }}" class="accordion-collapse collapse"
+                            aria-labelledby="heading{{ forloop.counter }}" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    {% for point in content.key_points.splitlines %}
+                                    <li>{{ point }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+
+        <div>
+            <div class="Hiring">
+                <h2>Hiring Partners</h2>
+            </div>
+            <div class="scroll">
+                <img src="{% static 'assets/course_page_images/infosys.png' %}">
+                <img src="{% static 'assets/course_page_images/microsoft.png' %}">
+                <img src="{% static 'assets/course_page_images/tcs.png' %}">
+                <img src="{% static 'assets/course_page_images/tech.png' %}">
+                <img src="{% static 'assets/course_page_images/wipro.png' %}">
+            </div>
+        </div>
+        <section class="coursereq">
+
+
+            <div class="courselist">
+                <div class="requirement">
+                    <h4>Course Requirement</h4>
+                </div>
+                <hr>
+                <ul>
+                    {% for prerequisite in course.prerequisites.splitlines %}
+                    {% if prerequisite.strip %}
+                    <li>{{ prerequisite.strip }}</li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+
+        </section>
+        <!-- <section class="faq"> -->
+        <div class="qa">
+            <h4>FAQ'S</h4>
+        </div>
+    </div>
+    <section class="faq">
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+            {% for faq in faqs %}
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFAQ{{ forloop.counter }}">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseFAQ{{ forloop.counter }}" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseFAQ{{ forloop.counter }}">
+                        {{ forloop.counter }}. {{ faq.faq_heading }}
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFAQ{{ forloop.counter }}" class="accordion-collapse collapse"
+                    aria-labelledby="headingFAQ{{ forloop.counter }}" data-bs-parent="#accordionPanelsStayOpenExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>{{ faq.faq_description }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- <aside class="earning-potential"> -->
+    <section>
+        <aside class="earning-potential">
+            <div class="earnheading">
+                <h2>Earning Potential</h2>
+            </div>
+
+            <ul>
+                <div class="minspan">
+                    <div class="pack">6 LPA</div>
+                    <div class="progress" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
+                        style="height:8%">
+                        <div class="progress-bar " style="width: 25% ; background:  #e7075e"></div>
+                    </div>
+                    <p class="minimum">min</p>
+                </div>
+                <div class="avgspan">
+                    <div class="pack">12 LPA</div>
+                    <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75"
+                        aria-valuemin="0" aria-valuemax="100" style="height: 8%">
+                        <div class="progress-bar" style="width: 75% ; background:#e7075e "></div>
+                    </div>
+                    <p class="average">avg</p>
+                </div>
+                <div class="maxspan">
+                    <div class="pack">20 LPA</div>
+                    <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100"
+                        aria-valuemin="0" aria-valuemax="100" style="height:8%">
+                        <div class="progress-bar " style="width: 100% ; background: #e7075e"></div>
+                    </div>
+                    <p class="maximum">max</p>
+                </div>
+            </ul>
+        </aside>
+    </section>
+    <section class="tools">
+        <div class="Ai_tools">
+            <h2>AI Fundamental Tools Covered</h2>
+        </div>
+        <div class="scroll1">
+            <img src="{% static 'assets/course_page_images/tensorflow.png' %}" height="150px" width="140px">
+            <img src="{% static 'assets/course_page_images/pytorch.png' %}" height="150px" width="140px">
+            <img src="{% static 'assets/course_page_images/keras.png' %}" height="150px" width="140px">
+            <img src="{% static 'assets/course_page_images/scikit.png' %}" height="150px" width="140px">
+            <img src="{% static 'assets/course_page_images/opencv.png' %}" height="150px" width="140px">
+            <img src="{% static 'assets/course_page_images/genism.png' %}" height="150px" width="140px">
+        </div>
+    </section>
+    <div class="demo">
+        <p>Let's explore further the implications of transitioning to online training</p>
+        <input type="button" class="request" name="request" value="Request a Demo">
+    </div>
+    <section>
+        <h2 class=" course_cert">Course Certificate</h2>
+        <div class="course_completion">
+            <div class="cert_para">
+                <p>The Cyber Security Practitioner Programming Course Certificate focuses on enhancing
+                    coding skills for securing applications and systems. The curriculum covers topics like secure
+                    coding
+                    practices, ethical hacking, and defensive programming. It's ideal for developers and security
+                    professionals aiming to bolster their cybersecurity expertise.</p>
+            </div>
+            <img class="cert-img" src="{% static 'assets/course_page_images/course certificate.jpg' %}" height="400px"
+                width="600px">
+        </div>
+    </section>
+
+
+    <div class="_review">
+        <h2>Course Reviews</h2>
+    </div>
+    <section class="reviews">
+        <div class="coursereview">
+            <div class="review1">
+                <p class="para1">DataWorks.pro's training programs are comprehensive and effective</p>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <div class="review_img1">
+                    <img src="{% static 'assets/course_page_images/anika.png' %}" height="50px" width="90px">
+                    <div class="rname1">
+                        Anika.K
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="coursereview1">
+            <div class="review2">
+                <p class="para2">The hands-on approach at DataWorks.pro makes learning enjoyable</p>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <div class="review_img2">
+                    <img src="{% static 'assets/course_page_images/rohan.png' %}" height="50px" width="90px">
+                    <div class="rname2">
+                        Rohan.A
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="coursereview2">
+            <div class="review3">
+                <p class="para3">DataWorks.pro offers cutting-edge training in the latest technologies</p>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <div class="review_img3">
+                    <img src="{% static 'assets/course_page_images/divya.png' %}" height="50px" width="90px">
+                    <div class="rname3">
+                        Divya.M
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="coursereview3">
+            <div class="review4">
+                <p class="para4">The course content at DataWorks.pro is relevant and up-to-date</p>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <div class="review_img4">
+                    <img src="{% static 'assets/course_page_images/sahil.png' %}" height="50px" width="70px">
+                    <div class="rname4">
+                        Sahil. V
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <div class="cardshead">
+        <h2>Recommended Courses</h2>
+    </div>
+    <section class="cards">
+        <div class="AI_container">
+            <div class="ai-img">
+                <img src="{% static 'assets/course_page_images/data_engineer.png' %}" width="355px" height="220px">
+            </div>
+            <div class="heading">
+                <h2>AI Fundamentals</h2>
+            </div>
+        </div>
+        <div class="course-elite">
+            <div class="cloud1-img">
+                <img src="{% static 'assets/course_page_images/elite data.png' %}" width="355px" height="220px">
+            </div>
+            <div class="heading">
+                <h2>Elite Data Architect Program</h2>
+            </div>
+        </div>
+        <div class="course-cyber">
+            <div class="cyber-img">
+                <img src="{% static 'assets/course_page_images/cloud_master.png' %}" width="355px" height="220px">
+            </div>
+            <div class="heading">
+                <h2>Cyber Security practitioner Program</h2>
+            </div>
+        </div>
+    </section>
+    </div>
+</body>
+
+</html>

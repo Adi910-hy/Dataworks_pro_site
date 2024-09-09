@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Categories</title>
+</head>
+<body>
+    <h1>Categories</h1>
+    <ul>
+        {% for category in categories %}
+            <li><a href="{% url 'course_types_list' %}">{{ category.name }}</a></li>
+        {% empty %}
+            <li>No categories available.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

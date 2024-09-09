@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Courses</title>
+</head>
+<body>
+    <h1>Courses</h1>
+    <ul>
+        {% for type in types %}
+            <li><a href="{% url 'course_by_type' type.pk %}">{{ type.name }}</a></li>
+        {% empty %}
+            <li>No courses available.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

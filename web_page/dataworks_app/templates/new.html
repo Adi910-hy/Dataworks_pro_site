@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>data works</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/new.css' %}">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"> <img class="img"
+                    src="{% static '/assets/home_page_images/dataworks_pro_logo.jpeg' %}" height="46" width="235"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li>
+                        <div class="mega-menu">
+                    <li class="dropdown">
+                        <a href="#">Courses <i class="fa-solid fa-angle-down"></i></a>
+                        <div class="dropdown-content">
+                            {% for category in categories %}
+                            <div class="dropdown">
+                                <a href="#">{{ category.name }}</a>
+                                <div class="dropdown-content">
+                                    {% for course_type in course_types %}
+                                    <div class="dropdown">
+                                        <a href="{% url 'foundations_test_filtered' course_type.id %}">{{ course_type.name }}</a>
+                                        <div class="dropdown-content">
+                                            {% for course in courses %}
+                                            {% if course.category_id == course_type.id %}
+                                            <a href="{% url 'course_detail' course.id %}">{{ course.title }}</a>
+                                            {% endif %}
+                                            {% empty %}
+                                            <a>No courses available for this course type.</a>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    {% empty %}
+                                    <a>No course types available for this category.</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            {% empty %}
+                            <a>No categories available.</a>
+                            {% endfor %}
+                        </div>
+                    </li>
+            </div>
+            </li>
+
+            </ul>
+            <span class="navbar-text">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <section>
+                    <li class="menu-item" id="head1">
+                        <a href="#">Enterprise <i class="fa-solid fa-angle-down"></i></a>
+                        <div class="mega1">
+                            <div class="menu1">
+                                <ul>
+                                    <li><a href="#">Corporate Ls</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    </section></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <section>
+                    <li class="menu-item" id="head2">
+                        <a href="#">Resources <i class="fa-solid fa-angle-down"></i></a>
+                        <div class="mega1">
+                            <div class="menu1">
+                                <ul>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Tutorials</a></li>
+                                    <li><a href="#">Practice Test</a></li>
+                                    <li><a href="#">interview Questions</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    </section></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <section>
+                    <li class="menu-item" id="head3">
+                        <a href="#">Contact Us</a>
+                    </li>
+                    </section></a>
+                    </li>
+                </ul>
+            </span>
+        </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="home_Designed">
+                    <p>Designed to transfom</br>
+                        you into a highly skilled</br>
+                        Software Professional</br></p>
+                </div>
+                <button type="Get Started" class="Started_button"><a href="#">Get Started</a></button>
+                <div class="home_Designed1">
+                    <p>
+                        Recognized as the Best Brand in</br>
+                        Technology UpSkilling
+                    </p>
+                </div>
+
+            </div>
+            <div class="col banner_image">
+                <div class="home_Designed2"></div>
+                <div class="home_Designed3">
+                    <img src="{% static '/assets/home_page_images/data_works_img.png' %}" height="500" />
+                </div>
+            </div>
+            </ul>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="home_PLATFORMS">
+                    <p>OUR PARTNERS IN HIRING / PLATFORMS</p>
+                </div>
+
+
+
+            <div class="home_logo">
+                <img src="{% static 'assets/home_page_images/infosys.png' %}" height="80" width="80">
+            </div>
+            <div class="home_logo1">
+                <img src="{% static 'assets/home_page_images/microsoft.png' %}" height="80" width="80">
+            </div>
+            <div class="home_logo2">
+                <img src="{% static 'assets/home_page_images/wipro.png' %}" height="80" width="80">
+            </div>
+            <div class="home_logo3">
+                <img src="{% static 'assets/home_page_images/tcs.png' %}" height="80" width="80">
+            </div>
+            <div class="home_logo4">
+                <img src="{% static 'assets/home_page_images/Tech_Mahindra.png' %}" height="80" width="80">
+            </div>
+            <div class="home_logo5">
+                <img src="{% static 'assets/home_page_images/AWS.png' %}" height="80" width="80">
+            </div>
+            <div class="home_demand_courses"></div>
+            <div class="home_demand_courses1">
+                <p>Find our on-demand courses</p>
+            </div>
+            <div class="home_demand_courses6"></div>
+            <div class="home_demand_courses2">
+                <img class="pictures" src="{% static 'assets/home_page_images/box.png' %}" height="180" width="250">
+            </div>
+            <div class="home_demand_courses3">
+                <img class="pictures1" src="{% static 'assets/home_page_images/box1.png' %}" height="180" width="250">
+            </div>
+            <div class="home_demand_courses4">
+                <img class="pictures2" src="{% static 'assets/home_page_images/box2.png' %}" height="180" width="250">
+            </div>
+            <div class="home_demand_courses5">
+                <img class="pictures3" src="{% static 'assets/home_page_images/box3.png' %}" height="180" width="250">
+            </div>
+            <p class="home_demand_courses7">Full Stack</br> Development</p>
+            <p class="home_demand_courses8">AI Fundamentals</p>
+            <p class="home_demand_courses9">ChatGPT</p>
+            <p class="home_demand_courses10">Cloud Computing</p>
+            <button type="ALL COURSES" class="button1"><a href="">ALL COURSES</a></button>
+            <div class="home_map">
+                <h1>Roadmap</h1>
+            </div>
+            <div class="home_map1">
+                <img src="{% static 'assets/home_page_images/map.png' %}" width="96%">
+            </div>
+            <div class="home_Recognized"></div>
+            <p class="home_Recognized1">Recognized as</br>
+                <b>Best Tech Skilling</b></br>
+                <b>EdTech Company</b></p>
+            <div class="home_Recognized2"></div>
+            <div class="home_Recognized3">
+                <img class="pictures" src="{% static 'assets/home_page_images/nandy.jpg' %} " height="280" width="330"> 
+            </div>
+            <div class="home_Categories">
+                <h3>Categories</h3>
+            </div>
+            <div class="home_Categories1">
+                <p>Popular Categories</p>
+            </div>
+            <div class="home_Categories2"></div>
+            <div class="home_Categories3"></div>
+            <div class="home_Categories4"></div>
+            <div class="home_Categories5"></div>
+            <div class="home_Categories6">
+                <img class="pictures" src="{% static 'assets/home_page_images/boy-complete-01-1-1.png' %}" height="250" width="250">
+            </div>
+            <div class="home_Categories7">
+                <img class="pictures" src="{% static 'assets/home_page_images/boy.png' %}" height="250" width="250">
+            </div>
+            <div class="home_Categories8">
+                <img class="pictures" src="{% static 'assets/home_page_images/boy1.png' %}" height="250" width="250">
+            </div>
+            <div class="home_foundation">
+                <p>Foundations</p>
+            </div>
+            <div class="home_foundation1">
+                <p>Job-Oriented</p>
+            </div>
+            <div class="home_foundation2">
+                <p>Career Advancer</p>
+            </div>
+            <div class="home_foundation-box"></div>
+            <div class="home_foundation-box1"></div>
+            <div class="home_foundation-box2"></div>
+            <div class="home_foundation-text">
+                <p>5 Courses</p>
+            </div>
+            <div class="home_foundation-text1">
+                <p>5 Courses</p>
+            </div>
+            <div class="home_foundation-text2">
+                <p>5 Courses</p>
+            </div>
+            <div class="home_discount">
+                <p>Limited time offer</p>
+            </div>
+            <div class="home_discount1">
+                <p>20% Discount on all of</br>
+                    our new & upcomingof</br>
+                    courses</p>
+            </div>
+            <div class="home_discount2">
+                <p>Elevate your skills with a remarkable 50% discount on our latest courses. Don’t miss </br>this exclusive opportunity to advance your learning journey at an unbeatable price!</p>
+            </div>
+            <button type="ALL COURSES" class="button2"><a href="">ALL COURSES</a></button>
+            <div class="home_discount3">
+                <img src="{% static 'assets/home_page_images/Woman-Peek-1.png' %}" height="450" width="450">
+            </div>
+            <div class="home_testimonial">
+                <p>Testimonial</p>
+            </div>
+            <div class="home_testimonial1">
+                <p>What says our students</p>
+            </div>
+            <div class="home_testimonial2">
+                <img src="{% static 'assets/home_page_images/meghana.png' %}" height="120" width="120">
+            </div>
+            <div class="home_testimonial3">
+                <i class="fa-solid fa-chevron-left"></i>
+            </div>
+            <div class="home_testimonial4">
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="home_testimonial5">
+                <i class="fa-solid fa-quote-left"></i>
+            </div>
+            <div class="home_testimonial6">
+                 The AI courses at DataWorks are mind-blowing! The 
+            </div>
+            <div class="home_testimonial7">
+                 instructors are not just teachers; they're mentors guiding us through </br> the latest industry trends. Real-time case studies made the complex
+            </div>
+            <div class="home_testimonial8">
+                  seem achievable. Can't wait to implement these skills!
+            </div>
+            <div class="home_testimonial9">
+                <h4>Meghana Nerella</h4>
+            </div>
+            <div class="home_testimonial10">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="home_testimonial11">
+                AI Engineer
+            </div>
+            <div class="home_subscribe"></div>
+            <div class="home_subscribe1">
+                <p>Subscribe Our Newsletter</p>
+            </div>
+            <div class="home_subscribe2">
+                <input type="email"  name="email" placeholder="Your Email Address"  id="email01">
+            </div> 
+                <p><a href="" id="home_subscribe3">Subscribe</a></p>
+                <h1 class="home_instructor">Why Choose us?</h1>
+        
+            <p class="home_instructor01">Unlock transformative education at DataWorks,<br/> guided by industry experts for practical<br/> proficiency alongside theoretical understanding.</p>
+
+           <p class="home_instructor01"> Join our collaborative community and step<br/> confidently into the tech realm, investing in a<br/> future where your skills match the cutting edge</p>
+            <p><a href="" class="home_instructor02">LEARN MORE</a></p>
+            <div class="home_instructor03">
+                <i class="fa-solid fa-gear"></i>
+            </div>
+            <h1  class="home_instructor04" >High Quality Courses</h1>
+            <p  class="home_instructor05">Explore our top-notch courses, offering cutting-<br/>edge content for practical skill development,<br/> ensuring you excel in your chosen field.</p>
+            <div class="home_instructor06">
+                <i class="fa-regular fa-folder-open"></i>
+            </div>
+            <h1 class="home_instructor07">Life Time Access</h1>
+            <p class="home_instructor08">Enjoy lifelong learning with unlimited access to <br/>extensive resources, allowing you to revisit<br/> materials and stay updated at your own pace.</p>
+            <div class="home_instructor09">
+                <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <h1 class="home_instructor10">Expert Instructors</h1>
+            <p class="home_instructor11">Learn from industry leaders who provide real-<br/>world insights, enriching your understanding of<br/> the subject matter for a guided path to success.</p>
+            <div class="home_instructor12">
+                <i class="fa-solid fa-shield"></i>
+            </div>
+            <h1 class="home_instructor13" >Dedicated Support</h1>
+            <p class="home_instructor14" >Experience unwavering assistance with our<br/> support system, ensuring you receive help<br/> precisely when needed for a seamless learning<br/> journey.</p>
+           <div class="home-blog00">
+            <div class="home_blog">
+                <p>Blog</p>
+            </div>
+            <div class="home_blog1">
+                <p>Latest news</p>
+            </div>
+            <div class="home_blog2"></div>
+            <div class="home_blog3"></div>
+            <div class="home_blog4"></div>
+            <div class="home_blog5">
+                <img class="pictures" src="{% static 'assets/home_page_images/blog.jpg' %}" height="250" width="353">
+                <h5 class="home_blog5-1">12 April 2024</h5>
+            </div>
+            <div class="home_blog6">
+                <img class="pictures" src="{% static 'assets/home_page_images/blog1.jpg' %}" height="250" width="353">
+                <h5 class="home_blog5-1">12 April 2024</h5>
+            </div>
+            <div class="home_blog7">
+                <img class="pictures" src="{% static 'assets/home_page_images/blog2.jpg' %}" height="250" width="351">
+                <h5 class="home_blog5-1">12 April 2024</h5>
+            </div>
+            <div class="home_blog8">
+                <P>7 Tips for Protecting Your </br> Data When Using </br> Generative-AI Tools</P>
+            </div>
+            <div class="home_blog9">
+                <P>How to Build Career in Cloud </br> Computing</P>
+            </div>
+            <div class="home_blog10">
+                <P>AI Increases innovation rate </br> by 2021</P>
+            </div>
+            <div class="home_blog11">
+                <P>Artificial intelligence has profoundly </br> transformed the job market in a few </br> short months.  In this new...</P>
+            </div>
+            <div class="home_blog12">
+                <p>Cloud computing has revolutionized </br> the tech industry, offering numerous </br> opportunities for career growth...</p>
+            </div>
+            <div class="home_blog13">
+                <P>Artificial intelligence has significantly</br> accelerated the pace of innovation </br> across various industries,...</P>
+            </div>
+            <div class="home_Featured"></div>
+            <div class="home_Featured1">
+                <p>Featured In</p>
+            </div>
+            <div class="home_Featured2"></div>
+            <div class="home_deccan">
+                <i class="fa-solid fa-chevron-left"></i>
+            </div>
+            <div class="home_deccan1">
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="home_deccan2">
+                <img class="pictures" src="{% static 'assets/home_page_images/times of india.png' %}" height="100" width="250">
+            </div>
+            <div class="home_deccan3">
+                <img class="pictures" src="{% static 'assets/home_page_images/deccan.png' %}" height="100" width="250">
+            </div>
+            <div class="home_deccan4">
+                <img class="pictures" src="{% static 'assets/home_page_images/the indian express.jpg' %}" height="100" width="300">
+            </div>
+        </div>
+        <footer>
+                <div class="footer_length">
+                    <div class="footer_png">
+                        <img src="{% static 'assets/home_page_images/dataworkslogofooter.png.crdownload' %}" width="290" height="50">
+                    </div>
+                    <div class="footer_text">
+                     <p>With a proud 10-year history, we <br/>stand as pioneers in high-quality <br/>online courses. Our instructors,<br/> seasoned experts, ensure an <br/>unparalleled learning journey,<br/> providing diverse materials for an<br/> enriching educational experience.</p>
+                    </div>
+                    <div class="footer_heading">
+                        <h4>Resources</h4>
+                        <div class="footer_position">
+                        <a href="#" class="footer_links"><i class="fa-solid fa-greater-than"></i>&nbsp;&nbsp;&nbsp;About us</a>
+                        <a href="#" class="footer_links"><i class="fa-solid fa-greater-than"></i>&nbsp;&nbsp;&nbsp;Terms of Use</a>
+                        <a href="#" class="footer_links"><i class="fa-solid fa-greater-than"></i>&nbsp;&nbsp;&nbsp;Privacy Policy</a>
+                    </div>
+                </div>
+                <div class="footer_headings">
+                    <h4 >Recent Posts</h4>
+                    <img class="footer_run" src="./Assets/home_page_images/three.png">
+                    <div class="footer_data">
+                    <p><a href="#">7 Tips for Protecting<br/> Your Data When Using <br/>Generative-AI Tools</a></p>
+                    <span class="footer_2024">April 12, 2024</span>
+                </div>
+                </div>
+        
+                <div class="footer_outer">
+                <div class="footer_headings">
+                    <img class="footer_run" src="./Assets/home_page_images/four.png">
+                    <div class="footer_data">
+                    <p><a href="#">How to Build Career in<br/> Cloud Computing</a></p>
+                    <span class="footer_2024">April 12, 2024</span>
+                </div>
+                </div>
+            </div>
+        
+             <div class="footer_contact">  
+            <h4>Contact US</h4>
+            </div>
+        
+             <div class="footer_info">
+            <i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;&nbsp;<p class="footer_address">N-Heights, Plot No 38, Phase 2,<br/> Siddiq Nagar, HITEC City,<br/> Hyderabad, Telangana-500081</p>
+            <i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;&nbsp;<a href="#">contact@dataworks.pro</a><br/>
+            <p><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;7386825666 , 7386325666</p>
+            </div>
+        
+            <h3 class="footer_follow">Follow Us</h3>
+            <div class="footer_icons">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+        
+                </div>
+        
+                <div class="footer_reserved">
+                  <p>© Copy 2024. All Rights Reserved</p>
+                </div>
+        </footer>
+    </body>
+</html>

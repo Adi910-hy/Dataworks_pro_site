@@ -1,0 +1,549 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html>
+{% block content %}
+
+<head>
+    {% load static %}
+    <title>data works sample</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="{% static 'assets/css/home.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+    <main>
+        <section>
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-8 home_Designed_best">
+                        <div class="home_Designed">
+                            <p>
+                                Designed to transform</br>
+                                you into a highly skilled</br>
+                                Software Professional
+                            </p>
+                        </div>
+                        <button type="button" class="Started_button">
+                            <a href="#">Get Started<i class="fa-solid fa-angle-right"></i></a>
+                        </button>
+                        <div class="home_Designed1">
+                            <p>
+                                Recognized as the Best Brand in
+                                Technology UpSkilling
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 home_Designed_best1">
+                        <div class="home_Designed2">
+                            <img class="home_Designed3"
+                                src="{% static 'assets/images/home_page_images/data_works_img.png' %}" height="500" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="home_PLATFORMS">
+                            <p>OUR PARTNERS IN HIRING / PLATFORMS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="home_logo_cntr">
+                <div class="home_logo">
+                    <img src="{% static 'assets/images/home_page_images/infosys.png' %}" height="80" width="80">
+                </div>
+                <div class="home_logo1">
+                    <img src="{% static 'assets/images/home_page_images/microsoft.png' %}" height="80" width="80">
+                </div>
+                <div class="home_logo2">
+                    <img src="{% static 'assets/images/home_page_images/wipro.png' %}" height="80" width="80">
+                </div>
+                <div class="home_logo3">
+                    <img src="{% static 'assets/images/home_page_images/tcs.png' %}" height="80" width="80">
+                </div>
+                <div class="home_logo4">
+                    <img src="{% static 'assets/images/home_page_images/Tech_Mahindra.png' %}" height="80" width="80">
+                </div>
+                <div class="home_logo5">
+                    <img src="{% static 'assets/images/home_page_images/AWS.png' %}" height="80" width="80">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container-fluid home_demand_courses">
+                <div class="row ">
+                    <h1 class="home_demand_courses1">Find our on-demand courses</h1>
+                    <p class="home_demand_courses6"></p>
+                </div>
+                <div class="row ">
+                    <div class="cards_demand">
+                        <div class="col-md-3">
+                            <div class="AI_container">
+                                <div class="ai-img">
+                                    <img src="{% static 'assets/images/home_page_images/image.png' %}" width="365px"
+                                        height="196px" style="border-radius:5px border=5px solid gray">
+                                    <h6 class="ai_img_back_text">Beginner</h6>
+                                </div>
+                                <div class="line_img">
+                                    <img class="dotted_bar"
+                                        src="{% static 'assets/images/home_page_images/Group 78.png' %}" height="80px">
+                                    <div class="card_1">
+                                        <p class="cards_para">16 hrs of live instructor-led sessions and experimental
+                                        </p>
+                                        <p class="cards_para1">Interactive Trainer - Late Session
+                                            focused on Full Stack AI Engineering</p>
+                                    </div>
+                                </div>
+                                <div class="heading">
+                                    <h4>AI Engineering</h4>
+                                </div>
+                                <div class="some_container">
+                                    <div class="people_img">
+                                        <img src="{% static 'assets/images/home_page_images/Rectangle 229.png' %}"
+                                            width="30px" height="30px">
+                                        <p class="people_text">1.7K+</p>
+                                    </div>
+                                    <div class="star_img">
+                                        <img src="{% static 'assets/images/home_page_images/Star 17.png' %}"
+                                            width="25px" height="25px">
+                                        <p class="star_text">5.0</p>
+                                    </div>
+                                    <button class="cont_button">Enroll</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="AI_container">
+                                <div class="ai-img">
+                                    <img src="{% static 'assets/images/home_page_images/image (3).png' %}" width="365px"
+                                        height="196px" style="border-radius:5px border=5px solid gray">
+                                    <h6 class="ai_img_back_text">Beginner</h6>
+
+                                </div>
+                                <div class="line_img">
+                                    <img class="dotted_bar"
+                                        src="{% static 'assets/images/home_page_images/Group 78.png' %}" height="80px">
+                                    <div class="card_1">
+                                        <p class="cards_para">16 hrs of live instructor-led sessions and experimental
+                                        </p>
+                                        <p class="cards_para1">Interactive Trainer - Late Session
+                                            focused on Full Stack AI Engineering</p>
+                                    </div>
+                                </div>
+                                <div class="heading">
+                                    <h4>Cloud Computing</h4>
+                                </div>
+                                <div class="some_container">
+                                    <div class="people_img">
+                                        <img src="{% static 'assets/images/home_page_images/Rectangle 229.png' %}"
+                                            width="30px" height="30px">
+                                        <p class="people_text">1.7K+</p>
+                                    </div>
+                                    <div class="star_img">
+                                        <img src="{% static 'assets/images/home_page_images/Star 17.png' %}"
+                                            width="25px" height="25px">
+                                        <p class="star_text">5.0</p>
+                                    </div>
+                                    <button class="cont_button">Enroll</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="AI_container">
+                                <div class="ai-img">
+                                    <img src="{% static 'assets/images/home_page_images/image (2).png' %}" width="365px"
+                                        height="196px" style="border-radius:5px border=5px solid gray">
+                                    <h6 class="ai_img_back_text">Beginner</h6>
+
+                                </div>
+                                <div class="line_img">
+                                    <img class="dotted_bar"
+                                        src="{% static 'assets/images/home_page_images/Group 78.png' %}" height="80px">
+                                    <div class="card_1">
+                                        <p class="cards_para">16 hrs of live instructor-led sessions and experimental
+                                        </p>
+                                        <p class="cards_para1">Interactive Trainer - Late Session
+                                            focused on Full Stack AI Engineering</p>
+                                    </div>
+                                </div>
+                                <div class="heading">
+                                    <h4>ChatGpt</h4>
+                                </div>
+                                <div class="some_container">
+                                    <div class="people_img">
+                                        <img src="{% static 'assets/images/home_page_images/Rectangle 229.png' %}"
+                                            width="30px" height="30px">
+                                        <p class="people_text">1.7K+</p>
+                                    </div>
+                                    <div class="star_img">
+                                        <img src="{% static 'assets/images/home_page_images/Star 17.png' %}"
+                                            width="25px" height="25px">
+                                        <p class="star_text">5.0</p>
+                                    </div>
+                                    <button class="cont_button">Enroll</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="AI_container">
+                                <div class="ai-img">
+                                    <img src="{% static 'assets/images/home_page_images/image (4).png' %}" width="365px"
+                                        height="196px" style="border-radius:5px border=5px solid gray">
+                                    <h6 class="ai_img_back_text">Beginner</h6>
+
+                                </div>
+                                <div class="line_img">
+                                    <img class="dotted_bar"
+                                        src="{% static 'assets/images/home_page_images/Group 78.png' %}" height="80px">
+                                    <div class="card_1">
+                                        <p class="cards_para">16 hrs of live instructor-led sessions and experimental
+                                        </p>
+                                        <p class="cards_para1">Interactive Trainer - Late Session </br>
+                                            focused on Full Stack AI Engineering</p>
+                                    </div>
+                                </div>
+                                <div class="heading">
+                                    <h4>Python Programming</h4>
+                                </div>
+                                <div class="some_container">
+                                    <div class="people_img">
+                                        <img src="{% static 'assets/images/home_page_images/Rectangle 229.png' %}"
+                                            width="30px" height="30px">
+                                        <p class="people_text">1.7K+</p>
+                                    </div>
+                                    <div class="star_img">
+                                        <img src="{% static 'assets/images/home_page_images/Star 17.png' %}"
+                                            width="25px" height="25px">
+                                        <p class="star_text">5.0</p>
+                                    </div>
+                                    <button class="cont_button">Enroll</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col home_on_demand_courses1">
+                        <button type="ALL COURSES" class="button1"><a href="">ALL COURSES</a></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col">
+                        <div class="home_map">
+                            <h1>Roadmap</h1>
+                            <p class="home_map2"></p>
+                        </div>
+                        <div class="home_map1">
+                            <img src="{% static 'assets/images/home_page_images/map.png' %}" width="96%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container-fluid home_Recognized">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <p class="home_Recognized1">
+                            Recognized as</br>
+                            <b>Best Tech Skilling</b></br>
+                            <b>EdTech Company</b>
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="home_Recognized2">
+                            <img class="home_Recognized3" src="{% static 'assets/images/home_page_images/nandy.jpg' %}"
+                                alt="Recognition Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="home_Categories">
+                        <h6>Categories</h6>
+                    </div>
+                    <div class="home_Categories1">
+                        <p>Popular Categories</p>
+                    </div>
+                    <p class="home_Categories2"></p>
+                </div>
+                <div class="home_foundation_cards">
+                    <div class="card home_foundation_card">
+                        <img src="{% static 'assets/images/home_page_images/boy_1.png' %}"
+                            class="card-img-top home_foundation_card_img" alt="...">
+                        <div class="card-body home_foundation_card_body">
+                            <h5 class="card-title home_foundation_card_title">Foundations</h5>
+                            <p class="card-text home_foundation_card_text">5 Courses</p>
+                        </div>
+                    </div>
+                    <div class="card home_foundation_card">
+                        <img src="{% static 'assets/images/home_page_images/boy_2.png' %}"
+                            class="card-img-top home_foundation_card_img" alt="...">
+                        <div class="card-body home_foundation_card_body">
+                            <h5 class="card-title home_foundation_card_title">Job-Oriented</h5>
+                            <p class="card-text home_foundation_card_text">5 Courses</p>
+                        </div>
+                    </div>
+                    <div class="card home_foundation_card">
+                        <img src="{% static 'assets/images/home_page_images/design3_1.png' %}"
+                            class="card-img-top home_foundation_card_img" alt="...">
+                        <div class="card-body home_foundation_card_body">
+                            <h5 class="card-title home_foundation_card_title">Career Advancer</h5>
+                            <p class="card-text home_foundation_card_text">5 Courses</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col home_on_categories">
+                <button type="ALL COURSES" class="home_on_categories_btn"><a href="">ALL CATEGORIES</a></button>
+            </div>
+        </section>
+        <section>
+            <div class="container text-center home_discount4">
+                <div class="row">
+                    <div class="col-md-5">
+                        <img class="home_discount3" src="{% static 'assets/images/home_page_images/Woman-Peek-1.png' %}"
+                            height="550" width="470">
+                    </div>
+                    <div class="col-md-7">
+                        <p class="home_discount">Limited time offer</p>
+                        <p class="home_discount1">
+                            20% Discount on all of</br>
+                            our new & upcoming</br>
+                            courses</p>
+                        <p class="home_discount2">Elevate your skills with a remarkable 50% discount on our latest
+                            courses. Don’t miss this exclusive opportunity to advance your learning journey at an
+                            unbeatable price!</p>
+                        <div class="home_discount5">
+                            <button type="ALL COURSES" class="button2"><a href="">ALL COURSES</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="home_testimonial">
+                <p>Testimonial</p>
+            </div>
+            <div class="home_testimonial1">
+                <p>What says our students</p>
+            </div>
+            <div class="home_testimonial2">
+                <img src="{% static 'assets/images/home_page_images/meghana.png' %}" height="120" width="120">
+            </div>
+            <div class="home_testimonial_content">
+                <div class="home_testimonial3">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="home_testimonial4">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+                <div class="home_testimonial5">
+                    <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <div class="home_testimonial_content1">
+                    <div class="home_testimonial6">
+                        The AI courses at DataWorks are mind-blowing! The
+                    </div>
+                    <div class="home_testimonial7">
+                        instructors are not just teachers; they’re mentors guiding us through </br> the latest industry
+                        trends. Real-time case studies made the complex
+                    </div>
+                    <div class="home_testimonial8">
+                        seem achievable. Can’t wait to implement these skills!
+                    </div>
+                    <div class="home_testimonial9">
+                        <h4>Meghana Nerella</h4>
+                    </div>
+                </div>
+                <div class="home_testimonial10">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="home_testimonial11">
+                    AI Engineer
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="home_subscribe_news">
+                <h1>Subscribe Our Newsletter</h1>
+                <div class="home_subscribe_search"><input type="Search" placeholder="Your Email address"><button
+                        type="submit">Subscribe</button></div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-4 home_Choose_us">
+                        <h1 class="home_instructor">Why Choose us?</h1>
+                        <p class="home_instructor01">Unlock transformative education at DataWorks,<br /> guided by
+                            industry experts for practical<br /> proficiency alongside theoretical understanding.</p>
+                        <p class="home_instructor01"> Join our collaborative community and step<br /> confidently into
+                            the tech realm, investing in a<br /> future where your skills match the cutting edge</p>
+                        <p><a href="" class="home_instructor02">LEARN MORE</a></p>
+                    </div>
+                    <div class="col-md-4 home_Choose_us1">
+                        <div class="home_instructor03">
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                        <h1 class="home_instructor04">High Quality Courses</h1>
+                        <p class="home_instructor05">Explore our top-notch courses, offering cutting-<br />edge content
+                            for practical skill development,<br /> ensuring you excel in your chosen field.</p>
+                        <div class="home_instructor06">
+                            <i class="fa-regular fa-folder-open"></i>
+                        </div>
+                        <h1 class="home_instructor07">Life Time Access</h1>
+                        <p class="home_instructor08">Enjoy lifelong learning with unlimited access to <br />extensive
+                            resources, allowing you to revisit<br /> materials and stay updated at your own pace.</p>
+                    </div>
+                    <div class="col-md-4 home_Choose_us2">
+                        <div class="home_instructor09">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <h1 class="home_instructor10">Expert Instructors</h1>
+                        <p class="home_instructor11">Learn from industry leaders who provide real-<br />world insights,
+                            enriching your understanding of<br /> the subject matter for a guided path to success.</p>
+                        <div class="home_instructor12">
+                            <i class="fa-solid fa-shield"></i>
+                        </div>
+                        <h1 class="home_instructor13">Dedicated Support</h1>
+                        <p class="home_instructor14">Experience unwavering assistance with our<br /> support system,
+                            ensuring you receive help<br /> precisely when needed for a seamless learning<br /> journey.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+
+
+            <div class="container-fluid home-blog00">
+                <!-- <div class="row"> -->
+                <p class="home_blog">Blog</p>
+                <p class="home_blog1">Latest news</p>
+                <div class="cards_blogs">
+                    <div class="card blog_box">
+                        <img src="{% static 'assets/images/home_page_images/news_1.jpg' %}" class="card-img-top"
+                            alt="...">
+                        <div class="card-body">
+                            <h5 class="card_date">April 1,2021</h5>
+                            <h3 class="card-title_blog">How to Build Career</br>
+                                in Cloud Computing</h3>
+
+                            <p class="card-text">Cloud computing has become the</br>
+                                backbone of modern IT solutions,</br>
+                                powering everything from enterprise</br>
+                                applications to personal storage. As</br>
+                                more</p>
+                            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                        </div>
+                    </div>
+                    <div class="card blog_box">
+                        <img src="{% static 'assets/images/home_page_images/news_2.jpg' %}" class="card-img-top"
+                            alt="...">
+                        <div class="card-body">
+                            <h5 class="card_date">April 1,2021</h5>
+                            <h3 class="card-title_blog">AI Increase</br>
+                                innovation rate by 2021</h3>
+
+                            <p class="card-text">According to a Microsoft -IDC study</br>
+                                by 2021, Artificial Intelligence double</br>
+                                the rate of innovation at</br>
+                                organizations and employee</br>
+                                productivity in India, it’s</p>
+                            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                        </div>
+                    </div>
+                    <div class="card blog_box">
+                        <img src="{% static 'assets/images/home_page_images/news_3.jpg' %}" class="card-img-top"
+                            alt="...">
+                        <div class="card-body">
+                            <h5 class="card_date">April 1,2021</h5>
+                            <h3 class="card-title_blog">7 Tips for Protecting</br>
+                                Your Data When Using</br>
+                                Generative-AI Tools </h3>
+
+                            <p class="card-text">Artificial intelligence has profoundly</br>
+                                transformed the job market in a few</br>
+                                short months. In this new landscape,</br>
+                                failing to haveh</p>
+                            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container-fluid home_Featured">
+                <div class="row">
+                    <p class="home_Featured1">Featured In</p>
+                    <div class="home_Featured2"></div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="home_deccan">
+                <i class="fa-solid fa-chevron-left"></i>
+            </div>
+            <div class="home_deccan1">
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="home_deccan2">
+                <img class="pictures" src="{% static 'assets/images/home_page_images/times of india.png' %}"
+                    height="150" width="400">
+            </div>
+            <div class="home_deccan3">
+                <img class="pictures" src="{% static 'assets/images/home_page_images/deccan.png' %}" height="150"
+                    width="400">
+            </div>
+            <div class="home_deccan4">
+                <img class="pictures" src="{% static 'assets/images/home_page_images/the indian express.jpg' %}"
+                    height="150" width="500">
+            </div>
+        </section>
+    </main>
+
+    <script> src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"</script>
+</body>
+{% endblock %}
+
+</html>

@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+{% block content %}
+
+<head>
+    <title>Blog-Page</title>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/css/blog_detail.css' %}">
+</head>
+
+<body>
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="blog-background">
+                        <h1>{{ post.heading }}</h1>
+                        <p>{{ post.quote }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2 bl-og_single">
+                    <div class="sticky">
+                        <div class="vertical-line">
+                            <div class="logging">
+                                <ul>
+                                    {% for section in sections %}
+                                    <li><a href="#{{ section.id }}">{{ section.heading }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7 bl-og_matter">
+                    <div class="img_hands">
+                        {{ updated_content|safe }}
+                    </div>
+                </div>
+                <div class="col-3 bl-og_topics">
+                    <div class="">
+                        <div class="web_design">
+                            <img src="{{ post.advertisement.url }}" height="auto" width="100%">
+                            <div class="right-div">
+                                <div class="blog_list">
+                                    <a href="#">All Blogs</a>
+                                </div>
+                                <div class="horizontal-line"></div>
+                                <div class="blog_options">
+                                    <ul>
+                                        <li><a href="#">Apache</a></li>
+                                        <li><a href="#">Databases</a></li>
+                                        <li><a href="#">Docker</a></li>
+                                        <li><a href="#">JavaScript</a></li>
+                                        <li><a href="#">Kubernetes</a></li>
+                                        <li><a href="#">Linux Basics</a></li>
+                                        <li><a href="#">MySQL</a></li>
+                                        <li><a href="#">Python</a></li>
+                                        <li><a href="#">React</a></li>
+                                        <li><a href="#">Security</a></li>
+                                        <li><a href="#">Ubuntu</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="Related_blogs">
+            <h5>Related Blogs</h5>
+        </div>
+    </section>
+    
+    <section>
+        <div class="cards">
+            {% for blog in blogs %}
+            <div class="card bl-og_cc">
+                <img src="{{ blog.image_url }}" class="card-img-top" alt="Blog Image">
+                <div class="card-body">
+                    <small>{{ content.blog_author }}</small><br />
+                    <small>{{ content.publish_date|date:"d.m.Y" }}</small>
+                    <h5 class="card-title">{{ blog.heading }}</h5>
+                    <p class="card-text">{{ blog.truncated_description }}</p>
+                    <a href="{% url 'blog_detail' blog.pk %}" class="btn btn-primary">
+                        Know More <img src="{% static 'assets/images/blog_page_images/Line_3.png' %}" width="10%">
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+
+
+    <div class="share">
+        <h6>Share this<span><i class="fa-brands fa-facebook" style="color: #756c6c;"></i><i class="fa-brands fa-twitter"
+                    style="color: #756c6c;"></i><i class="fa-brands fa-instagram" style="color: #756c6c;"></i></h6>
+    </div>
+
+    <section>
+        <div class="container-fluid bl-og_new">
+            <div class="row">
+                <div class="hear_you">
+                    <h3 class="happy_days">we would love to hear from you</h3>
+                    <p class="exited">We are all exited to work with you and see you growing</p>
+                    <div class="search">
+                        <input type="search" placeholder="Enter your mail id or mobile number" name="email" id="email">
+                    </div>
+                    <div class="touch_btn">
+                        <button class="getin">Get in touch</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+{% endblock %}
+
+</html>

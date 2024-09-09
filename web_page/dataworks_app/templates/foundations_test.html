@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+{% block content %}
+
+<head>
+    <title>Course-Grid dataworks</title>
+    <link rel="stylesheet" href="{% static 'assets/css/foundation_test.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="rs_entire_course_page">
+        <div class="rs_home_background">
+            <div class="rs_home">
+                <span class="rs_span1">Home </span><span class="rs_span2"><img
+                        src="{% static 'assets/images/course_list_images/right.png' %}" height="8px" width="-500px"></span><span
+                    class="rs_span3">Course Grid</span>
+            </div>
+        </div>
+        <div class="rs_coursepage">
+            <div class="rs_course-searchbar">
+                <input type="search" placeholder="Search for a course">
+                <button id="rs_search">Search</button>
+            </div>
+            <div class="rs_course-para">
+                <p>Choose your career path</p>
+            </div>
+            <div class="rs_course-buttons">
+                <a href="{% url 'foundations_test' %}" class="rs_course-all">All</a>
+                {% for course_type in course_types %}
+                <a href="{% url 'foundations_test_filtered' course_type.id %}" class="rs_sub-buttons"
+                    id="course-type-{{ forloop.counter }}">
+                    {{ course_type.name }}
+                </a>
+                {% endfor %}
+            </div>
+            <div class="rs_card-container">
+                {% for course in courses %}
+                <div class="rs_course-AI">
+                        <img src="{{ MEDIA_URL }}{{ course.topic_image.url }}" class="rs_ai-img" alt="{{ course.title }}">
+                    <div class="rs_content">
+                        <div class="rs_heading">
+                            <p>{{ course.title }}</p>
+                        </div>
+                        <div class="rs_Ai-para">
+                            <p id="rs_aip">{{ course.description }}</p>
+                        </div>
+                    </div>
+                    <div class="rs_aibutton">
+                        <a href="{% url 'course_detail' course.id %}">
+                            <button id="rs_course-1">Read More</button>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}
+
+</html>

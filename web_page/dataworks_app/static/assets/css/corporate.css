@@ -1,0 +1,681 @@
+body {
+  font-family: "montserrat" !important;
+  width: 100%;
+  overflow-x: hidden;
+}
+.pr_heading_kpr h1 {
+  margin-top: 8rem;
+  color: #e3144d;
+  font-size: 4rem;
+  text-align: start;
+  padding-left: 4rem;
+  font-weight: 1000;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+.pr_heading_kpr p {
+  font-size: 1rem;
+  padding-left: 4rem;
+}
+.pr_bgcolor_kpr {
+  overflow: hidden;
+
+  display: flex;
+}
+.pr-trusted_kpr {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-top: 5rem;
+  padding: 0px 8rem;
+}
+.pr-sicp_kpr {
+  background-color: #f3f8ff;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-top: 5rem;
+  color: #666666;
+  border-radius: 20px;
+}
+.pr-student_kpr p {
+  font-weight: 1000;
+  font-size: 2rem;
+}
+.pr-student_kpr span {
+  font-size: 1.1rem;
+}
+.stnt_kpr {
+  border-right: 2px solid #666666 !important;
+  height: 100px;
+  margin-top: -80px;
+}
+.inst_kpr {
+  border-right: 2px solid #666666 !important;
+  height: 100px;
+  margin-top: -80px;
+}
+.cour_kpr {
+  border-right: 2px solid #666666 !important;
+  height: 100px;
+  margin-top: -80px;
+}
+.pr-instructor_kpr p {
+  font-weight: 1000;
+  font-size: 2rem;
+}
+.pr-instructor_kpr span {
+  font-size: 1.1rem;
+}
+.pr-courses_kpr p {
+  font-weight: 1000;
+  font-size: 2rem;
+}
+.pr-courses_kpr span {
+  font-size: 1.1rem;
+}
+.pr-placed_kpr p {
+  font-weight: 1000;
+  font-size: 2rem;
+}
+.pr-placed_kpr span {
+  font-size: 1.1rem;
+}
+.pr-platform_kpr {
+  margin-top: 6rem;
+  text-align: center;
+  background-color: #f3f8ff;
+  margin-bottom: 6rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+.pr-platform1_kpr p {
+  font-size: 2rem;
+  font-weight: 1000;
+  color: #e3144d;
+}
+
+.pr-platform2_kpr {
+  margin-top: 2rem;
+}
+.pr-explore_kpr {
+  font-weight: 1000;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 5rem;
+}
+.card-body_kpr {
+  text-align: center;
+  background-color: #f3f8ff;
+}
+.card-body_kpr .card-title_kpr {
+  color: #e3144d !important;
+  font-weight: 1000;
+}
+
+.card_kpr {
+  border: none !important;
+  border-radius: 20px;
+}
+.btn-primary_kpr {
+  background-color: #f3f8ff !important ;
+  border: 1px solid black !important;
+  color: black !important;
+}
+.pr-features_kpr {
+  font-size: 1.8rem;
+  font-weight: 1000;
+  text-align: center;
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+}
+.training-head_kpr {
+  font-size: 1.2rem;
+  font-weight: 1000;
+  margin-bottom: 2rem;
+}
+.pr-train_kpr {
+  color: #666666;
+}
+
+.train-img_kpr {
+  margin-top: 6rem;
+  width: auto;
+  height: auto;
+}
+
+.image1_kpr,
+.image2_kpr,
+.image3_kpr,
+.image4_kpr,
+.image5_kpr {
+  margin-right: 6%;
+}
+.training-head2_kpr {
+  font-size: 1.2rem;
+  font-weight: 1000;
+  margin-bottom: 2rem;
+}
+.pr-train2_kpr {
+  color: #666666;
+}
+.lovetohear_kpr {
+  background-color: #f3f8ff;
+  text-align: center;
+  padding: 60px 0px;
+  margin-top: 6rem;
+}
+.lovetohear_kpr input {
+  width: 400px;
+  padding: 10px;
+  border-radius: 30px;
+  border-style: none;
+  outline: none;
+  background-color: #cccccc;
+  color: white;
+}
+.lovetohear_kpr p {
+  color: #999999;
+}
+.lovetohear_kpr h1 {
+  color: #666666;
+}
+.lovetohear_kpr ::placeholder {
+  text-align: center;
+  color: #ffffff;
+}
+.lovetohear_kpr button {
+  color: white;
+  background-color: #e7005e;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+.fnt-asm-btn1_kpr {
+  border: 1px solid #f3f8ff;
+  background-color: #f3f8ff;
+  font-size: 1.5rem;
+  /* margin-left: 30%; */
+  width: 10px;
+  color: #3690b2;
+  position: relative;
+  right: 5%;
+}
+.fnt-asm-btn2_kpr {
+  border: 1px solid #f3f8ff;
+  background-color: #f3f8ff;
+  font-size: 1.5rem;
+  color: #3690b2;
+  width: 10px;
+}
+
+/* @media screen and (min-width:320px) and (max-width:480px){
+        .train-img{
+            width:20%;
+            height: auto;
+            position: absolute;
+            right: 700%;
+        }
+        .pr_image{
+           position: relative;
+           right: 200px;
+          
+           top:-10px;
+           width:400px;
+           z-index: 9;
+        }
+        .pr_heading h1{
+
+        }
+    } */
+
+/* Media Query for Devices with Width Between 320px and 480px */
+
+@media (min-width: 320px) and (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+  .row {
+    overflow-x: hidden;
+    display: block !important;
+  }
+
+  /* .pr_image {
+    margin-top: -24rem;
+    width: 18rem; */
+
+  .pr-sicp_kpr {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .pr_heading_kpr h1 {
+    margin-top: 12rem;
+    font-size: 2rem;
+    padding-left: 1rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+    top: -10rem;
+  }
+
+  .pr_heading_kpr p {
+    width: 320px;
+    position: relative;
+    right: 60px;
+    top: -10rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    /* font-size: 0.8rem;
+    padding-left: 1rem;
+    width: 100%; */
+  }
+
+  /* .pr-trusted {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    padding: 0px 1rem;
+  }
+
+  .pr-sicp {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 2rem;
+  } */
+
+  /* .pr-student p, .pr-instructor p, .pr-courses p, .pr-placed p {
+        font-size: 1.2rem;
+    } */
+
+  .stnt_kpr,
+  .inst_kpr,
+  .cour_kpr {
+    height: 40px;
+    margin-top: -30px;
+  }
+
+  .pr-platform_kpr {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .pr-platform1_kpr p {
+    font-size: 1.2rem;
+  }
+
+  .pr-platform2_kpr .image {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .pr-platform2_kpr {
+    display: flex;
+    flex-direction: column;
+  }
+  .image1_kpr {
+    height: 10rem;
+    width: 10rem;
+    margin-left: 4rem;
+  }
+  .image2_kpr,
+  .image3_kpr,
+  .image4_kpr,
+  .image5_kpr {
+    display: none;
+  }
+  .fnt-asm-btn1_kpr {
+    position: relative;
+    left: 0px;
+    top: 90px;
+    /* top: 90px; */
+  }
+  .fnt-asm-btn2_kpr {
+    position: relative;
+    right: -250px;
+    top: -100px;
+    /* bottom: 95px; */
+  }
+
+  .pr-explore_kpr {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .card-body_kpr .card-title_kpr {
+    font-size: 1rem;
+  }
+
+  .card-body_kpr .card-text_kpr {
+    font-size: 0.8rem;
+  }
+
+  .pr-features_kpr {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    bottom: 6rem;
+    font-size: 2rem;
+  }
+
+  .training-head_kpr,
+  .training-head2_kpr {
+    font-size: 0.9rem;
+  }
+
+  .pr-train_kpr {
+    font-size: 0.8rem;
+    text-align: justify;
+  }
+
+  .train-img_kpr img {
+    height: auto;
+    width: 100%;
+  }
+
+  .lovetohear_kpr input {
+    width: 85%;
+  }
+
+  .lovetohear_kpr button {
+    width: 75%;
+    padding: 12px;
+    margin-top: 10px;
+  }
+
+  .lovetohear_kpr {
+    padding: 30px 0px;
+    margin-top: 3rem;
+  }
+
+  .fnt-asm-btn1_kpr,
+  .fnt-asm-btn2_kpr {
+    font-size: 1rem;
+    margin-right: 1rem;
+  }
+
+  .col-3,
+  .col-6,
+  .col-sm-4,
+  .col-7 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* .pr_image {
+    order: -1;
+    text-align: center;
+  } */
+
+  .pr_content_kpr {
+    order: 0;
+  }
+
+  .col-5 {
+    width: 25rem;
+  }
+  .pr-student_kpr {
+    margin-left: 6rem;
+  }
+  .pr-instructor_kpr {
+    margin-left: 6rem;
+  }
+  .pr-courses_kpr {
+    margin-left: 6rem;
+  }
+  .pr-placed_kpr {
+    margin-left: 6rem;
+  }
+  .stnt_kpr {
+    border-bottom: 2px solid #666666 !important;
+    width: 130px;
+    position: relative;
+    right: 20px;
+    border-right: none !important;
+    margin-bottom: 20px;
+  }
+  .inst_kpr {
+    border-bottom: 2px solid #666666 !important;
+    width: 130px;
+    position: relative;
+    right: 20px;
+    border-right: none !important;
+    margin-bottom: 20px;
+  }
+  .cour_kpr {
+    border-bottom: 2px solid #666666 !important;
+    width: 130px;
+    position: relative;
+    right: 20px;
+    border-right: none !important;
+    margin-bottom: 20px;
+  }
+  .card-body_kpr {
+    margin-top: 2rem;
+  }
+  .pr-train_kpr {
+    width: 280px;
+  }
+  .pr-trusted_kpr {
+    width: 400px;
+    position: relative;
+    right: 4.5rem;
+    bottom: 16rem;
+    text-align: justify;
+    margin-bottom: 10rem;
+  }
+  .train-img_kpr {
+    height: 20rem;
+    width: 20rem;
+  }
+  .pr-train2_kpr {
+    width: 280px;
+  }
+  .pr_image_kpr {
+    position: relative;
+    top: -9rem;
+    height: 25rem;
+    width: 19rem;
+  }
+  .pr-sicp_kpr {
+    position: relative;
+    bottom: 22rem;
+  }
+  .pr-platform_kpr {
+    position: relative;
+    bottom: 19rem;
+  }
+  .pr-explore_kpr {
+    position: relative;
+    bottom: 14rem;
+    font-size: 2rem;
+  }
+  .card-container_kpr {
+    position: relative;
+    bottom: 13rem;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+  body {
+    font-size: 12px;
+  }
+  .row {
+    overflow-x: hidden;
+    display: block !important;
+  }
+  /* .pr_heading h1{
+      position: relative;
+      top:30rem
+    } */
+  .pr_heading_kpr p {
+    width: 500px;
+  }
+  .pr_image_kpr {
+    width: 170% !important;
+    height: 180% !important ;
+  }
+  .pr-trusted_kpr {
+    position: relative;
+    bottom: -1rem !important;
+  }
+  .pr-student_kpr {
+    position: relative;
+    left: 12rem;
+  }
+  .pr-instructor_kpr {
+    position: relative;
+    left: 12rem;
+  }
+  .pr-courses_kpr {
+    position: relative;
+    left: 12rem;
+  }
+  .pr-placed_kpr {
+    position: relative;
+    left: 12rem;
+  }
+  .stnt_kpr {
+    /* margin-left: 18rem;
+      height: 5.2rem;
+      position: relative;
+      bottom:1rem; */
+    border-bottom: 2px solid #666666 !important;
+    width: 130px;
+    position: relative;
+    right: 10px;
+    border-right: none !important;
+    margin-bottom: 20px;
+  }
+  .inst_kpr {
+    border-bottom: 2px solid #666666 !important;
+    width: 130px;
+    position: relative;
+    right: 10px;
+    border-right: none !important;
+    margin-bottom: 20px;
+  }
+  .cour_kpr {
+    border-bottom: 2px solid #666666 !important;
+    width: 130px;
+    position: relative;
+    right: 10px;
+    border-right: none !important;
+    margin-bottom: 20px;
+  }
+  .image3_kpr,
+  .image4_kpr,
+  .image5_kpr {
+    display: none;
+  }
+  .card_kpr {
+    width: 30rem;
+  }
+  .card-body_kpr {
+    margin-bottom: 2rem;
+  }
+  .pr-train_kpr {
+    width: 450px;
+    text-align: justify;
+  }
+  .pr-train2_kpr {
+    width: 450px;
+    text-align: justify;
+  }
+  .train-img_kpr {
+    position: relative;
+    bottom: 50px;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .row {
+    overflow-x: hidden;
+    display: block !important;
+  }
+  .pr_heading_kpr h1 {
+    text-align: justify;
+    font-size: 50px;
+  }
+  .pr_heading_kpr p {
+    width: 400px;
+  }
+  .pr_image_kpr {
+    position: relative;
+    top: 2rem;
+    height: 450px;
+    width: 450px;
+  }
+  .pr-trusted_kpr {
+    position: relative;
+    bottom: 6rem;
+  }
+  .pr-student_kpr {
+    position: relative;
+    left: 12rem;
+  }
+  .pr-instructor_kpr {
+    position: relative;
+    left: 12rem;
+  }
+  .pr-courses_kpr {
+    position: relative;
+    left: 12rem;
+  }
+  .pr-placed_kpr {
+    position: relative;
+    left: 12rem;
+  }
+  .stnt_kpr {
+    border-bottom: 2px solid #666666 !important;
+    width: 130px;
+    position: relative;
+    right: 10px;
+    border-right: none !important;
+    margin-bottom: 20px;
+  }
+  .inst_kpr {
+    border-bottom: 2px solid #666666 !important;
+    width: 130px;
+    position: relative;
+    right: 10px;
+    border-right: none !important;
+    margin-bottom: 20px;
+  }
+  .cour_kpr {
+    border-bottom: 2px solid #666666 !important;
+    width: 130px;
+    position: relative;
+    right: 10px;
+    border-right: none !important;
+    margin-bottom: 20px;
+  }
+  .image3_kpr,
+  .image4_kpr,
+  .image5_kpr {
+    display: none;
+  }
+  .pr-train_kpr {
+    width: 450px;
+    text-align: justify;
+  }
+  .pr-train2_kpr {
+    width: 450px;
+    text-align: justify;
+  }
+  .train-img_kpr{
+    position: relative;
+    bottom: 50px;
+    right: 50px;
+  }
+}
+@media (min-width: 1025px) and (max-width:1200px) {
+ .pr_heading_kpr h1{
+  font-size: 40px;
+ }
+ .train-img_kpr{
+  position: relative;
+  right: 50px;
+ }
+}

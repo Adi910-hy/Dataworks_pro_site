@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Dataworks{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'assets/css/Responsive_Header.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/DataworksFooter.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+            integrity="sha512-oHDEc8XedBx1XvS3s7bObmxPmpZQnY2o8Lt+H/YxZgrVO6wo9eB8hJ5/mu0xd10ljBsuME7Y+OTQErx0I/O9hQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'category_course' %}"> <img class="header_img"
+                        src="{%static 'assets/images/blog_page_images/dataworkslogo.png'%}" height="40" width="250"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav menu">
+                        <li class="nav-item menu-item header_space">
+                            <a class="nav-link active" aria-current="page" href="#">Courses<i
+                                    class="fas fa-chevron-down"></i></a>
+
+                            <div class="mega-menu" style="display:none;">
+                                <section class="portal">
+                                    <div class="tabs">
+                                        <a href="#" class="tab tablinks active"
+                                            onclick="openCity(event, 'London')">Foundations</a>
+                                        <a href="#" class="tab tablinks"
+                                            onclick="openCity(event, 'Paris')">Job-Oriented</a>
+                                        <a href="#" class="tab tablinks"
+                                            onclick="openCity(event, 'Tokyo')">CareerAdvancer</a>
+                                    </div>
+                                    <div id="London" class="tabcontent" style="display: block;">
+                                        <div class="header_sbs">
+                                            <div class="content">
+                                                <h1>DataWorks.Pro Portal</h1>
+                                                <div class="header_wrap">
+                                                    <p>Discover the learning platform tailored to your company’s unique
+                                                        needs,
+                                                        optimizing how your team learns and grows. Ideal for enhancing
+                                                        both internal
+                                                        and external training programs.</p>
+                                                </div>
+                                            </div>
+                                            <div class="courses">
+                                                <div class="course-card">
+                                                    <img class="icon_col"
+                                                        src="{% static 'assets/images/blog_page_images/arcticons_ask-ai (2).png' %}"
+                                                        width="30" height="30">
+                                                    <h4>AI Fundamentals</h4>
+                                                    <a href="#">→</a>
+                                                </div>
+                                                <div class="course-card">
+                                                    <img src="{% static 'assets/images/blog_page_images/cloud-add.png' %}"
+                                                        width="25" height="25">
+                                                    <h4>Cloud Computing</h4>
+                                                    <a href="#">→</a>
+                                                </div>
+                                                <div class="course-card">
+                                                    <img src="{% static 'assets/images/blog_page_images/arcticons_openai-chatgpt.png' %}"
+                                                        width="25" height="25">
+                                                    <h4>Chat GPT</h4>
+                                                    <a href="#">→</a>
+                                                </div>
+                                                <div class="course-card">
+                                                    <img src="{% static 'assets/images/blog_page_images/Group.png' %}"
+                                                        width="25" height="25">
+                                                    <h4>IT Essentials</h4>
+                                                    <a href="#">→</a>
+                                                </div>
+                                                <div class="course-card">
+                                                    <img src="{% static 'assets/images/blog_page_images/Group (1).png' %}"
+                                                        width="25" height="25">
+                                                    <h4>Data Engineering Foundations</h4>
+                                                    <a href="#">→</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="Paris" class="tabcontent" style="display: none;">
+                                        <div class="header_sbs">
+                                            <div class="content">
+                                                <h1>DataWorks.Pro Portal</h1>
+                                                <div class="header_wrap">
+                                                    <p>Discover the learning platform tailored to your company’s unique
+                                                        needs,
+                                                        optimizing how your team learns and grows. Ideal for enhancing
+                                                        both internal
+                                                        and external training programs.</p>
+                                                </div>
+                                            </div>
+                                            <div class="courses">
+                                                <div class="course-card">
+                                                    <img class="icon_col"
+                                                        src="{% static 'assets/images/blog_page_images/fluent_cloud-database-20-regular.png' %}"
+                                                        width="30" height="30">
+                                                    <h4>Cloud Data Engineering & Analytics Program</h4>
+                                                    <a href="#">→</a>
+                                                </div>
+                                                <div class="course-card">
+                                                    <img src="{% static 'assets/images/blog_page_images/01.png' %}"
+                                                        width="25" height="25">
+                                                    <h4>Cloud Computing Mastery</h4>
+                                                    <a href="#">→</a>
+                                                </div>
+                                                <div class="course-card">
+                                                    <img src="{% static 'assets/images/blog_page_images/eos-icons_cloud-computing-outlined.png' %}"
+                                                        width="25" height="25">
+                                                    <h4>Full Stack Development</h4>
+                                                    <a href="#">→</a>
+                                                </div>
+                                                <div class="course-card">
+                                                    <img src="{% static 'assets/images/blog_page_images/code.png' %}"
+                                                        width="25" height="25">
+                                                    <h4>Full Stack AI Engineering</h4>
+                                                    <a href="#">→</a>
+                                                </div>
+                                                <div class="course-card">
+                                                    <img src="{% static 'assets/images/blog_page_images/code-circle.png' %}"
+                                                        width="25" height="25">
+                                                    <h4>Cyber Security Practitioner Program</h4>
+                                                    <a href="#">→</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="Tokyo" class="tabcontent" style="display: none;">
+                                        <div class="header_sbs">
+                                            <div class="content">
+                                                <h1>DataWorks.Pro Portal</h1>
+                                                <div class="header_wrap">
+                                                    <p>Discover the learning platform tailored to your company’s unique
+                                                        needs,
+                                                        optimizing how your team learns and grows. Ideal for enhancing
+                                                        both internal
+                                                        and external training programs.</p>
+                                                </div>
+                                            </div>
+                                            <div class="courses">
+                                                <div class="course-card">
+                                                    <img class="icon_col"
+                                                        src="{% static 'assets/images/blog_page_images/command-square.png' %}"
+                                                        width="30" height="30">
+                                                    <h4>Generative AI</h4>
+                                                    <a href="#">→</a>
+                                                </div>
+                                                <div class="course-card">
+                                                    <img src="{% static 'assets/images/blog_page_images/cloud-add (1).png' %}"
+                                                        width="25" height="25">
+                                                    <h4>Leadership program in AI & Cloud</h4>
+                                                    <a href="#">→</a>
+                                                </div>
+                                                <div class="course-card">
+                                                    <img src="{% static 'assets/images/blog_page_images/profile.png' %}"
+                                                        width="25" height="25">
+                                                    <h4>Prompt Engineering</h4>
+                                                    <a href="#">→</a>
+                                                </div>
+                                                <div class="course-card">
+                                                    <img src="{% static 'assets/images/blog_page_images/majesticons_data-line.png' %}"
+                                                        width="25" height="25">
+                                                    <h4>Elite data Architect program</h4>
+                                                    <a href="#">→</a>
+                                                </div>
+                                                <div class="course-card">
+                                                    <img src="{% static 'assets/images/blog_page_images/people.png' %}"
+                                                        width="25" height="25">
+                                                    <h4>Full stack AI & ML program</h4>
+                                                    <a href="#">→</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav" id="enterprise">
+                <ul class="navbar-nav">
+                    <li class="nav-item menu-item header_part2">
+                        <a class="nav-link active header_right" href="#">
+                            Enterprise
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </a>
+                        <div class="mega-menus">
+                            <div class="menu-columns">
+                                <ul>
+                                    <li><a href="{% url 'corporate' %}">Corporate Ls</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="collapse navbar-collapse" id="navbarNav" id="resources">
+                <ul class="navbar-nav">
+                    <li class="nav-item menu-item header_part2">
+                        <a class="nav-link active header_right" href="#">Resources <span class="icon"><i
+                                    class="fas fa-chevron-down"></i></span></a>
+                        <div class="mega-menus">
+                            <div class="menu-columns">
+                                <ul>
+                                    <li><a href="{% url 'blog_list' %}">Blog</a></li>
+                                    <li><a href="#">Tutorials</a></li>
+                                    <li><a href="#">Practice Test</a></li>
+                                    <li><a href="#">interview Questions</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="collapse navbar-collapse edges_right " id="navbarNav" id="contact">
+                <ul class="navbar-nav">
+                    <li class="nav-item menu-item header_part2">
+                        <a class="nav-link active" href="#">Contact Us<i class="fas fa-chevron-down"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+
+    <footer class="fo_oter_len">
+        <div class="footer_length">
+            <div class="container-fluid footer_ajgap">
+                <div class="row">
+                    <div class="col-4 ff_aj1">
+                        <div class="footer_ajimg">
+                            <div class="footer_png">
+                                <img src="{% static 'assets/images/blog_page_images/dataworks_footer_logo.png' %}"
+                                    width="290" height="50">
+                            </div>
+                            <div class="footer_text">
+                                <p>With a proud 10-year history, we stand as pioneers in high-quality online courses.
+                                    Our instructors, seasoned experts, ensure an unparalleled learning journey,
+                                    providing diverse materials for an enriching educational experience.</p>
+                            </div>
+                            <div class="footer_ak">
+                                <h3 class="footer_follow">Follow Us</h3>
+                                <div class="footer_icons">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                    <i class="fa-brands fa-twitter"></i>
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                    <i class="fa-brands fa-instagram"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2  ff_aj2">
+                        <div class="footer_ajsour">
+                            <div class="footer_heading">
+                                <h4>Resources</h4>
+                                <div class="footer_position">
+                                    <a href="#" class="footer_link1"><i
+                                            class="fa-solid fa-greater-than"></i>&nbsp;&nbsp;&nbsp;About us</a>
+                                    <a href="#" class="footer_links"><i
+                                            class="fa-solid fa-greater-than"></i>&nbsp;&nbsp;&nbsp;Terms of Use</a>
+                                    <a href="#" class="footer_links"><i
+                                            class="fa-solid fa-greater-than"></i>&nbsp;&nbsp;&nbsp;Privacy Policy</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3 ff_aj3">
+                        <div class="footer_ajrec">
+                            <div class="footer_headings">
+                                <h4>Recent Posts</h4>
+                                <img class="footer_run"
+                                    src="{% static 'assets/images/blog_page_images/footer_1.jpeg' %}">
+                                <div class="footer_data">
+                                    <p><a href="#">7 Tips for Protecting Your Data When Using Generative-AI Tools</a>
+                                    </p>
+                                    <span class="footer_2024">April 12, 2024</span>
+                                </div>
+                            </div>
+                            <div class="footer_change">
+                                <div class="footer_outer">
+                                    <div class="footer_headings">
+                                        <img class="footer_run"
+                                            src="{% static 'assets/images/blog_page_images/footer_2.jpeg' %}">
+                                        <div class="footer_data">
+                                            <p><a href="#">How to Build Career in Cloud Computing</a></p>
+                                            <span class="footer_2024">April 12, 2024</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3 ff_aj4">
+                        <div class="footer_ajlas">
+                            <div class="footer_contact">
+                                <h4>Contact Us</h4>
+                            </div>
+
+                            <div class="footer_info">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <p class="footer_address">N-Heights, Plot No 38, Phase 2, Siddiq Nagar, HITEC City,
+                                    Hyderabad, Telangana-500081</p>
+                                <div> <i class="fa-solid fa-envelope"></i>
+                                    <div class="ff_mail"><a href="#" class="footer_email">contact@dataworks.pro</a>
+                                    </div>
+                                </div>
+                                <div> <i class="fa-solid fa-phone"></i>
+                                    <div class="ff_num"><span class="footer_num">7386825666 , 7386325666</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container_fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="footer_reserved">
+                        <p>© Copy 2024. All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const button = document.getElementsByClassName('nav-link')[0];
+        const data = document.getElementsByClassName('mega-menu')[0];
+
+        button.addEventListener('click', function (event) {
+            event.preventDefault();
+            if (data.style.display === 'none' || data.style.display === '') {
+                data.style.display = 'block';
+
+            }
+            else {
+                data.style.display = 'none';
+            }
+        }
+        );
+
+
+
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+
+</body>
+
+</html>

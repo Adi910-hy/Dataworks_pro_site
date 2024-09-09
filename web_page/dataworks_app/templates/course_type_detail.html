@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ course_type.name }} - Courses</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/new_dw.css' %}">
+</head>
+<body>
+    <h1>Courses under {{ course_type.name }}</h1>
+    {% if courses %}
+        <ul>
+            {% for course in courses %}
+                <li>
+                    <a href="{% url 'course_detail' course.id %}">{{ course.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No courses available for this course type.</p>
+    {% endif %}
+</body>
+</html>

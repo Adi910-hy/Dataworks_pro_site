@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Courses by Type</title>
+</head>
+<body>
+    <h1>{{ type.name }}</h1>
+    <ul>
+        {% for course in courses %}
+            <li><a href="{% url 'course_detail' course.id %}">{{ course.title }}</a></li>
+        {% empty %}
+            <li>No courses available for this type.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
