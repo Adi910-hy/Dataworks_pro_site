@@ -564,7 +564,7 @@ small {
    .lovetohear_bl_tej {
     width: 100%;
    }
-<<<<<<< HEAD
+
 }
 @media screen and (min-width: 481px) and (max-width: 600px) {
     .more_bl_tej {
@@ -581,8 +581,7 @@ small {
     .card_bl_tej {
         width: 360px;
     }
-=======
->>>>>>> 5db21f6715ffef9e35103c610670c78e04c3ae59
+    
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .background_container_bl_tej {
