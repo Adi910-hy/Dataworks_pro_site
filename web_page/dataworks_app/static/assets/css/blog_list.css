@@ -101,6 +101,9 @@ small {
     margin-top: 1.25rem;
     /* margin-left: 2%; */
     margin-right: 2%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space:nowrap;
 }
 
 .card_body_bl_tej {
@@ -245,6 +248,9 @@ small {
 }
 .card_title_bl_tej {
     margin-top: 1.25rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     /* margin-left: 2%; */
 }
 .card_text_bl_tej {
@@ -257,6 +263,7 @@ small {
     text-overflow: ellipsis; /* Add ellipses after truncation */
     text-align: justify;
     padding-bottom: 5%;
+   
 }
 .card_1_body_bl_tej {
     position: relative; /* Allows the button to be positioned inside the card */
