@@ -564,6 +564,24 @@ small {
    .lovetohear_bl_tej {
     width: 100%;
    }
+
+}
+@media screen and (min-width: 481px) and (max-width: 600px) {
+    .more_bl_tej {
+        width: 220px;
+        float: right;
+    }
+    .more_bl_tej img {
+        position: relative;
+        left: 14px;
+        width: 40px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 910px) {
+    .card_bl_tej {
+        width: 360px;
+    }
+    
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .background_container_bl_tej {
