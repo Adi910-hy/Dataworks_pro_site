@@ -1,9 +1,8 @@
 /* my newly updated code */
 .ra_entirepage {
-    width: 100%;
-    margin-left: 20px;
-    margin-top: -10px;
-
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 1%;
 }
 
 body {
@@ -148,7 +147,7 @@ body {
 
 .ra_Ai_img {
     margin-left: 30%;
-    margin-top: 15%;
+    margin-top: 18%;
     border-radius: 10px;
     border-color: lightgrey;
     border: none;
@@ -432,7 +431,7 @@ li::marker {
     background-color: #eff2fb;
     margin-top: 4%;
     margin-left: 6%;
-    margin-bottom: 4%;
+    margin-bottom: 3%;
     width: 88%;
     height: 100%;
 }
@@ -509,6 +508,11 @@ li::marker {
     padding-left: 2%;
 }
 
+.ra_scrollbar{
+    margin-top: 1%;
+    margin-bottom: 5%;
+}
+
 .ra_scroll {
     background-color: #1b1b51;
     display: flex;
@@ -561,32 +565,36 @@ li::marker {
 
 .ra_scroll1 {
     background-color: white;
-    width: 90%;
-    margin-left: 4%;
+    width: 93%;
+    margin-left: 5%;
+    gap: 2%;
 }
 
-.ra_demo {
-    margin-left: 75px;
-}
 
-.ra_demo p {
-    padding: -20px 30px;
-    color: white;
-    border-radius: 8px;
+.demo_para{
+    padding: 10px 30px;
     background-color: #1b1b51;
+    border-radius: 10px;
+    color: white;
     display: flex;
-    width: 80%;
-    margin-left: 6%;
-    margin-top: -10%;
-    position: relative;
-    line-height: 5em;
-    gap: 470px;
-    padding-left: 25px;
+    margin-left: 9%;
+    margin-bottom: 13%;
+    width: 133%;
+}
+
+.demo_para p{
+    margin-top: 7px;
+    width: 100%;
 }
 
 .ra_tool1 {
-    padding-bottom: 200px;
     margin-left: 14px;
+}
+
+.ra_configurations {
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 20%;
 }
 
 .ra_toolspara {
@@ -594,26 +602,20 @@ li::marker {
     font-weight: 500;
     font-size: 20px;
     text-align: center;
-    margin-left: -22%;
+    margin-right: 12%;
 }
 
 .ra_request {
     border-style: none;
-    position: relative;
-    left: 850px;
-    top: -65px;
     background-color: #e7075e;
     color: white;
-    padding: 10px;
-    width: 180px;
-    margin-right: 40px;
-    border-radius: 5px;
     text-decoration: none;
+    text-align: center;
+    margin-top: 5px;
+    padding: 5px;
+    width: 13%;
+    height: 100%;
 
-}
-
-.ra_course_completion {
-    display: flex;
 }
 
 .ra_cert_para {
@@ -621,17 +623,22 @@ li::marker {
     font-size: 18px;
     color: #000;
     text-align: justify;
+    margin-left: 10%;
 }
 
 .ra_course_cert {
     color: #e7075e;
     text-align: center;
-    margin-top: 15%;
+    margin-top: 10%;
     margin-bottom: 5%;
 }
 
+.ra_cert-img{
+    margin-left: 15%;
+}
+
 .ai_main_col2 {
-    margin-left: 10%;
+    margin-left: 9%;
 }
 
 .ra_course-requirement {
@@ -655,8 +662,9 @@ li::marker {
     text-align: center;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
-    height: 100%;
-    width: 95%;
+    height: 95%;
+    width: 70%;
+    margin-left:10%;
 }
 
 .ra_earning-potential h2 {
@@ -683,7 +691,7 @@ li::marker {
 }
 
 .ai_main_col3 {
-    margin-left: 9%;
+    margin-left: 7%;
 }
 
 .ra_faq{
@@ -694,7 +702,8 @@ li::marker {
     color: #e7075e;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-left: 2%;
-    margin-bottom: 2%;
+    margin-bottom: 3%;
+    width: 90%;
 }
 
 .ra_f_button{
@@ -722,9 +731,11 @@ li::marker {
 .ra_Ai_tools {
     color: #e7075e;
     text-align: center;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    /
+    margin-bottom: 2%;
+}
+
+.all_reviews{
+    padding: 0px 100px !important;
 }
 
 .ra_reviews {
@@ -745,19 +756,17 @@ li::marker {
     gap: 20%;
 }
 
-.ra_review {
+.ra_review_setting {
     color: #e7075e;
-    margin-top: 5%;
-    margin-left: 40%;
-    margin-bottom: 5%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    text-align: center;
 }
 
-.ra_review1 {
-
+.ra_review{
     height: 400px;
     box-shadow: -45px -45px -45px -45px #888;
     border: #888 2px;
-
 }
 
 .ra_para {
@@ -774,100 +783,16 @@ li::marker {
     color: grey;
 }
 
-.ra_review_img1 {
+.ra_review_img {
     padding: 25px;
 }
 
-.ra_rname1 {
+.ra_name {
     margin-left: 100px;
     margin-top: -40px;
     color: #00004d;
     font-weight: bold;
     font-size: 17px;
-}
-
-.ra_coursereview1 {
-    width: 230px;
-    height: 270px;
-    box-shadow: #696969;
-    border: 2px solid whitesmoke;
-    display: flex;
-    background-color: white;
-}
-
-.ra_review2 {
-
-    height: 400px;
-    box-shadow: -45px -45px -45px -45px #888;
-    border: #888 2px;
-}
-
-.ra_review_img2 {
-    padding: 30px;
-}
-
-.ra_rname2 {
-    margin-left: 100px;
-    margin-top: -40px;
-    color: #00004d;
-    font-size: 17px;
-    font-weight: bold;
-}
-
-.ra_coursereview2 {
-    width: 230px;
-    height: 270px;
-    box-shadow: #696969;
-    border: 2px solid whitesmoke;
-    display: flex;
-    background-color: white;
-}
-
-.ra_review3 {
-
-    height: 400px;
-    box-shadow: -45px -45px -45px -45px #888;
-    border: #888 2px;
-}
-
-.ra_review_img3 {
-    padding: 30px;
-}
-
-.ra_rname3 {
-    margin-left: 100px;
-    margin-top: -40px;
-    color: #00004d;
-    font-size: 17px;
-    font-weight: bold;
-}
-
-.ra_coursereview3 {
-    width: 230px;
-    height: 270px;
-    box-shadow: #696969;
-    border: 2px solid whitesmoke;
-    display: flex;
-    background-color: white;
-}
-
-.ra_review4 {
-
-    height: 400px;
-    box-shadow: -45px -45px -45px -45px #888;
-    border: #888 2px;
-}
-
-.ra_review_img4 {
-    padding: 30px;
-}
-
-.ra_rname4 {
-    margin-left: 100px;
-    margin-top: -40px;
-    color: #00004d;
-    font-size: 17px;
-    font-weight: bold;
 }
 
 .starchecked {
@@ -880,42 +805,42 @@ li::marker {
     margin-left: 25px;
 }
 
-.ra_AI_container {
+.ra_recommended_courses{
+    display: flex;
+    margin-left: 3%;
+}
 
-    height: 343px;
+.ra_AI_container {
+    width: 80%;
     background-color: white;
     border: 2px solid black;
     border-radius: 20px;
     position: relative;
-    margin-bottom: 100px;
-    margin-top: 10%;
+    margin-top: 7%;
+    margin-bottom: 15%;
     text-align: center;
     box-shadow: -0.75px -0.75px -0.75px -0.75px #00004d;
 }
 
 .ra_ai-img {
-    padding-top: 5px;
-    border-radius: 10px;
+    padding: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     display: block;
     width: 100%;
-    height: 200px;
+    height: 40%;
     background-size: cover;
 }
 
 .ra_heading {
-    position: relative;
     font-family: Arial, Helvetica, sans-serif, 'montserrat' !important;
     color: #2E2056;
-    font-size: 10px;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
+    font-size: 20px;
     font-size: 12px;
-    top: -5%;
-    margin-left: -5px;
     font-weight: 500;
+    margin-left: 9%;
+    margin-bottom: 7%;
+    text-align: left;
 }
 
 .ra_some_container {
@@ -923,7 +848,10 @@ li::marker {
     background-color: #eff2fb;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
-    margin-top: -10px;
+    margin-top: 10px;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 .ra_some_container {
@@ -932,35 +860,43 @@ li::marker {
 
 .ra_people_img {
     display: flex;
-    position: absolute;
-    left: 8%;
-    bottom: 1%;
+    gap: 8%;
+}
+
+.ra_people_img img{
+    margin-top: 12%;
+    margin-left: 40%;
+}
+
+.ra_people_img p{
+    margin-top: 13%;
 }
 
 .ra_star_img {
     display: flex;
-    position: absolute;
-    left: 35%;
-    bottom: 1%;
-
+    gap: 6%;
 }
 
+.ra_star_img img{
+    margin-left: 4rem;
+    margin-top: 0.5rem;
+}
+
+.ra_star_img p{
+    margin-top: 8%;
+}
 
 .ra_cont_button {
-    display: flex;
     border-style: none;
-    color: white;
-    width: 25%;
     height: 25px;
+    color: white;
     border-radius: 25px;
     background-color: #e7075e;
-    font-size: 12px;
-    padding: 1%;
-    padding-left: 7%;
-    position: absolute;
-    bottom: 6%;
-    right: 13%;
-
+    font-size: 15px;
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 12%;
+    padding: 0% 10%;
 }
 
 .ra_heading:hover {
@@ -970,22 +906,16 @@ li::marker {
 .ra_line_img {
     display: flex;
     width: 70%;
-    margin-left: 5%;
-    margin-top: -19%;
+    margin-left: 9%;
+    margin-top: 3%;
 }
 
 .ra_cards_para {
-    position: relative;
-    font-size: 12px;
-    width: 100%;
-}
-
-.ra_cards_para1 {
-    width: 130%;
-    font-size: 12px;
-    position: relative;
-    margin-top: -4%;
-
+    margin-top: 3px;
+    font-size: 14px;
+    width: 115%;
+    text-align: left;
+    margin-left: 5%;
 }
 
 .ra_cards {
@@ -998,44 +928,9 @@ li::marker {
 }
 
 .ra_dotted_bar {
-    margin-top: 2%;
-}
-
-.ra_course-elite {
-    width: 370px;
-    height: 350px;
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 20px;
-    position: relative;
-    left: -200px;
-    top: 125px;
-    margin: 20px;
-    margin-top: -45px;
-    text-align: center;
-    box-shadow: -0.75px -0.75px -0.75px -0.75px #00004d;
-}
-
-.ra_cloud1-img {
-    padding-top: 5px;
-    border-radius: 10px;
-    height: 200px;
-}
-
-.ra_course-heading {
-    text-align: center;
-    left: 25px;
-    padding-top: -5px;
-    font-size: 15px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #2E2056;
-    position: relative;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
-    top: 10px;
+    margin-top: 3%;
+    width: 5%;
+    height: 5%;
 }
 
 .ra_course-heading:hover {
@@ -1091,8 +986,8 @@ li::marker {
 
 .ra_cardshead {
     color: #e7075e;
-    margin-left: 35%;
-    margin-top: 5%;
+    margin-left: 6.5%;
+    margin-top: 2%;
 }
 
 .ra_testimonial_rating {
@@ -1132,6 +1027,7 @@ li::marker {
     border: none;
     margin-top: 20%;
     margin-bottom: 20%;
+    margin-left:9%;
     padding-left: 6%;
     padding-right: 6%;
     border-radius: 20px;
@@ -1144,6 +1040,7 @@ li::marker {
     border: none;
     margin-top: 20%;
     margin-bottom: 20%;
+    margin-left:9%;
     padding-left: 6%;
     padding-right: 6%;
     border-radius: 20px;
@@ -1156,6 +1053,7 @@ li::marker {
     border: none;
     margin-top: 20%;
     margin-bottom: 20%;
+    margin-left:9%;
     padding-left: 6%;
     padding-right: 6%;
     border-radius: 20px;
@@ -1238,36 +1136,6 @@ li::marker {
     line-height: 1.6;
 }
 
-.card-more {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-}
-
-.more-button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-}
-
-.more-button img {
-    width: 30px;
-    height: auto;
-    transition: transform 0.3s;
-}
-
-
-.more-button.expanded img {
-    transform: rotate(180deg);
-}
-
-.ra_img_cont {
-    background-color: #eff2fb;
-
-
-}
-
 .text1 {
     font-size: 18px;
     line-height: 2.5em;
@@ -1328,12 +1196,6 @@ li::marker {
     height: 90%;
 }
 
-/* .course-AI:hover {
-    transform: scale(1.03);
-    transition: ease 0.5s;
-    cursor: pointer;
-} */
-
 .ai-img {
     padding-top: 5px;
     border-radius: 10px;
@@ -1391,80 +1253,6 @@ li::marker {
     font-weight: 600;
     text-align: start;
     margin-left: 5%;
-}
-
-.some_container {
-    height: 48px;
-    width: 370px;
-    background-color: #F3F8FF;
-    position: relative;
-    left: 2%;
-    top: 5%;
-
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-
-}
-
-.some_container_back {
-    position: relative;
-    left: 0%;
-}
-
-.some_container {
-    display: flex;
-}
-
-.people_img {
-    display: flex;
-    position: absolute;
-    left: 6%;
-    bottom: 1%;
-    top: 22%;
-}
-
-.people_text {
-    position: relative;
-    left: 5%;
-    font-size: 1.3rem;
-}
-
-.star_img {
-    display: flex;
-    position: absolute;
-    left: 35%;
-    bottom: 1%;
-    top: 25%;
-
-}
-
-.star_text {
-    position: relative;
-    left: 12%;
-    font-size: 1.3rem;
-}
-
-
-.cont_button {
-    display: flex;
-    border-style: none;
-    color: white;
-    width: 28%;
-    height: 30px;
-    border-radius: 25px;
-    background-color: #e7075e;
-    font-size: 18px;
-    padding: 2% 7% 7% 7%;
-    /* padding-left: 7%; */
-    position: absolute;
-    bottom: 0%;
-    right: 10%;
-    top: 20%;
-    margin-bottom: 10px;
-    text-align: center;
-    font-weight: 500;
-
-
 }
 
 .cards_demand {
