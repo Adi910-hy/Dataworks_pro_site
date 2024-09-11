@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'dataworks',
         'USER' : 'root',
-        'PASSWORD' : 'Admin@143',
+        'PASSWORD' : 'Taeju(18)',
         'HOST' : 'localhost',
         'PORT' : '3306'      
     }

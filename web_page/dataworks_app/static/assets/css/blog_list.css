@@ -1,4 +1,4 @@
-body {
+.overflow_bl_tej {
     font-family: "Montserrat" !important;
     overflow-x: hidden;
 }
@@ -50,16 +50,6 @@ small {
     position: relative;
     right: 3.125rem; 
 } 
-/* .background_container_bl_tej{
-    background-image: url('./../images/blog_img.png');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    width: 100%; 
-    height: 31.25rem; 
-    margin: 0;
-} */
-
 .class1_bl_tej ul {
     list-style-type: none;
     text-align: left;
@@ -85,78 +75,10 @@ small {
 .text_center_bl_tej {
     margin: 2%;
 }
-/* .card_img_top_bl_tej{
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    margin: 2%;
-    width: 96%;
-}
-.cards_1_bl_tej {
-    display: flex;
-    gap: 2rem;
-}
-.card_1_bl_tej{
-    border-radius: 55px;
-}
-
-.card_1_bl_tej {
-    border: 1px solid #adacac;
-    width: 28rem;
-}
-.card_1_title_bl_tej {
-    margin-top: 1.25rem; 
-    margin-left: 2%;
-    margin-right: 2%;
-}
-.card_1_text_bl_tej {
-    text-align: justify;
-}
-.class2_bl_tej {
-    text-align: justify; 
-    width: 100%;
-    margin: 0% 1%;
-} */
-
 .setting_card{
     display: flex;
     flex-direction: column;
 }
-
-/* .class2_box_bl_tej {
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); 
-    border-radius: 60px; 
-    text-align: justify;
-    padding-bottom: 1.25rem; 
-} */
-/* .class2_box_bl_tej h3, p, small {
-    padding: 0.625rem 0.625rem 0rem 0.625rem; 
-} 
-.more_bl_tej button {
-    width: 40%;
-    background-color: white;
-    border: none;
-    border-radius: 50px; 
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); 
-    padding: 0.625rem;  */
-    /* position: relative;
-    left: 50%;
-    top: -3.125rem; 
-    margin-bottom: -2.5rem;  */
-    /* float: right;
-    font-weight: 450;
-    font-size: 20px;
-}
-.more_bl_tej img {
-    background-color: black;
-    border-radius: 50px; 
-    position: relative;
-    left: 1.50rem; 
-} */
-/* .class3_bl_tej {
-    padding: 5%;
-    margin-left: 80px;
-    width: 130%;
-} */
 .card_img_top_bl_tej {
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
@@ -177,7 +99,7 @@ small {
 
 .card_1_title_bl_tej {
     margin-top: 1.25rem;
-    margin-left: 2%;
+    /* margin-left: 2%; */
     margin-right: 2%;
 }
 
@@ -220,16 +142,16 @@ small {
     background-color: black;
     border-radius: 50px;
     position: relative;
-    left: 0.50rem;
+    left: 1.50rem;
 }
 .search_bl_tej {
     position: relative;
-    width: 46%;
+    width: 700px;
     margin: 1%;
 }
 
 .search_bl_tej input {
-    width: 60%;
+    width: 420px;
     padding: 10px 20px 10px 40px; 
     font-size: 16px;
     border: 1px solid #DADADA;
@@ -253,7 +175,7 @@ small {
 .underline_bl_tej {
     border-top: 0.125rem solid #E7005E; 
     width: 12.5rem; 
-    margin-left: 0.625rem; 
+    margin-left: 0.200rem; 
     margin-top: -1.25rem; 
 }
 .crack_up_bl_tej img {
@@ -262,8 +184,9 @@ small {
     left: 13.75rem; 
 }
 .crack_up_bl_tej {
+    margin-top: 3%;
     margin-left: 3%;
-} 
+}
 .grid_bl_tej ul {
     margin: 2%;
     display: grid;
@@ -322,7 +245,7 @@ small {
 }
 .card_title_bl_tej {
     margin-top: 1.25rem;
-    margin-left: 2%;
+    /* margin-left: 2%; */
 }
 .card_text_bl_tej {
     text-align: justify;
@@ -360,10 +283,6 @@ small {
     width: 9.375rem; 
     float: right;
 }
-/* .blogs_btn_bl_tej_img:hover , 
-.cards_btn_bl_tej_img:hover {
-    color: white;
-} */
 .read_more_blogs_bl_tej {
     margin: 3%;
 }
@@ -443,7 +362,7 @@ small {
     margin-top: 1.25rem;
 }
 @media (max-width: 600px) {
-    body {
+    .overflow_bl_tej {
         overflow-x: hidden !important;
     }
 }
@@ -457,8 +376,13 @@ small {
         left: 180px;
     }
 }
+@media  screen and (min-width:420px) and (max-width:480px) {
+    .class2_bl_tej {
+        margin-left: -4%;
+    }
+}
 @media screen and (min-width: 320px) and (max-width: 480px) {
-    body {
+    .overflow_bl_tej {
         overflow-x: hidden !important;
     }
     .background_container_bl_tej {
@@ -473,24 +397,19 @@ small {
     .subscribe_bl_tej input {
         width: 230px;
     }
-    /* .subscribe_bl_tej button {
-        position: relative;
-        top: -51px;
-        left: 180px;
-    } */
     .class1_bl_tej {
-        width: 300px;
+        width: 280px;
     }
     .more_bl_tej {
-        width: 280px;
+        width: 200px;
         float: right;
     }
     .more_bl_tej img {
         position: relative;
         left: 8px;
+        width: 40px;
     }
     .class2_bl_tej {
-        /* margin-left: -26px; */
         width: 100%;
         position: relative;
         top: 1000px;
@@ -510,16 +429,14 @@ small {
     .card_body_bl_tej {
         font-size: 16px;
     }
-    .search_bl_tej {
-        width: 100%;
+    .search_bl_tej input {
+        width: 36%;
     }
     .grid_bl_tej ul {
         margin: 10px;
         display: flex;
         flex-direction: column;
     }
-
-    
     .cards_bl_tej {
         display: flex;
         flex-direction: column;
@@ -556,77 +473,89 @@ small {
     width: 100%;
     background-color: #F3F8FF;
     text-align: center;
-    /* font-size: 16px; */
    }
 
 }
 @media screen and (min-width: 481px) and (max-width: 767px){
+    .overflow_bl_tej {
+        overflow-x: hidden !important;
+    }
     .background_container_bl_tej {
         width: 100%;
     }
-
+    .card_title1_bl_tej{
+        font-size: 35px;
+    }
+    .card_title2_bl_tej{
+        font-size: 46px;
+    }
+    .subscribe_bl_tej input {
+        width: 340px;
+    }
     .class1_bl_tej {
         width: 400px;
     }
+    .more_bl_tej {
+        width: 280px;
+        float: right;
+    }
+    .more_bl_tej img {
+        position: relative;
+        left: 8px;
+    }
     .class2_bl_tej {
-        margin-left: -5rem;
-        margin-top: 54.25rem;
-        width: 37.5rem; 
+        width: 100%;
+        position: relative;
+        top: 1000px;
+        left: -50px;
+        margin-bottom: 1010px;
+    }
+    .class2_bl_tej {
+        margin-left: -8%;
     }
     .cards_1_bl_tej {
         display: block;
     }
     .card_1_bl_tej {
+        width: 98%;
         margin-bottom: 20px;
     }
-     
-    .more_bl_tej {
-         margin-top: 0.625rem; 
-        margin-bottom: 0.625rem; 
+    .card_img_top_bl_tej {
+        height: 260px;
     }
-    
-    .more_bl_tej img {
-        position: relative !important;
-        left: 1rem !important;
-    } 
+    .card_body_bl_tej {
+        font-size: 16px;
+    }
     .search_bl_tej {
         width: 100%;
-        
     }
-    
-    
-    .class2_box_bl_tej {
-        margin-top: 5rem; 
-    } 
-    
-  
     .grid_bl_tej ul {
-        margin: 3%;
+        margin: 10px;
         display: flex;
         flex-direction: column;
     }
-
-    
     .cards_bl_tej {
         display: flex;
         flex-direction: column;
     }
     .card_bl_tej {
         width: 90%;
-        margin-left: 20px;
+        margin: 10px;
     } 
    .blogs_img_bl_tej {
-        width: 90%;
+        width: 98%;
         height: 90%;
-        margin-left: 20px;
+        margin: -10px;
    }
    .box_in_bl_tej {
-    width: 90%;
-    margin-left: 20px;
+    width: 98%;
+    margin-left: 10px;
+    padding: 0;
    }
    .blogs_bl_tej {
     flex-direction: column;
     align-items: flex-start;
+    text-align: center;
    }
    .box_in_bl_tej a {
     float: left;
@@ -634,43 +563,46 @@ small {
    }
    .lovetohear_bl_tej {
     width: 100%;
+   }
 }
+@media screen and (min-width: 481px) and (max-width: 600px) {
+    .more_bl_tej {
+        width: 220px;
+        float: right;
+    }
+    .more_bl_tej img {
+        position: relative;
+        left: 14px;
+        width: 40px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 910px) {
+    .card_bl_tej {
+        width: 360px;
+    }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .background_container_bl_tej {
         width: 100%;
     }
-
+    .class2_bl_tej {
+        width: 100%;
+        position: relative;
+        top: 1000px;
+        left: -100px;
+        margin-bottom: 1010px;
+        margin-left: -4%;
+    }
     .class1_bl_tej {
         width: 400px;
     }
-    /* .class2_bl_tej {
-        margin-left: -100px;
-        margin-top: 820px;
-        width: 100%;
-    }
-    .more_bl_tej {
-        margin-top: 10px;
-        margin-bottom: 10px;
+    .card_img_top_bl_tej {
+        height: 200px;
     }
     .more_bl_tej img {
         position: relative;
         left: 10px;
-    } */
-    /* .search_bl_tej {
-        position: relative;
-        top: -540px;
-    } */
-    /* .class2_box_bl_tej {
-        margin-top: 80px;
     }
-    .class3_bl_tej {
-        margin-top: 1450px;
-        margin-left: -350px;
-        width: 620px;
-        margin-bottom: 30px;
-    } */
-
     .grid_bl_tej ul {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -687,93 +619,27 @@ small {
     .background_container_bl_tej {
         width: 100%;
     }
-    .more_bl_tej img {
-        position: relative;
-        left: 20px;
+    .card_img_top_bl_tej {
+        height: 260px;
     }
-    /* .class3_bl_tej {
-        margin-top: 65px;
-        margin-left: 40px;
-    } */
+    .cards_1_bl_tej {
+        gap: 20px;
+    }
+    .class2_bl_tej {
+        margin-right: 3%;
+    }
     .lovetohear_bl_tej {
         width: 100%;
     }
 }
-
-@media screen and (min-width: 481px) and (max-width: 769px){
+@media screen and (min-width: 1201px) {
     .background_container_bl_tej {
-        width: max-content !important;
-    }
-
-    .class1_bl_tej {
-        width: 400px;
+        width: 100%;
     }
     .class2_bl_tej {
-        margin-left: -5rem;
-        margin-top: 51.25rem;
-        width: 37.5rem; 
+        margin-right: 3%;
     }
-    
-    .more_bl_tej {
-        margin-top: 0.625rem; 
-        margin-bottom: 0.625rem; 
+    .lovetohear_bl_tej {
+        width: 100%;
     }
-    
-    .more_bl_tej img {
-        position: relative;
-        left: 3.125rem;
-    }
-    
-    .search_bl_tej {
-        position: relative;
-        top: -33.75rem; 
-    }
-    
-    .class2_box_bl_tej {
-        margin-top: 5rem; 
-    }
-    
-    /* .class3_bl_tej {
-        margin-top: 90.625rem;
-        margin-left: -14.875rem; 
-        width: 37.5rem; 
-        margin-bottom: 1.875rem; 
-    } */
-    
-
-    .grid_bl_tej ul {
-        margin: 3%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    
-    .cards_bl_tej {
-        display: flex;
-        flex-direction: column;
-    }
-    .card_bl_tej {
-        width: 600px;
-        margin-left: 20px;
-    } 
-   .blogs_img_bl_tej {
-        width: 600px;
-        height: 600px;
-        margin-left: 20px;
-   }
-   .box_in_bl_tej {
-    width: 600px;
-    margin-left: 20px;
-   }
-   .blogs_bl_tej {
-    flex-direction: column;
-    align-items: flex-start;
-   }
-   .box_in_bl_tej a {
-    float: left;
-    margin-bottom: 20px;
-   }
-   .lovetohear_bl_tej {
-    width: 750px;
-}
 }
