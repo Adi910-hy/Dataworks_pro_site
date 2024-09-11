@@ -200,7 +200,7 @@
                     </div>
                 </div>
             </div>
-            <div class="ra_scrollbar" style="margin-top: 2%;">
+            <div class="ra_scrollbar">
                 <div class="ra_Hiring">
                     <h2>Hiring Partners</h2>
                 </div>
@@ -215,326 +215,221 @@
                     {% endfor %}
                 </div>
             </div>
-        </div>
-        <div class="container-fluid" style="margin-top: 4%;">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="ai_main_col2">
-                        <div class="row">
-                            <div class="ra_coursereq">
-                                <div class="ra_courselist">
-                                    <div class="ra_requirement">
-                                        <h2>Course Requirement</h2>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="ai_main_col2">
+                            <div class="row">
+                                <div class="ra_coursereq">
+                                    <div class="ra_courselist">
+                                        <div class="ra_requirement">
+                                            <h2>Course Requirement</h2>
+                                        </div>
+                                        <ul>
+                                            {% for requirement in requirements %}
+                                            <li class="{% if forloop.counter > 2 %}hidden{% endif %}">
+                                                {{requirement.requirement }}</li>
+                                            {% endfor %}
+                                        </ul>
                                     </div>
-                                    <ul>
-                                        {% for requirement in requirements %}
-                                        <li class="{% if forloop.counter > 2 %}hidden{% endif %}">
-                                            {{requirement.requirement }}</li>
-                                        {% endfor %}
-                                    </ul>
-                                </div>
-                                <div class="ra_button-2">
-                                    <button id="course_req_button">See more<i
-                                            class="fa-solid fa-angle-down"></i></button>
+                                    <div class="ra_button-2">
+                                        <button id="course_req_button">See more<i
+                                                class="fa-solid fa-angle-down"></i></button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="ai_main_col3">
-                            <div class="ra_qa">
-                                <h2>FAQ'S</h2>
-                            </div>
-                            <div class="ra_faq">
-                                <div class="accordion" id="accordionPanelsStayOpenExample">
-                                    {% for faq in faqs %}
-                                    <div class="accordion-item {% if forloop.counter > 4 %}hidden{% endif %}">
-                                        <h2 class="accordion-header" id="headingFAQ{{ forloop.counter }}">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse"
-                                                data-bs-target="#panelsStayOpen-collapseFAQ{{ forloop.counter }}"
-                                                aria-expanded="false"
-                                                aria-controls="panelsStayOpen-collapseFAQ{{ forloop.counter }}">
-                                                {{ forloop.counter }}. {{ faq.faq_heading }}
-                                            </button>
-                                        </h2>
-                                        <div id="panelsStayOpen-collapseFAQ{{ forloop.counter }}"
-                                            class="accordion-collapse collapse"
-                                            aria-labelledby="headingFAQ{{ forloop.counter }}"
-                                            data-bs-parent="#accordionPanelsStayOpenExample">
-                                            <div class="accordion-body">
-                                                <ul>
-                                                    <li>{{ faq.faq_description }}</li>
-                                                </ul>
+                        <div class="row">
+                            <div class="ai_main_col3">
+                                <div class="ra_qa">
+                                    <h2>FAQ'S</h2>
+                                </div>
+                                <div class="ra_faq">
+                                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                                        {% for faq in faqs %}
+                                        <div class="accordion-item {% if forloop.counter > 4 %}hidden{% endif %}">
+                                            <h2 class="accordion-header" id="headingFAQ{{ forloop.counter }}">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#panelsStayOpen-collapseFAQ{{ forloop.counter }}"
+                                                    aria-expanded="false"
+                                                    aria-controls="panelsStayOpen-collapseFAQ{{ forloop.counter }}">
+                                                    {{ forloop.counter }}. {{ faq.faq_heading }}
+                                                </button>
+                                            </h2>
+                                            <div id="panelsStayOpen-collapseFAQ{{ forloop.counter }}"
+                                                class="accordion-collapse collapse"
+                                                aria-labelledby="headingFAQ{{ forloop.counter }}"
+                                                data-bs-parent="#accordionPanelsStayOpenExample">
+                                                <div class="accordion-body">
+                                                    <ul>
+                                                        <li>{{ faq.faq_description }}</li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    {% endfor %}
-                                    <div class="ra_f_button">
-                                        <button id="faqs_button">See more<i class="fa-solid fa-angle-down"></i></button>
+                                        {% endfor %}
+                                        <div class="ra_f_button">
+                                            <button id="faqs_button">See more<i
+                                                    class="fa-solid fa-angle-down"></i></button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="ra_earning-potential">
-                        <div class="ra_earnheading">
-                            <h2>Earning Potential</h2>
-                        </div>
+                    <div class="col-md-4">
+                        <div class="ra_earning-potential">
+                            <div class="ra_earnheading">
+                                <h2>Earning Potential</h2>
+                            </div>
 
-                        <ul>
-                            <div class="ra_minspan">
-                                <div class="ra_pack">6 LPA</div>
-                                <div class="progress" role="progressbar" aria-valuenow="25" aria-valuemin="0"
-                                    aria-valuemax="100" style="height:8%">
-                                    <div class="progress-bar " style="width: 25% ; background:  #e7075e">
+                            <ul>
+                                <div class="ra_minspan">
+                                    <div class="ra_pack">6 LPA</div>
+                                    <div class="progress" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                                        aria-valuemax="100" style="height:8%">
+                                        <div class="progress-bar " style="width: 25% ; background:  #e7075e">
+                                        </div>
                                     </div>
+                                    <p class="ra_minimum">min</p>
                                 </div>
-                                <p class="ra_minimum">min</p>
-                            </div>
-                            <div class="ra_avgspan">
-                                <div class="ra_pack">12 LPA</div>
-                                <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75"
-                                    aria-valuemin="0" aria-valuemax="100" style="height: 8%">
-                                    <div class="progress-bar" style="width: 75% ; background:#e7075e ">
+                                <div class="ra_avgspan">
+                                    <div class="ra_pack">12 LPA</div>
+                                    <div class="progress" role="progressbar" aria-label="Warning example"
+                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="height: 8%">
+                                        <div class="progress-bar" style="width: 75% ; background:#e7075e ">
+                                        </div>
                                     </div>
+                                    <p class="ra_average">avg</p>
                                 </div>
-                                <p class="ra_average">avg</p>
-                            </div>
-                            <div class="ra_maxspan">
-                                <div class="ra_pack">20 LPA</div>
-                                <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100"
-                                    aria-valuemin="0" aria-valuemax="100" style="height:8%">
-                                    <div class="progress-bar " style="width: 100% ; background: #e7075e">
+                                <div class="ra_maxspan">
+                                    <div class="ra_pack">20 LPA</div>
+                                    <div class="progress" role="progressbar" aria-label="Danger example"
+                                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height:8%">
+                                        <div class="progress-bar " style="width: 100% ; background: #e7075e">
+                                        </div>
                                     </div>
+                                    <p class="ra_maximum">max</p>
                                 </div>
-                                <p class="ra_maximum">max</p>
-                            </div>
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="ra_tools">
-            <div class="ra_Ai_tools">
-                <h2>AI Fundamental Tools Covered</h2>
-            </div>`
-            <div class="ra_scroll1">
-                <div class="container-fluid"></div>
+            <div class="ra_configurations">
+                <div class="ra_tools">
+                    <div class="ra_Ai_tools">
+                        <h2>AI Fundamental Tools Covered</h2>
+                    </div>`
+                    <div class="ra_scroll1">
+                        <div class="container-fluid">
+                            <div class="row">
+                                {% for tool in tools %}
+                                <div class="col-md-2">
+                                    <img src="{{ tool.image.url }}" class="ra_tool1" height="75%" width="75%">
+                                    <p class="ra_toolspara">{{ tool.tool_name }}</p>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="col-md-8">
+                        <div class="demo_para">
+                            <p>{{ demo_request.paragraph_text }}</p>
+                            <a href="{{ demo_request.button_url }}" class="ra_request">{{ demo_request.button_text}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="ra_certifications">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="ra_cert_para">
+                                <h2 class=" ra_course_cert">Course Certificate</h2>
+                                <p>{{ certificate.description }}</p>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            {% if certificate.image %}
+                            <img class="ra_cert-img" src="{{ certificate.image.url }}" height="400px" width="550px">
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ra_review_setting">
+                <h2>Course Reviews</h2>
+            </div>
+            <div class="container-fluid all_reviews">
                 <div class="row">
-                    {% for tool in tools %}
-                    <div class="col-md-2">
-                        <div class="ra_tool1">
-                            <img src="{{ tool.image.url }}" height="150px" width="150px">
-                            <p class="ra_toolspara">{{ tool.tool_name }}</p>
+                    {% for review in reviews %}
+                    <div class="col-md-3">
+                        <div class="ra_reviews">
+                            <div class="ra_coursereview">
+                                <div class="ra_review ra_review{{ forloop.counter }}">
+                                    <div class="ra_review_img ra_review_img{{ forloop.counter }}">
+                                        <img src="{% static 'assets/images/course_page_images/pic.png' %}" width="63px"
+                                            height="63px" style="margin:-20px; border-radius: 5px;">
+                                        <div class="ra_name ra_rname{{ forloop.counter }}">{{ review.reviewer_name }}
+                                        </div>
+                                    </div>
+                                    <p class="ra_para ra_para{{ forloop.counter }}">{{ review.review_text }}</p>
+                                    <div class="starchecked">
+                                        {% for i in "1" %}
+                                        <span
+                                            class="fa fa-star {% if forloop.counter <= review.star_rating %}checked{% endif %}"></span>
+                                        {% endfor %}
+                                        <span>{{ review.star_rating }} Star Ratings</span>
+                                        <span class="ra_r_date">12 Apr 2024</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     {% endfor %}
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="ra_demo">
-        <p>{{ demo_request.paragraph_text }}</p>
-        <a href="{{ demo_request.button_url }}" class="ra_request">{{ demo_request.button_text }}</a>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <h2 class=" ra_course_cert">Course Certificate</h2>
-                <div class="ra_course_completion">
-                    <div class="ra_cert_para">
-                        <p>{{ certificate.description }}</p>
-                    </div>
-                </div>
+            <div class="ra_cardshead">
+                <h2>Recommended Courses</h2>
             </div>
-            <div class="col-md-6">
-                {% if certificate.image %}
-                <img class="ra_cert-img" src="{{ certificate.image.url }}" height="400px" width="550px">
-                {% endif %}
-            </div>
-        </div>
-    </div>
-    <div class="ra_review">
-        <h2>Course Reviews</h2>
-    </div>
-    <div class="container">
-        <div class="row">
-            {% for review in reviews %}
-            <div class="col-md-3">
-                <div class="ra_reviews">
-                    <div class="ra_coursereview">
-                        <div class="ra_review{{ forloop.counter }}">
-                            <div class="ra_review_img{{ forloop.counter }}">
-                                <img src="{% static 'assets/images/course_page_images/pic.png' %}" width="63px"
-                                    height="63px" style="margin:-20px; border-radius: 5px;">
-                                <div class="ra_rname{{ forloop.counter }}">{{ review.reviewer_name }}</div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="ra_recommended_courses">
+                    {% for mention in mentions %}
+                    <div class="col-md-3 p-0">
+                        <div class="ra_AI_container">
+                            <img src="{{ mention.image.url }}" class="ra_ai-img">
+                            <div class="ra_line_img">
+                                <img class="ra_dotted_bar" src="{%static 'assets/images/course_page_images/card1.png'%}"
+                                    height="53px">
+                                <div class="ra_card_1">
+                                    <p class="ra_cards_para">{{ mention.point1 }}</p>
+                                    <p class="ra_cards_para">{{ mention.point2 }}</p>
+                                </div>
                             </div>
-                            <p class="ra_para ra_para{{ forloop.counter }}">{{ review.review_text }}</p>
-                            <div class="starchecked">
-                                {% for i in "1" %}
-                                <span
-                                    class="fa fa-star {% if forloop.counter <= review.star_rating %}checked{% endif %}"></span>
-                                {% endfor %}
-                                <span>{{ review.star_rating }} Star Ratings</span>
-                                <span class="ra_r_date">12 Apr 2024</span>
+                            <div class="ra_heading">
+                                <h5><strong>{{ mention.course_title }}</strong></h>
+                            </div>
+                            <div class="ra_some_container">
+                                <div class="ra_people_img">
+                                    <img src="{%static 'assets/images/course_page_images/card2.png'%}" width="25px"
+                                        height="25px">
+                                    <p class="ra_people_text">1.7K+</p>
+                                </div>
+                                <div class="ra_star_img">
+                                    <img src="{%static 'assets/images/course_page_images/Star 14.png'%}" width="20px"
+                                        height="20px">
+                                    <p class="ra_star_text">5.0</p>
+                                </div>
+                                <button class="ra_cont_button">Enroll</button>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-    <div class="ra_cardshead">
-        <h2>Recommended Courses</h2>
-    </div>
-    <div class="container-fluid home_demand_courses">
-        <div class="row ">
-            <div class="cards_demand">
-                <div class="col-md-3">
-                    <div class="AI_container">
-                        <div class="ai-img">
-                            <img src="{% static 'assets/images/home_page_images/image.png' %}" width="365px"
-                                height="196px" style="border-radius:5px border=5px solid gray">
-                            <h6 class="ai_img_back_text">Beginner</h6>
-                        </div>
-                        <div class="line_img">
-                            <img class="dotted_bar" src="{% static 'assets/images/home_page_images/Group 78.png' %}"
-                                height="80px">
-                            <div class="card_1">
-                                <p class="cards_para">16 hrs of live instructor-led sessions and experimental
-                                </p>
-                                <p class="cards_para1">Interactive Trainer - Late Session
-                                    focused on Full Stack AI Engineering</p>
-                            </div>
-                        </div>
-                        <div class="heading">
-                            <h4>AI Engineering</h4>
-                        </div>
-                        <div class="some_container">
-                            <div class="people_img">
-                                <img src="{% static 'assets/images/home_page_images/Rectangle 229.png' %}" width="30px"
-                                    height="30px">
-                                <p class="people_text">1.7K+</p>
-                            </div>
-                            <div class="star_img">
-                                <img src="{% static 'assets/images/home_page_images/Star 17.png' %}" width="25px"
-                                    height="25px">
-                                <p class="star_text">5.0</p>
-                            </div>
-                            <button class="cont_button">Enroll</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="AI_container">
-                        <div class="ai-img">
-                            <img src="{% static 'assets/images/home_page_images/image (3).png' %}" width="365px"
-                                height="196px" style="border-radius:5px border=5px solid gray">
-                            <h6 class="ai_img_back_text">Beginner</h6>
-
-                        </div>
-                        <div class="line_img">
-                            <img class="dotted_bar" src="{% static 'assets/images/home_page_images/Group 78.png' %}"
-                                height="80px">
-                            <div class="card_1">
-                                <p class="cards_para">16 hrs of live instructor-led sessions and experimental
-                                </p>
-                                <p class="cards_para1">Interactive Trainer - Late Session
-                                    focused on Full Stack AI Engineering</p>
-                            </div>
-                        </div>
-                        <div class="heading">
-                            <h4>Cloud Computing</h4>
-                        </div>
-                        <div class="some_container">
-                            <div class="people_img">
-                                <img src="{% static 'assets/images/home_page_images/Rectangle 229.png' %}" width="30px"
-                                    height="30px">
-                                <p class="people_text">1.7K+</p>
-                            </div>
-                            <div class="star_img">
-                                <img src="{% static 'assets/images/home_page_images/Star 17.png' %}" width="25px"
-                                    height="25px">
-                                <p class="star_text">5.0</p>
-                            </div>
-                            <button class="cont_button">Enroll</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="AI_container">
-                        <div class="ai-img">
-                            <img src="{% static 'assets/images/home_page_images/image (2).png' %}" width="365px"
-                                height="196px" style="border-radius:5px border=5px solid gray">
-                            <h6 class="ai_img_back_text">Beginner</h6>
-
-                        </div>
-                        <div class="line_img">
-                            <img class="dotted_bar" src="{% static 'assets/images/home_page_images/Group 78.png' %}"
-                                height="80px">
-                            <div class="card_1">
-                                <p class="cards_para">16 hrs of live instructor-led sessions and experimental
-                                </p>
-                                <p class="cards_para1">Interactive Trainer - Late Session
-                                    focused on Full Stack AI Engineering</p>
-                            </div>
-                        </div>
-                        <div class="heading">
-                            <h4>ChatGpt</h4>
-                        </div>
-                        <div class="some_container">
-                            <div class="people_img">
-                                <img src="{% static 'assets/images/home_page_images/Rectangle 229.png' %}" width="30px"
-                                    height="30px">
-                                <p class="people_text">1.7K+</p>
-                            </div>
-                            <div class="star_img">
-                                <img src="{% static 'assets/images/home_page_images/Star 17.png' %}" width="25px"
-                                    height="25px">
-                                <p class="star_text">5.0</p>
-                            </div>
-                            <button class="cont_button">Enroll</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="AI_container">
-                        <div class="ai-img">
-                            <img src="{% static 'assets/images/home_page_images/image (4).png' %}" width="365px"
-                                height="196px" style="border-radius:5px border=5px solid gray">
-                            <h6 class="ai_img_back_text">Beginner</h6>
-
-                        </div>
-                        <div class="line_img">
-                            <img class="dotted_bar" src="{% static 'assets/images/home_page_images/Group 78.png' %}"
-                                height="80px">
-                            <div class="card_1">
-                                <p class="cards_para">16 hrs of live instructor-led sessions and experimental
-                                </p>
-                                <p class="cards_para1">Interactive Trainer - Late Session </br>
-                                    focused on Full Stack AI Engineering</p>
-                            </div>
-                        </div>
-                        <div class="heading">
-                            <h4>Python Programming</h4>
-                        </div>
-                        <div class="some_container">
-                            <div class="people_img">
-                                <img src="{% static 'assets/images/home_page_images/Rectangle 229.png' %}" width="30px"
-                                    height="30px">
-                                <p class="people_text">1.7K+</p>
-                            </div>
-                            <div class="star_img">
-                                <img src="{% static 'assets/images/home_page_images/Star 17.png' %}" width="25px"
-                                    height="25px">
-                                <p class="star_text">5.0</p>
-                            </div>
-                            <button class="cont_button">Enroll</button>
-                        </div>
+                    {% endfor %}
                     </div>
                 </div>
             </div>

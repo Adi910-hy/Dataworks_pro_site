@@ -93,8 +93,8 @@ class DemoRequest(models.Model):
 
 class recommended_course(models.Model):
     image = models.ImageField()
-    point1 = models.CharField(max_length=50)
-    point2 = models.CharField(max_length=50)
+    point1 = models.CharField(max_length=150)
+    point2 = models.CharField(max_length=150)
     course_title = models.CharField(max_length=50)
 
 class Blog_Page(models.Model):
