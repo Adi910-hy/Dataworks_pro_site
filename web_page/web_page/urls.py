@@ -40,6 +40,7 @@ urlpatterns = [
     path('corporate/', views.corporate_view, name='corporate'),
     path('blog/<int:pk>/', views.blog_detail, name='blog_detail'),
     path('blog_list/', views.blog_list_view, name='blog_list'),
+    path('blog_header/', views.blog_header_view, name='category'),
 ]
 
 if settings.DEBUG:

@@ -38,7 +38,7 @@
                             </p>
                         </div>
                         <button type="button" class="Started_button">
-                            <a href="#">Get Started<i class="fa-solid fa-angle-right"></i></a>
+                            <a href="{% url 'foundations_test' %}">Get Started<i class="fa-solid fa-angle-right"></i></a>
                         </button>
                         <div class="home_Designed1">
                             <p>
@@ -97,30 +97,28 @@
                 </div>
                 <div class="row ">
                     <div class="cards_demand">
+                        {% for mention in mentions %}
                         <div class="col-md-3">
                             <div class="AI_container">
-                                <div class="ai-img">
-                                    <img src="{% static 'assets/images/home_page_images/image.png' %}" width="365px"
-                                        height="196px" style="border-radius:5px border=5px solid gray">
-                                    <h6 class="ai_img_back_text">Beginner</h6>
+                                <div class="ai-img_ns">
+                                    <img src="{{ mention.image.url }}" class="ai-img">
+                                    <!-- <h6 class="ai_img_back_text">Beginner</h6> -->
                                 </div>
                                 <div class="line_img">
                                     <img class="dotted_bar"
-                                        src="{% static 'assets/images/home_page_images/Group 78.png' %}" height="80px">
+                                        src="{% static 'assets/images/home_page_images/Group 78.png' %}" height="53px">
                                     <div class="card_1">
-                                        <p class="cards_para">16 hrs of live instructor-led sessions and experimental
-                                        </p>
-                                        <p class="cards_para1">Interactive Trainer - Late Session
-                                            focused on Full Stack AI Engineering</p>
+                                        <p class="cards_para">{{ mention.point1 }}</p>
+                                        <p class="cards_para">{{ mention.point2 }}</p>
                                     </div>
                                 </div>
                                 <div class="heading">
-                                    <h4>AI Engineering</h4>
+                                    <h5><strong>{{ mention.course_title }}</strong></h5>
                                 </div>
                                 <div class="some_container">
                                     <div class="people_img">
                                         <img src="{% static 'assets/images/home_page_images/Rectangle 229.png' %}"
-                                            width="30px" height="30px">
+                                            width="25px" height="25px">
                                         <p class="people_text">1.7K+</p>
                                     </div>
                                     <div class="star_img">
@@ -132,119 +130,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="AI_container">
-                                <div class="ai-img">
-                                    <img src="{% static 'assets/images/home_page_images/image (3).png' %}" width="365px"
-                                        height="196px" style="border-radius:5px border=5px solid gray">
-                                    <h6 class="ai_img_back_text">Beginner</h6>
-
-                                </div>
-                                <div class="line_img">
-                                    <img class="dotted_bar"
-                                        src="{% static 'assets/images/home_page_images/Group 78.png' %}" height="80px">
-                                    <div class="card_1">
-                                        <p class="cards_para">16 hrs of live instructor-led sessions and experimental
-                                        </p>
-                                        <p class="cards_para1">Interactive Trainer - Late Session
-                                            focused on Full Stack AI Engineering</p>
-                                    </div>
-                                </div>
-                                <div class="heading">
-                                    <h4>Cloud Computing</h4>
-                                </div>
-                                <div class="some_container">
-                                    <div class="people_img">
-                                        <img src="{% static 'assets/images/home_page_images/Rectangle 229.png' %}"
-                                            width="30px" height="30px">
-                                        <p class="people_text">1.7K+</p>
-                                    </div>
-                                    <div class="star_img">
-                                        <img src="{% static 'assets/images/home_page_images/Star 17.png' %}"
-                                            width="25px" height="25px">
-                                        <p class="star_text">5.0</p>
-                                    </div>
-                                    <button class="cont_button">Enroll</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="AI_container">
-                                <div class="ai-img">
-                                    <img src="{% static 'assets/images/home_page_images/image (2).png' %}" width="365px"
-                                        height="196px" style="border-radius:5px border=5px solid gray">
-                                    <h6 class="ai_img_back_text">Beginner</h6>
-
-                                </div>
-                                <div class="line_img">
-                                    <img class="dotted_bar"
-                                        src="{% static 'assets/images/home_page_images/Group 78.png' %}" height="80px">
-                                    <div class="card_1">
-                                        <p class="cards_para">16 hrs of live instructor-led sessions and experimental
-                                        </p>
-                                        <p class="cards_para1">Interactive Trainer - Late Session
-                                            focused on Full Stack AI Engineering</p>
-                                    </div>
-                                </div>
-                                <div class="heading">
-                                    <h4>ChatGpt</h4>
-                                </div>
-                                <div class="some_container">
-                                    <div class="people_img">
-                                        <img src="{% static 'assets/images/home_page_images/Rectangle 229.png' %}"
-                                            width="30px" height="30px">
-                                        <p class="people_text">1.7K+</p>
-                                    </div>
-                                    <div class="star_img">
-                                        <img src="{% static 'assets/images/home_page_images/Star 17.png' %}"
-                                            width="25px" height="25px">
-                                        <p class="star_text">5.0</p>
-                                    </div>
-                                    <button class="cont_button">Enroll</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="AI_container">
-                                <div class="ai-img">
-                                    <img src="{% static 'assets/images/home_page_images/image (4).png' %}" width="365px"
-                                        height="196px" style="border-radius:5px border=5px solid gray">
-                                    <h6 class="ai_img_back_text">Beginner</h6>
-
-                                </div>
-                                <div class="line_img">
-                                    <img class="dotted_bar"
-                                        src="{% static 'assets/images/home_page_images/Group 78.png' %}" height="80px">
-                                    <div class="card_1">
-                                        <p class="cards_para">16 hrs of live instructor-led sessions and experimental
-                                        </p>
-                                        <p class="cards_para1">Interactive Trainer - Late Session </br>
-                                            focused on Full Stack AI Engineering</p>
-                                    </div>
-                                </div>
-                                <div class="heading">
-                                    <h4>Python Programming</h4>
-                                </div>
-                                <div class="some_container">
-                                    <div class="people_img">
-                                        <img src="{% static 'assets/images/home_page_images/Rectangle 229.png' %}"
-                                            width="30px" height="30px">
-                                        <p class="people_text">1.7K+</p>
-                                    </div>
-                                    <div class="star_img">
-                                        <img src="{% static 'assets/images/home_page_images/Star 17.png' %}"
-                                            width="25px" height="25px">
-                                        <p class="star_text">5.0</p>
-                                    </div>
-                                    <button class="cont_button">Enroll</button>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
                 <div class="row">
                     <div class="col home_on_demand_courses1">
-                        <button type="ALL COURSES" class="button1"><a href="">ALL COURSES</a></button>
+                        <button type="ALL COURSES" class="button1"><a href="{% url 'foundations_test' %}">ALL COURSES</a></button>
                     </div>
                 </div>
             </div>
@@ -323,7 +214,7 @@
                 </div>
             </div>
             <div class="col home_on_categories">
-                <button type="ALL COURSES" class="home_on_categories_btn"><a href="">ALL CATEGORIES</a></button>
+                <button type="ALL COURSES" class="home_on_categories_btn"><a href="{% url 'foundations_test' %}">ALL CATEGORIES</a></button>
             </div>
         </section>
         <section>
@@ -343,7 +234,7 @@
                             courses. Don’t miss this exclusive opportunity to advance your learning journey at an
                             unbeatable price!</p>
                         <div class="home_discount5">
-                            <button type="ALL COURSES" class="button2"><a href="">ALL COURSES</a></button>
+                            <button type="ALL COURSES" class="button2"><a href="{% url 'foundations_test' %}">ALL COURSES</a></button>
                         </div>
                     </div>
                 </div>
@@ -418,36 +309,47 @@
                         <p><a href="" class="home_instructor02">LEARN MORE</a></p>
                     </div>
                     <div class="col-md-4 home_Choose_us1">
-                        <div class="home_instructor03">
+                        <!-- <div class="home_instructor03">
                             <i class="fa-solid fa-gear"></i>
+                        </div> -->
+                        <div class="home_in_im">
+                            <img src="{% static 'assets/images/home_page_images/setting-2.png' %}" class="home_in_ns"
+                                height="50" width="50">
+                            <span class="home_instructor04">High Quality Courses</span>
                         </div>
-                        <h1 class="home_instructor04">High Quality Courses</h1>
                         <p class="home_instructor05">Explore our top-notch courses, offering cutting-<br />edge content
                             for practical skill development,<br /> ensuring you excel in your chosen field.</p>
-                        <div class="home_instructor06">
-                            <i class="fa-regular fa-folder-open"></i>
+                        <div>
+                            <img src="{% static 'assets/images/home_page_images/document.png' %}" class="home_in_ns"
+                                height="50" width="50">
+                            <span class="home_instructor07">Life Time Access</span>
                         </div>
-                        <h1 class="home_instructor07">Life Time Access</h1>
                         <p class="home_instructor08">Enjoy lifelong learning with unlimited access to <br />extensive
                             resources, allowing you to revisit<br /> materials and stay updated at your own pace.</p>
                     </div>
                     <div class="col-md-4 home_Choose_us2">
-                        <div class="home_instructor09">
-                            <i class="fa-solid fa-user-tie"></i>
+                        <div>
+                            <img src="{% static 'assets/images/home_page_images/user.png' %}" class="home_in_ns"
+                                height="50" width="50">
+                            <span class="home_instructor10">Expert Instructors</span>
+                            <div>
+                                <p class="home_instructor11">Learn from industry leaders who provide real-<br />world
+                                    insights,
+                                    enriching your understanding of<br /> the subject matter for a guided path to
+                                    success.</p>
+                                <div>
+                                    <img src="{% static 'assets/images/home_page_images/security-safe.png' %}"
+                                        class="home_in_ns" height="50" width="50">
+                                    <span class="home_instructor13">Dedicated Support</span>
+                                </div>
+                                <p class="home_instructor14">Experience unwavering assistance with our<br /> support
+                                    system,
+                                    ensuring you receive help<br /> precisely when needed for a seamless learning<br />
+                                    journey.
+                                </p>
+                            </div>
                         </div>
-                        <h1 class="home_instructor10">Expert Instructors</h1>
-                        <p class="home_instructor11">Learn from industry leaders who provide real-<br />world insights,
-                            enriching your understanding of<br /> the subject matter for a guided path to success.</p>
-                        <div class="home_instructor12">
-                            <i class="fa-solid fa-shield"></i>
-                        </div>
-                        <h1 class="home_instructor13">Dedicated Support</h1>
-                        <p class="home_instructor14">Experience unwavering assistance with our<br /> support system,
-                            ensuring you receive help<br /> precisely when needed for a seamless learning<br /> journey.
-                        </p>
                     </div>
-                </div>
-            </div>
         </section>
 
         <section>
@@ -462,7 +364,11 @@
                         <img src="{% static 'assets/images/home_page_images/news_1.jpg' %}" class="card-img-top"
                             alt="...">
                         <div class="card-body">
-                            <h5 class="card_date">April 1,2021</h5>
+                            <div class="home_crd">
+                                <img src="{% static 'assets/images/home_page_images/calendar.png' %}" height="25"
+                                    width="25">
+                                <span class="card_date">April 1,2021</span>
+                            </div>
                             <h3 class="card-title_blog">How to Build Career</br>
                                 in Cloud Computing</h3>
 
@@ -478,7 +384,11 @@
                         <img src="{% static 'assets/images/home_page_images/news_2.jpg' %}" class="card-img-top"
                             alt="...">
                         <div class="card-body">
-                            <h5 class="card_date">April 1,2021</h5>
+                            <div class="home_crd">
+                                <img src="{% static 'assets/images/home_page_images/calendar.png' %}" height="25"
+                                    width="25">
+                                <span class="card_date">April 1,2021</span>
+                            </div>
                             <h3 class="card-title_blog">AI Increase</br>
                                 innovation rate by 2021</h3>
 
@@ -494,7 +404,11 @@
                         <img src="{% static 'assets/images/home_page_images/news_3.jpg' %}" class="card-img-top"
                             alt="...">
                         <div class="card-body">
-                            <h5 class="card_date">April 1,2021</h5>
+                            <div class="home_crd">
+                                <img src="{% static 'assets/images/home_page_images/calendar.png' %}" height="25"
+                                    width="25">
+                                <span class="card_date">April 1,2021</span>
+                            </div>
                             <h3 class="card-title_blog">7 Tips for Protecting</br>
                                 Your Data When Using</br>
                                 Generative-AI Tools </h3>
@@ -528,7 +442,7 @@
                 <i class="fa-solid fa-chevron-right"></i>
             </div>
             <div class="home_deccan2">
-                <img class="pictures" src="{% static 'assets/images/home_page_images/times of india.png' %}"
+                <img class="pictures_ns" src="{% static 'assets/images/home_page_images/times of india.png' %}"
                     height="150" width="400">
             </div>
             <div class="home_deccan3">

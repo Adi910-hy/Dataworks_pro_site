@@ -67,37 +67,20 @@
                                                 </div>
                                             </div>
                                             <div class="courses">
+                                                {% for course_type in course_types %}
+                                                {% if course_type.name == 'Foundations' %}
+                                                {% for course in courses %}
+                                                {% if course.category == course_type %}
                                                 <div class="course-card">
-                                                    <img class="icon_col"
-                                                        src="{% static 'assets/images/blog_page_images/arcticons_ask-ai (2).png' %}"
-                                                        width="30" height="30">
-                                                    <h4>AI Fundamentals</h4>
-                                                    <a href="#">→</a>
+                                                    <img class="icon_col" src="{{ course.header_image.url }}" width="30"
+                                                        height="30">
+                                                    <h4>{{ course.title }}</h4>
+                                                    <a href="{% url 'course_detail' course.id %}">→</a>
                                                 </div>
-                                                <div class="course-card">
-                                                    <img src="{% static 'assets/images/blog_page_images/cloud-add.png' %}"
-                                                        width="25" height="25">
-                                                    <h4>Cloud Computing</h4>
-                                                    <a href="#">→</a>
-                                                </div>
-                                                <div class="course-card">
-                                                    <img src="{% static 'assets/images/blog_page_images/arcticons_openai-chatgpt.png' %}"
-                                                        width="25" height="25">
-                                                    <h4>Chat GPT</h4>
-                                                    <a href="#">→</a>
-                                                </div>
-                                                <div class="course-card">
-                                                    <img src="{% static 'assets/images/blog_page_images/Group.png' %}"
-                                                        width="25" height="25">
-                                                    <h4>IT Essentials</h4>
-                                                    <a href="#">→</a>
-                                                </div>
-                                                <div class="course-card">
-                                                    <img src="{% static 'assets/images/blog_page_images/Group (1).png' %}"
-                                                        width="25" height="25">
-                                                    <h4>Data Engineering Foundations</h4>
-                                                    <a href="#">→</a>
-                                                </div>
+                                                {% endif %}
+                                                {% endfor %}
+                                                {% endif %}
+                                                {% endfor %}
                                             </div>
                                         </div>
                                     </div>
@@ -114,37 +97,20 @@
                                                 </div>
                                             </div>
                                             <div class="courses">
+                                                {% for course_type in course_types %}
+                                                {% if course_type.name == 'Job-Oriented' %}
+                                                {% for course in courses %}
+                                                {% if course.category == course_type %}
                                                 <div class="course-card">
-                                                    <img class="icon_col"
-                                                        src="{% static 'assets/images/blog_page_images/fluent_cloud-database-20-regular.png' %}"
-                                                        width="30" height="30">
-                                                    <h4>Cloud Data Engineering & Analytics Program</h4>
-                                                    <a href="#">→</a>
+                                                    <img class="icon_col" src="{{ course.header_image.url }}" width="30"
+                                                        height="30">
+                                                    <h4>{{ course.title }}</h4>
+                                                    <a href="{% url 'course_detail' course.id %}">→</a>
                                                 </div>
-                                                <div class="course-card">
-                                                    <img src="{% static 'assets/images/blog_page_images/01.png' %}"
-                                                        width="25" height="25">
-                                                    <h4>Cloud Computing Mastery</h4>
-                                                    <a href="#">→</a>
-                                                </div>
-                                                <div class="course-card">
-                                                    <img src="{% static 'assets/images/blog_page_images/eos-icons_cloud-computing-outlined.png' %}"
-                                                        width="25" height="25">
-                                                    <h4>Full Stack Development</h4>
-                                                    <a href="#">→</a>
-                                                </div>
-                                                <div class="course-card">
-                                                    <img src="{% static 'assets/images/blog_page_images/code.png' %}"
-                                                        width="25" height="25">
-                                                    <h4>Full Stack AI Engineering</h4>
-                                                    <a href="#">→</a>
-                                                </div>
-                                                <div class="course-card">
-                                                    <img src="{% static 'assets/images/blog_page_images/code-circle.png' %}"
-                                                        width="25" height="25">
-                                                    <h4>Cyber Security Practitioner Program</h4>
-                                                    <a href="#">→</a>
-                                                </div>
+                                                {% endif %}
+                                                {% endfor %}
+                                                {% endif %}
+                                                {% endfor %}
                                             </div>
                                         </div>
                                     </div>
@@ -162,37 +128,20 @@
                                                 </div>
                                             </div>
                                             <div class="courses">
+                                                {% for course_type in course_types %}
+                                                {% if course_type.name == 'Career Advancer' %}
+                                                {% for course in courses %}
+                                                {% if course.category == course_type %}
                                                 <div class="course-card">
-                                                    <img class="icon_col"
-                                                        src="{% static 'assets/images/blog_page_images/command-square.png' %}"
-                                                        width="30" height="30">
-                                                    <h4>Generative AI</h4>
-                                                    <a href="#">→</a>
+                                                    <img class="icon_col" src="{{ course.header_image.url }}" width="30"
+                                                        height="30">
+                                                    <h4>{{ course.title }}</h4>
+                                                    <a href="{% url 'course_detail' course.id %}">→</a>
                                                 </div>
-                                                <div class="course-card">
-                                                    <img src="{% static 'assets/images/blog_page_images/cloud-add (1).png' %}"
-                                                        width="25" height="25">
-                                                    <h4>Leadership program in AI & Cloud</h4>
-                                                    <a href="#">→</a>
-                                                </div>
-                                                <div class="course-card">
-                                                    <img src="{% static 'assets/images/blog_page_images/profile.png' %}"
-                                                        width="25" height="25">
-                                                    <h4>Prompt Engineering</h4>
-                                                    <a href="#">→</a>
-                                                </div>
-                                                <div class="course-card">
-                                                    <img src="{% static 'assets/images/blog_page_images/majesticons_data-line.png' %}"
-                                                        width="25" height="25">
-                                                    <h4>Elite data Architect program</h4>
-                                                    <a href="#">→</a>
-                                                </div>
-                                                <div class="course-card">
-                                                    <img src="{% static 'assets/images/blog_page_images/people.png' %}"
-                                                        width="25" height="25">
-                                                    <h4>Full stack AI & ML program</h4>
-                                                    <a href="#">→</a>
-                                                </div>
+                                                {% endif %}
+                                                {% endfor %}
+                                                {% endif %}
+                                                {% endfor %}
                                             </div>
                                         </div>
                                     </div>
