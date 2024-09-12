@@ -30,6 +30,7 @@ class Course(models.Model):
     description = models.TextField()
     topic_image = models.ImageField()
     gif_image = models.ImageField()
+    header_image = models.ImageField()
 
     def __str__(self):
         return self.title

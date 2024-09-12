@@ -95,15 +95,6 @@ def foundations_test(request, course_type_id=None):
         'selected_course_type_id': course_type_id,
     })
 
-def header_courses(request, course_type_id=None):
-    course_types = CourseType.objects.all()
-    courses = Course.objects.all()
-    context = {
-        'course_types': course_types,
-        'courses': courses,
-    }
-    return render(request, 'base.html', context)
-
 def course_detail(request, course_id):
     course = get_object_or_404(Course, pk=course_id)
     course_contents = course.course_content.all()
@@ -130,7 +121,7 @@ def course_detail(request, course_id):
         form = EnrollmentForm()
 
     return render(request, 'coursepage_testing.html', {
-        'course': course,
+        'course_page': course,
         'form': form,
         'course_contents': course_contents,
         'faqs': faqs,
@@ -154,11 +145,13 @@ def category_course(request):
     course_types = CourseType.objects.all()
 
     courses = Course.objects.all()
+    mentions = recommended_course.objects.all()
 
     return render(request, 'home.html', {
         'categories': categories,
         'course_types': course_types,
-        'courses': courses
+        'courses': courses,
+        'mentions': mentions,
     })
 
 def corporate_view(request):
@@ -217,5 +210,16 @@ def blog_list_view(request):
     return render(request, 'blog_list.html', {
         'content': content,
         'blogs': blogs,
+        'courses': courses,
+        })
+
+def blog_header_view(request):
+    categories = CategoryType.objects.all()
+    course_types = CourseType.objects.all()
+    courses = Course.objects.all()
+
+    return render(request, 'base.html', {
+        'categories': categories,
+        'course_types': course_types,
         'courses': courses,
         })

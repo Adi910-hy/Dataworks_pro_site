@@ -4,8 +4,8 @@
 {% block content %}
 
 <head>
-    <title>AI Fundamentals dataworks</title>
     {% load static %}
+    <title>AI Fundamentals dataworks</title>
     <link rel="stylesheet" href="{% static 'assets/css/coursepage_testing.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
@@ -21,13 +21,16 @@
     <div class="ra_entirepage">
         <div class="ra_Ai_page">
             <div class="ra_home">
-                <span class="ra_span1">Home </span><span class="ra_span2"><img
-                        src="{% static 'assets/images/course_page_images/right.png' %}" height="8px" width="-500px"
-                        style="color:gray"></span><span class="ra_span3"> Courses</span><span class="ra_span4"><img
-                        src="{% static 'assets/images/course_page_images/right.png' %}" height="8px" width="-500px"
-                        style="color:gray"></span><span class="ra_span5">Foundations</span>
+                <span class="ra_span1"><a href="{% url 'category_course' %}">Home</a></span>
+                <span class="ra_span2"><img src="{% static 'assets/images/course_page_images/right.png' %}" height="8px"
+                        width="-500px" style="color:gray"></span>
+                <span class="ra_span3"><a href="{% url 'foundations_test' %}">Courses</a></span>
+                <span class="ra_span4"><img src="{% static 'assets/images/course_page_images/right.png' %}" height="8px"
+                        width="-500px" style="color:gray"></span>
+                <span class="ra_span5"><a href="{% url 'foundations_test_filtered' 1 %}">Foundations</a></span>
                 <img src="{% static 'assets/images/course_page_images/right.png' %}" height="8px" width="-500px"
-                    style="color:gray"></span><span class="span6"> AI Fundamentals</span>
+                    style="color:gray">
+                <span class="span6"> AI Fundamentals</span>
             </div>
             <div class="ra_Ai_main">
                 <div class="container-fluid">
@@ -37,11 +40,11 @@
                                 <div class="ra_Heading_row">
                                     <div class="ra_heading-line"></div>
                                     <div class="ra_Ai_heading">
-                                        <h2>{{course.title}}</h2>
+                                        <h2>{{course_page.title}}</h2>
                                     </div>
                                 </div>
                                 <div class="ra_Ai_para">
-                                    <p>{{course.description}}</p>
+                                    <p>{{course_page.description}}</p>
                                 </div>
                                 <div class="ra_buttonstar">
                                     <div class="ra_stars">
@@ -65,7 +68,7 @@
                         </div>
                         <div class="col-md-5">
                             <div class="ra_Ai_img">
-                                <img src="{{course.topic_image.url }}" class="ra_image_setting">
+                                <img src="{{course_page.topic_image.url }}" class="ra_image_setting">
                             </div>
                         </div>
                     </div>
@@ -399,37 +402,37 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="ra_recommended_courses">
-                    {% for mention in mentions %}
-                    <div class="col-md-3 p-0">
-                        <div class="ra_AI_container">
-                            <img src="{{ mention.image.url }}" class="ra_ai-img">
-                            <div class="ra_line_img">
-                                <img class="ra_dotted_bar" src="{%static 'assets/images/course_page_images/card1.png'%}"
-                                    height="53px">
-                                <div class="ra_card_1">
-                                    <p class="ra_cards_para">{{ mention.point1 }}</p>
-                                    <p class="ra_cards_para">{{ mention.point2 }}</p>
+                        {% for mention in mentions %}
+                        <div class="col-md-3 p-0">
+                            <div class="ra_AI_container">
+                                <img src="{{ mention.image.url }}" class="ra_ai-img">
+                                <div class="ra_line_img">
+                                    <img class="ra_dotted_bar"
+                                        src="{%static 'assets/images/course_page_images/card1.png'%}" height="53px">
+                                    <div class="ra_card_1">
+                                        <p class="ra_cards_para">{{ mention.point1 }}</p>
+                                        <p class="ra_cards_para">{{ mention.point2 }}</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="ra_heading">
-                                <h5><strong>{{ mention.course_title }}</strong></h>
-                            </div>
-                            <div class="ra_some_container">
-                                <div class="ra_people_img">
-                                    <img src="{%static 'assets/images/course_page_images/card2.png'%}" width="25px"
-                                        height="25px">
-                                    <p class="ra_people_text">1.7K+</p>
+                                <div class="ra_heading">
+                                    <h5><strong>{{ mention.course_title }}</strong></h>
                                 </div>
-                                <div class="ra_star_img">
-                                    <img src="{%static 'assets/images/course_page_images/Star 14.png'%}" width="20px"
-                                        height="20px">
-                                    <p class="ra_star_text">5.0</p>
+                                <div class="ra_some_container">
+                                    <div class="ra_people_img">
+                                        <img src="{%static 'assets/images/course_page_images/card2.png'%}" width="25px"
+                                            height="25px">
+                                        <p class="ra_people_text">1.7K+</p>
+                                    </div>
+                                    <div class="ra_star_img">
+                                        <img src="{%static 'assets/images/course_page_images/Star 14.png'%}"
+                                            width="20px" height="20px">
+                                        <p class="ra_star_text">5.0</p>
+                                    </div>
+                                    <button class="ra_cont_button">Enroll</button>
                                 </div>
-                                <button class="ra_cont_button">Enroll</button>
                             </div>
                         </div>
-                    </div>
-                    {% endfor %}
+                        {% endfor %}
                     </div>
                 </div>
             </div>

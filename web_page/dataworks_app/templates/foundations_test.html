@@ -20,9 +20,9 @@
     <div class="rs_entire_course_page">
         <div class="rs_home_background">
             <div class="rs_home">
-                <span class="rs_span1">Home </span><span class="rs_span2"><img
-                        src="{% static 'assets/images/course_list_images/right.png' %}" height="8px" width="-500px"></span><span
-                    class="rs_span3">Course Grid</span>
+                <span class="rs_span1"><a href="{% url 'category_course' %}">Home</a></span>
+                <img src="{% static 'assets/images/course_list_images/right.png' %}" height="8px"
+                    width="-500px"></span><span class="rs_span3">Course Grid</span>
             </div>
         </div>
         <div class="rs_coursepage">
@@ -45,7 +45,7 @@
             <div class="rs_card-container">
                 {% for course in courses %}
                 <div class="rs_course-AI">
-                        <img src="{{ MEDIA_URL }}{{ course.topic_image.url }}" class="rs_ai-img" alt="{{ course.title }}">
+                    <img src="{{ MEDIA_URL }}{{ course.topic_image.url }}" class="rs_ai-img" alt="{{ course.title }}">
                     <div class="rs_content">
                         <div class="rs_heading">
                             <p>{{ course.title }}</p>
