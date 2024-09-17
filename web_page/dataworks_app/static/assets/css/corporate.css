@@ -2,6 +2,8 @@ body {
   font-family: "montserrat" !important;
   width: 100%;
   overflow-x: hidden;
+  background-color: white !important;
+  
 }
 .pr_heading_kpr h1 {
   margin-top: 8rem;
@@ -81,6 +83,53 @@ body {
 .pr-placed_kpr span {
   font-size: 1.1rem;
 }
+#counter1{
+  font-size: 30px;
+  font-weight: 1000;
+  margin-top: 30px;
+  color: #666666;
+}
+#counter2{
+  font-size: 30px;
+  font-weight: 1000;
+  margin-top: 30px;
+  color: #666666;
+}
+#counter3{
+  font-size: 30px;
+  font-weight: 1000;
+  margin-top: 30px;
+  color: #666666;
+}
+#counter4{
+  font-size: 30px;
+  font-weight: 1000;
+  margin-top: 30px;
+  color: #666666;
+}
+
+/* .body2 {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+} */
+
+/* .counter-container {
+  display: flex;
+  justify-content: space-between;
+} */
+
+.counter {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0 20px;
+}
 .pr-platform_kpr {
   margin-top: 6rem;
   text-align: center;
@@ -110,6 +159,7 @@ body {
   background-color: #f3f8ff;
   padding: 2rem;
   border-radius: 1rem;
+  height: 250px;
 }
 .card-body_kpr .card-title_kpr {
   color: #e3144d !important;
@@ -148,13 +198,57 @@ body {
   height: auto;
 }
 
-.image1_kpr,
-.image2_kpr,
-.image3_kpr,
-.image4_kpr,
-.image5_kpr {
-  margin-right: 6%;
+/* #image-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  width: 100%;
+  max-width: 1000px; 
 }
+#image-container img {
+  width: 140px;
+  margin: 3%;
+} */
+.body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  
+}
+
+.slider {
+  width: 800px; /* Adjust width as needed */
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 1s linear;
+  white-space: nowrap; /* Prevent images from wrapping */
+}
+
+.slider-item {
+  flex: 0 0 150px; /* Adjust width as needed */
+  margin-right: 20px; /* Spacing between images */
+}
+
+.slider-item img {
+  width: 100px;
+  height: auto;
+  display: block;
+}
+
+/* .image1_kpr
+.image2_kpr
+.image3_kpr
+.image4_kpr
+.image4_kpr{
+  margin-right: 6%;
+} */
 .training-head2_kpr {
   font-size: 1.2rem;
   font-weight: 1000;
@@ -196,23 +290,6 @@ body {
   border-radius: 30px;
   margin-top: 20px;
 }
-.fnt-asm-btn1_kpr {
-  border: 1px solid #f3f8ff;
-  background-color: #f3f8ff;
-  font-size: 1.5rem;
-  /* margin-left: 30%; */
-  width: 10px;
-  color: #3690b2;
-  position: relative;
-  right: 5%;
-}
-.fnt-asm-btn2_kpr {
-  border: 1px solid #f3f8ff;
-  background-color: #f3f8ff;
-  font-size: 1.5rem;
-  color: #3690b2;
-  width: 10px;
-}
 
 .pr-train_kpr p {
   margin-bottom: 2rem;
@@ -220,7 +297,24 @@ body {
 .pr-train2_kpr p{
   margin-bottom: 2rem;
 }
+.fnt-asm-btn1_kpr{
+  border: none;
+  background-color: #f3f8ff;
+  color:#3690B2;
+  margin-right: 80%;
+  position: relative;
+  top:110px
 
+}
+.fnt-asm-btn2_kpr{
+  border: none;
+  background-color: #f3f8ff;
+  color:#3690B2;
+  margin-left: 80%;
+  position: relative;
+  top:-110px
+
+}
 /* @media screen and (min-width:320px) and (max-width:480px){
         .train-img{
             width:20%;
@@ -310,20 +404,21 @@ body {
     margin-bottom: 2rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    
   }
 
   .pr-platform1_kpr p {
     font-size: 1.2rem;
   }
 
-  .pr-platform2_kpr .image {
+  /* .pr-platform2_kpr .image {
     width: 100%;
     margin: 0 auto;
   }
   .pr-platform2_kpr {
     display: flex;
     flex-direction: column;
-  }
+  } */
   .image1_kpr {
     height: 10rem;
     width: 10rem;
@@ -337,20 +432,26 @@ body {
   }
   .fnt-asm-btn1_kpr {
     position: relative;
-    left: 0px;
+    left: -130px;
     top: 90px;
+    
     /* top: 90px; */
   }
   .fnt-asm-btn2_kpr {
     position: relative;
     right: -250px;
     top: -100px;
+    margin-left: -65%;
     /* bottom: 95px; */
   }
 
+.slider-item{
+  margin-right: 23px;
+}
   .pr-explore_kpr {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
+
   }
 
   .card-body_kpr .card-title_kpr {
@@ -368,6 +469,7 @@ body {
     position: relative;
     bottom: 6rem;
     font-size: 2rem;
+ 
   }
 
   .training-head_kpr,
@@ -597,6 +699,9 @@ body {
   .train-img_kpr {
     position: relative;
     bottom: 50px;
+  }
+  .fnt-asm-btn2_kpr{
+    margin-right: -70px;
   }
 }
 @media (min-width: 481px) and (max-width: 767px) {

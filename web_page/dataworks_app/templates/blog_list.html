@@ -1,11 +1,12 @@
 {% extends "base.html" %}
-{% load static %}
+
 <!DOCTYPE html>
 <html>
 
 {% block content %}
 
 <head>
+    {% load static %}
     <title>Blog_List</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -61,17 +62,19 @@
                                 <h1>{{content.popular_blog_title}}</h1>
                                 <p>{{content.popular_blog_mini_title}}</p>
                             </div>
+
+                            <form method="GET">
                             <div class="search_bl_tej">
                                 <img src="{% static 'assets/images/blog_list_images/ri_search-line.png' %}"
                                     alt="Search Icon" class="search-icon_bl_tej">
-                                <input type="text" placeholder="Search...">
+                                    <input type="text" name="query" value="{{ search_query }}" placeholder="Search blogs..." oninput="this.form.submit()">
                             </div>
+                            </form>
                         </div>
                         <div class="cards_1_bl_tej">
-                            {% for blog in blogs|slice:":3" %}
-                            <div class="card card_1_bl_tej">
-                                <img src="{{ blog.image_url }}" class="card-img-top card_img_top_bl_tej" alt="Blog Image"
-                                    height="300px">
+                            {% for blog in blogs|slice:":3"%}
+                            <div class="card card_1_bl_tej {% if search_query and search_query|lower in blog.heading|lower %}highlight{% endif %}">
+                                <img src="{{ blog.image_url }}" class="card-img-top card_img_top_bl_tej" alt="Blog Image" height="300px">
                                 <div class="card-body card_body_bl_tej">
                                     <small>{{ content.blog_author }}</small><br />
                                     <small>{{ content.publish_date|date:"d.m.Y" }}</small>
@@ -79,15 +82,14 @@
                                     <p class="card-text card_1_text_bl_tej">{{ blog.truncated_description }}</p>
                                     <div class="more_bl_tej">
                                         <a href="{% url 'blog_detail' blog.pk %}">
-                                            <button type="button">More <img
-                                                    src="{% static 'assets/images/blog_list_images/arrow-right.png' %}"
-                                                    width="30%"></button>
+                                            <button type="button">More <img src="{% static 'assets/images/blog_list_images/arrow-right.png' %}" width="30%"></button>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                             {% endfor %}
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -97,7 +99,7 @@
                 <h1>Discover resources for all your<br /> career needs.</h1>
                 <p>Unlock Tools and Opportunities to Boost Your Career Growth</p>
                 <div class="under_line_bl_tej">
-                    <p>See DataWorks's Courses</p>
+                    <p><a href="{% url 'foundations_test' %}">See DataWorks's Courses</p></a>
                 </div>
                 <div class="underline_bl_tej"></div>
                 <img src="{% static 'assets/images/blog_list_images/Vector.png' %}" height="10px">
@@ -113,7 +115,7 @@
                 </ul>
             </div>
             <div class="more3_bl_tej">
-                <button type="submit">Know More<img src="{% static 'assets/images/blog_list_images/arrow-right.png' %}"
+                <button type="submit"><a href="{% url 'foundations_test' %}">Know More</a><img src="{% static 'assets/images/blog_list_images/arrow-right.png' %}"
                         width="8%"></button>
             </div>
             <img src="{% static 'assets/images/blog_list_images/image 6.png' %}" class="crack_bl_tej" width="100%">

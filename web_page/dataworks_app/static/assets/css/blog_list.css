@@ -72,6 +72,7 @@ small {
     color: #E7005E;
     background-color: #F3F8FF;
 }
+
 .text_center_bl_tej {
     margin: 2%;
 }
@@ -95,6 +96,11 @@ small {
     border-radius: 55px;
     border: 1px solid #adacac;
     width: 28rem;
+}
+
+.card_bl_tej:hover{
+    transform:scale(1.03);
+    transition: ease 0.5s;
 }
 
 .card_1_title_bl_tej {
@@ -175,6 +181,10 @@ small {
 .under_line_bl_tej {
     color: #E7005E;
 }
+.under_line_bl_tej a{
+    color: #E7005E;
+    text-decoration: none;
+}
 .underline_bl_tej {
     border-top: 0.125rem solid #E7005E; 
     width: 12.5rem; 
@@ -212,6 +222,10 @@ small {
     background-color: white;
     border: none;
     float: right;
+}
+.more3_bl_tej button a{
+    color: #E7005E;
+    text-decoration: none;
 }
 .more3_bl_tej img {
     background-color: #E7005E;

@@ -3,232 +3,313 @@
 <html>
 
 {% block content %}
-
 <head>
     {% load static %}
-
-    <title>corporate</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{%static 'assets/css/corporate.css'%}" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-        rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+        <title>corporate</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{%static 'assets/css/corporate.css'%}"/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+            rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
-<body>
-    <div class="container-fluid pr_bgcolor_kpr">
-        <div class="row">
-            <div class="col-5 trans_head_kpr">
-                <div class="pr_heading_kpr">
-                    <h1>TransformYour Workforce</h1>
-                    <p>
-                        Empower your team with cutting-edge skills to drive innovation and
-                        excellence. Ensure continuous access to advanced training and
-                        resources to keep them at the forefront of industry developments
-                    </p>
-                </div>
-            </div>
-            <div class="col-7">
-                <div class="pr_image_kpr">
-                    <img src="{% static  'assets/images/corporate_page_images/corporate-img1.png' %}" height="60%"
-                        width="100%" />
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="pr-trusted_kpr">
-        <p>
-            Trusted by over 13,500+ Students & Organization Recommended Around the
-            world
-        </p>
-    </div>
-    <div class="container pr-sicp_kpr">
-        <div class="row">
-            <div class="col-3">
-                <div class="pr-student_kpr">
-                    <p>10,800</p>
-                    <span>student</span>
-                    <div class="stnt_kpr"></div>
-                </div>
-            </div>
-
-            <div class="col-3">
-                <div class="pr-instructor_kpr">
-                    <p>70</p>
-                    <span>Instructors</span>
-                    <div class="inst_kpr"></div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="pr-courses_kpr">
-                    <p>25</p>
-                    <span>courses</span>
-                    <div class="cour_kpr"></div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="pr-placed_kpr">
-                    <p>3,927</p>
-                    <span>placed</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid pr-platform_kpr">
-        <div class="row">
-            <div class="pr-platform1_kpr">
-                <p>Our associates in recruitment endeavors / platforms.</p>
-                <span>Dedicated Solutions with Diverse Expertise and unwavering
-                    Dedication in Dynamic Markets</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="pr-platform2_kpr">
-                    <button class="fnt-asm-btn1_kpr"><i class="fa-solid fa-angle-left"></i></button>
-                    <img class="image1_kpr" src="{% static  'assets/images/corporate_page_images/platform-img1.png' %}"
-                        height="100%" width="8%" />
-                    <img class="image2_kpr" src="{% static  'assets/images/corporate_page_images/platform-img2.png' %}"
-                        height="100%" width="8%" />
-                    <img class="image3_kpr" src="{% static  'assets/images/corporate_page_images/platform-img3.png' %}"
-                        height="100%" width="8%" />
-                    <img class="image4_kpr" src="{% static  'assets/images/corporate_page_images/platform-img4.png' %}"
-                        height="100%" width="8%" />
-                    <img class="image5_kpr" src="{% static  'assets/images/corporate_page_images/platform-img5.png' %}"
-                        height="100%" width="8%" />
-                    <button class="fnt-asm-btn2_kpr"><i class="fa-solid fa-angle-right"></i></button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="pr-explore_kpr">
-        <p>Explore now</p>
-    </div>
-    <div class="container card-container_kpr">
-        <div class="row">
-            <div class="col-sm-4 mb-3 mb-sm-0">
-                <div class="card_kpr">
-                    <div class="card-body_kpr">
-                        <h5 class="card-title_kpr">Find your dream course</h5>
-                        <p class="card-text_kpr">
-                            Achieve your ambitions with the perfect course at one of best
-                            institutions. Enroll in our specialized programs to elevate your
-                            career.
+    
+    <body>
+        <div class="container-fluid pr_bgcolor_kpr">
+            <div class="row">
+                <div class="col-5 trans_head_kpr" >
+                    <div class="pr_heading_kpr">
+                        <h1>TransformYour Workforce</h1>
+                        <p>
+                            Empower your team with cutting-edge skills to drive innovation and
+                            excellence. Ensure continuous access to advanced training and
+                            resources to keep them at the forefront of industry developments
                         </p>
-                        <a href="#" class="btn btn-primary_kpr">Explore Now</a>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card_kpr">
-                    <div class="card-body_kpr">
-                        <h5 class="card-title_kpr">Come & See Us</h5>
-                        <p class="card-text_kpr">
-                            Need assistance? Were here for you. Schedule a no-cost
-                            appointment with our specialists to explore how we can support
-                            your workforce development.
-                        </p>
-                        <a href="#" class="btn btn-primary_kpr">Book Appointment</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card_kpr">
-                    <div class="card-body_kpr">
-                        <h5 class="card-title_kpr">Why choose DataWorks</h5>
-                        <p class="card-text_kpr">
-                            Inspiring students since past 10+ years, we collaborate with
-                            leading candidates to provide high-quality training and support
-                            for your success.
-                        </p>
-                        <a href="#" class="btn btn-primary_kpr">Speak To Us</a>
+                <div class="col-7">
+                    <div class="pr_image_kpr">
+                        <img src="{% static  'assets/images/corporate_page_images/corporate-img1.png' %}" height="60%" width="100%" />
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="pr-features_kpr">
-        <p>Our Training Features</p>
-    </div>
+        <div class="pr-trusted_kpr">
+            <p>
+                Trusted by over 13,500+ Students & Organization Recommended Around the
+                world
+            </p>
+        </div>
+        <div class="container pr-sicp_kpr">
+            <div class="row">
+                <div class="col-3">
+                    <div class="pr-student_kpr">
+                        <div class="counter" id="counter1">0</div>
+                        <span>student</span>
+                        <div class="stnt_kpr"></div>
+                    </div>
+                </div>
+    
+                <div class="col-3">
+                    <div class="pr-instructor_kpr">
+                        <div class="counter" id="counter2">0</div>
+                        <span>Instructors</span>
+                        <div class="inst_kpr"></div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="pr-courses_kpr">
+                        <div class="counter" id="counter3">0</div>
+                        <span>courses</span>
+                        <div class="cour_kpr"></div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="pr-placed_kpr">
+                        <div class="counter" id="counter4">0</div>
+                        <span>placed</span>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <!-- <div class="body2">
+        <div class="counter-container">
+            <div class="counter" id="counter1">0</div>
+            <div class="counter" id="counter2">0</div>
+            <div class="counter" id="counter3">0</div>
+            <div class="counter" id="counter4">0</div>
+        </div>
+        </div> -->
+        <div class="container-fluid pr-platform_kpr">
+            <div class="row">
+                <div class="pr-platform1_kpr">
+                    <p>Our associates in recruitment endeavors / platforms.</p>
+                    <span>Dedicated Solutions with Diverse Expertise and unwavering
+                        Dedication in Dynamic Markets</span>
+                </div>
+            </div>
+            <button class="fnt-asm-btn1_kpr"><i class="fa-solid fa-angle-left"></i></button>
+            <div class="body">
+                <div class="slider">
+                    <div class="slider-track">
+                    
+                        <div class="slider-item"><img src="/static/assets/images/corporate_page_images/platform-img1.png" alt="Image 1"></div>
+                        <div class="slider-item"><img src="/static/assets/images/corporate_page_images/platform-img2.png" alt="Image 2"></div>
+                        <div class="slider-item"><img src="/static/assets/images/corporate_page_images/platform-img3.png" alt="Image 3"></div>
+                        <div class="slider-item"><img src="/static/assets/images/corporate_page_images/platform-img4.png" alt="Image 4"></div>
+                        <div class="slider-item"><img src="/static/assets/images/corporate_page_images/platform-img5.png" alt="Image 5"></div>
+                        <!-- <button class="fnt-asm-btn2_kpr"><i class="fa-solid fa-angle-right"></i></button> -->
+                    </div>
+                </div>
+            </div>
+            <button class="fnt-asm-btn2_kpr"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
 
 
-    <div class="container pr-training_kpr">
-        <div class="row">
-            <div class="col-3">
-                <div class="pr-train_kpr">
-                    <div>
-                        <h1 class="training-head_kpr">1. Personalized Learning Paths</h1>
-                        <p>
-                            Customize training to meet individual employee needs and career
-                            objectives, enhancing engagement and performance.
-                        </p>
-                    </div>
-                    <div>
-                        <h1 class="training-head_kpr">2. Mentorship and Coaching Programs</h1>
-                        <p>
-                            Facilitate one-on-one mentorship and coaching opportunities to
-                            provide personalized guidance and support.
-                        </p>
-                    </div>
-                    <div>
-                        <h1 class="training-head_kpr">
-                            3. Learning Management System (LMS) Integration
-                        </h1>
-                        <p>
-                            Seamlessly integrate with existing LMS platforms to streamline
-                            administration and tracking of learning activities
-                        </p>
+        <div class="pr-explore_kpr">
+            <p>Explore now</p>
+        </div>
+        <div class="container card-container_kpr" >
+            <div class="row">
+                <div class="col-sm-4 mb-3 mb-sm-0">
+                    <div class="card_kpr">
+                        <div class="card-body_kpr">
+                            <h5 class="card-title_kpr">Find your dream course</h5>
+                            <p class="card-text_kpr">
+                                Achieve your ambitions with the perfect course at one of best
+                                institutions. Enroll in our specialized programs to elevate your
+                                career.
+                            </p>
+                            <a href="#" class="btn btn-primary_kpr">Explore Now</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-6">
-                <div class="         ">
-                    <img src="{% static  'assets/images/corporate_page_images/training-img.png' %}" height="450"
-                        width="550" />
+                <div class="col-sm-4">
+                    <div class="card_kpr">
+                        <div class="card-body_kpr">
+                            <h5 class="card-title_kpr">Come & See Us</h5>
+                            <p class="card-text_kpr">
+                                Need assistance? Were here for you. Schedule a no-cost
+                                appointment with our specialists to explore how we can support
+                                your workforce development.
+                            </p>
+                            <a href="#" class="btn btn-primary_kpr">Book Appointment</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="col-3">
-                <div class="pr-train2_kpr">
-                    <div>
-                        <h1 class="training-head2_kpr">4. Real-Time Collaboration Tools</h1>
-                        <p>
-                            Enable real-time collaboration and communication among learners through integrated chat,
-                            video conferencing, and collaborative documents.
-                        </p>
-                    </div>
-                    <div>
-                        <h1 class="training-head2_kpr">5. Course Completion Certificates</h1>
-                        <p>
-                            Issue professional certificates upon completion of courses, recognizing the learner’s
-                            achievements and boosting their credentials.
-                        </p>
-                    </div>
-                    <div>
-                        <h1 class="training-head2_kpr">
-                            6. Project Collaboration Platforms
-                        </h1>
-                        <p>
-                            Provide collaborative platforms where learners can work on projects together, share
-                            resources, and communicate effectively.
-                        </p>
+                <div class="col-sm-4">
+                    <div class="card_kpr">
+                        <div class="card-body_kpr">
+                            <h5 class="card-title_kpr">Why choose DataWorks</h5>
+                            <p class="card-text_kpr">
+                                Inspiring students since past 10+ years, we collaborate with
+                                leading candidates to provide high-quality training and support
+                                for your success.
+                            </p>
+                            <a href="#" class="btn btn-primary_kpr">Speak To Us</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="lovetohear_kpr">
-        <h1>we would love to hear from you</h1>
-        <p>We are all exited to work with you and see you growing</p>
-        <input type="email" placeholder="Enter your mail id or mobile number"><br />
-        <button type="submit">Get in touch</button>
-    </div>
-</body>
+        <div class="pr-features_kpr">
+            <p>Our Training Features</p>
+        </div>
+    
+    
+        <div class="container pr-training_kpr">
+            <div class="row">
+                <div class="col-3">
+                    <div class="pr-train_kpr">
+                        <div>
+                            <h1 class="training-head_kpr">1. Personalized Learning Paths</h1>
+                            <p>
+                                Customize training to meet individual employee needs and career
+                                objectives, enhancing engagement and performance.
+                            </p>
+                        </div>
+                        <div>
+                            <h1 class="training-head_kpr">2. Mentorship and Coaching Programs</h1>
+                            <p>
+                                Facilitate one-on-one mentorship and coaching opportunities to
+                                provide personalized guidance and support.
+                            </p>
+                        </div>
+                        <div>
+                            <h1 class="training-head_kpr">
+                                3. Learning Management System (LMS) Integration
+                            </h1>
+                            <p>
+                                Seamlessly integrate with existing LMS platforms to streamline
+                                administration and tracking of learning activities
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            
+            
+    
+                    <div class="col-6">
+                        <div class="    train-img_kpr     ">
+                            <img src="{% static  'assets/images/corporate_page_images/training-img.png' %}" height="450" width="550" />
+                        </div>
+                    </div>
+    
+                    <div class="col-3">
+                        <div class="pr-train2_kpr">
+                            <div>
+                                <h1 class="training-head2_kpr">4. Real-Time Collaboration Tools</h1>
+                                <p>
+                                    Enable real-time collaboration and communication among learners through integrated chat, video conferencing, and collaborative documents. 
+                                </p>
+                            </div>
+                            <div>
+                                <h1 class="training-head2_kpr">5. Course Completion Certificates</h1>
+                                <p>
+                                    Issue professional certificates upon completion of courses, recognizing the learner’s achievements and boosting their credentials.
+                                </p>
+                            </div>
+                            <div>
+                                <h1 class="training-head2_kpr">
+                                    6. Project Collaboration Platforms 
+                                </h1>
+                                <p>
+                                    Provide collaborative platforms where learners can work on projects together, share resources, and communicate effectively. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+               
+            
+            </div>
+        </div>
+        <div class="lovetohear_kpr">
+            <h1>we would love to hear from you</h1>
+            <p>We are all exited to work with you and see you growing</p>
+            <input type="email" placeholder="Enter your mail id or mobile number"><br/>
+            <button type="submit">Get in touch</button>
+        </div>
+
+        <script>
+           const track = document.querySelector('.slider-track');
+    const items = document.querySelectorAll('.slider-item');
+    const itemWidth = items[0].offsetWidth; // Width of each image
+    const itemMargin = parseInt(getComputedStyle(items[0]).marginRight); // Margin between images
+    const moveDistance = itemWidth + itemMargin; // Distance to move per image
+    const totalItems = items.length; // Total number of images
+    const trackWidth = moveDistance * totalItems; // Total width of the track
+    let currentPosition = 0;
+    let cloneCount = 0;
+
+    // Clone the images to make the track seamless
+    function cloneItems() {
+        const itemsToClone = Array.from(items).map(item => item.cloneNode(true));
+        itemsToClone.forEach(item => track.appendChild(item));
+        cloneCount = itemsToClone.length;
+    }
+
+    // Initialize cloning of images
+    cloneItems();
+
+    // Adjust the width of the track to account for the cloned items
+    track.style.width = `${trackWidth * 2}px`;
+
+    function moveSlider() {
+        currentPosition -= moveDistance; // Move the slider to the left
+
+        // If the entire first set of images has scrolled out of view
+        if (Math.abs(currentPosition) >= trackWidth) {
+            currentPosition = 0; // Reset position
+            track.style.transition = 'none'; // Disable transition for instant reset
+            track.style.transform = `translateX(${currentPosition}px)`; // Reset position
+
+            // Continue movement after a frame to avoid visible jump
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    track.style.transition = 'transform 1s linear'; // Re-enable transition
+                    moveSlider(); // Continue the movement
+                });
+            });
+        } else {
+            // Move the slider with continuous scrolling
+            track.style.transform = `translateX(${currentPosition}px)`;
+            requestAnimationFrame(() => {
+                setTimeout(moveSlider, 3000); // Adjust delay as needed for smoother scrolling
+            });
+        }
+    }
+
+    // Start the movement after page load
+    moveSlider();
+
+     // Function to create a fast scrolling counter
+     function fastScrollCounter(counterId, targetNumber, increment, speed) {
+        const counterElement = document.getElementById(counterId);
+        let currentNumber = 0;
+
+        function updateCounter() {
+            currentNumber += increment;
+            counterElement.textContent = currentNumber;
+
+            if (currentNumber >= targetNumber) {
+                counterElement.textContent = targetNumber; // Ensure it lands exactly at the target number
+                clearInterval(interval); // Stop the counter when target is reached
+            }
+        }
+
+        const interval = setInterval(updateCounter, speed);
+    }
+
+    // Define each counter's target, increment, and speed
+    fastScrollCounter('counter1', 10800, 300, 40); // Counter 1: Target = 150, Increment by 10, Speed = 30ms
+    fastScrollCounter('counter2', 70, 2, 40); // Counter 2: Target = 300, Increment by 20, Speed = 40ms
+    fastScrollCounter('counter3', 25, 1, 40); // Counter 3: Target = 500, Increment by 25, Speed = 50ms
+    fastScrollCounter('counter4', 3924, 100, 40); // Counter 4: Target = 1000, Increment by 50, Speed = 60ms
+
+        </script>
+    </body>
 {% endblock %}
-
-</html>
+    </html>

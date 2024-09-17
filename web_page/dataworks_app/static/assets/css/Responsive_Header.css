@@ -14,7 +14,7 @@ body{
 .mega-menu{
     position: absolute;
     left:0rem;
-    /* display: none; */
+    display: none;
     margin-top:15px;
     background-color: #F3F8FF;
     width: 100%;

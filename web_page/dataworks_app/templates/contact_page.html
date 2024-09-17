@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html>
+
+{% block content %}
+
+<head>
+    {% load static %}
+
+    <title>corporate</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'assets/css/contact.css'%}" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container-fluid mt-5 cntnr-nl">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="contact_compress">
+                <h1 class="mb-4">Reach Out To Us:</h1>
+                <p class="para">Ready for a data transformation? Leave us a message, and let’s start the conversation on
+                    AI and Cloud brilliance.</p>
+                <div class="mb-3">
+                    <div class="icon2">
+                        <i class="fa-solid fa-envelope-open"></i>
+                        <span class="contact-label1">Email Address :</span>
+                    </div>
+                    <p class="para contact_text">contact@dataworks.pro</p>
+                </div>
+                <div class="mb-3">
+                    <div class="icon1">
+                        <i class="fa-solid fa-phone"></i>
+                        <span class="contact-label2">Phone Number :</span>
+                    </div>
+                    <p class="para contact_text">7386825666 <br /> 7386325666</p>
+                </div>
+                <div class="mb-3">
+                    <div class="icon1">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span class="contact-label">Our Location</span>
+                    </div>
+                    <p class="para contact_text">N-Heights, Plot No 38, Phase 2, Siddiq Nagar, HITEC City, Hyderabad,
+                        Telangana-500081</p>
+                </div>
+            </div>
+            </div>
+            <div class="col-md-6">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.5154986305717!2d78.37307621435306!3d17.425601888056846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91f36cba6e29%3A0x50883e4f48552cb7!2sK%20P%20H%20B%20Phase%209%2C%20Kukatpally%2C%20Hyderabad%2C%20Telangana%20500085!5e0!3m2!1sen!2sin!4v1599661372619!5m2!1sen!2sin"
+                    width="100%" height="55%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+{% endblock %}
+
+</html>

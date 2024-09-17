@@ -38,6 +38,7 @@ urlpatterns = [
     path('foundations_test/', views.foundations_test, name='foundations_test'),
     path('foundations_test/<int:course_type_id>/', views.foundations_test, name='foundations_test_filtered'),
     path('corporate/', views.corporate_view, name='corporate'),
+    path('contact/', views.contact_view, name='contact'),
     path('blog/<int:pk>/', views.blog_detail, name='blog_detail'),
     path('blog_list/', views.blog_list_view, name='blog_list'),
     path('blog_header/', views.blog_header_view, name='category'),

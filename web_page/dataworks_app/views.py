@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import *
 from .forms import *
-from bs4 import BeautifulSoup # type: ignore
+from bs4 import BeautifulSoup 
 import re
 
 def create_category(request):
@@ -81,20 +81,6 @@ def course_type_detail(request, course_type_id):
         'courses': courses,
     })
 
-def foundations_test(request, course_type_id=None):
-    if course_type_id:
-        course_type = get_object_or_404(CourseType, id=course_type_id)
-        courses = Course.objects.filter(category=course_type)
-    else:
-        courses = Course.objects.all()
-    
-    course_types = CourseType.objects.all()
-    return render(request, 'foundations_test.html', {
-        'courses': courses,
-        'course_types': course_types,
-        'selected_course_type_id': course_type_id,
-    })
-
 def course_detail(request, course_id):
     course = get_object_or_404(Course, pk=course_id)
     course_contents = course.course_content.all()
@@ -157,6 +143,9 @@ def category_course(request):
 def corporate_view(request):
     return render(request, 'corporate_page.html')
 
+def contact_view(request):
+    return render(request, 'contact_page.html')
+
 def blog_detail(request, pk):
     post = get_object_or_404(Blog_Page, pk=pk)
     blogs = Blog_Page.objects.all()
@@ -196,10 +185,54 @@ def extract_first_50_words(html_content):
     words = text.split()
     return ' '.join(words[:50]) + '...' if len(words) > 50 else text
 
+def blog_header_view(request):
+    course_types = CourseType.objects.all()
+    courses = Course.objects.all()
+
+    return render(request, 'base.html', {
+        'course_types': course_types,
+        'courses': courses,
+        })
+
+def foundations_test(request, course_type_id=None):
+    if course_type_id:
+        course_type = get_object_or_404(CourseType, id=course_type_id)
+        courses = Course.objects.filter(category=course_type)
+    else:
+        courses = Course.objects.all()
+
+    search_query = request.GET.get('query', '').strip()
+    
+    if not search_query and 'query' in request.GET:
+        return redirect('foundations_test') 
+
+    if search_query:
+        courses = courses.filter(title__istartswith=search_query)  
+
+    course_types = CourseType.objects.all()
+
+
+    return render(request, 'foundations_test.html', {
+        'courses': courses,
+        'course_types': course_types,
+        'selected_course_type_id': course_type_id,
+        'search_query': search_query, 
+    })
+
+
 def blog_list_view(request):
     content = Blog_List.objects.first()
-    blogs = Blog_Page.objects.all()
     courses = Course.objects.all()
+
+    search_query = request.GET.get('query', '').strip()
+
+    
+    if not search_query and 'query' in request.GET:
+        return redirect('blog_list') 
+
+    blogs = Blog_Page.objects.all()
+    if search_query:
+        blogs = blogs.filter(heading__istartswith=search_query)  
 
     for blog in blogs:
         soup = BeautifulSoup(blog.content_description, 'html.parser')
@@ -209,17 +242,7 @@ def blog_list_view(request):
 
     return render(request, 'blog_list.html', {
         'content': content,
+        'courses': courses,
         'blogs': blogs,
-        'courses': courses,
-        })
-
-def blog_header_view(request):
-    categories = CategoryType.objects.all()
-    course_types = CourseType.objects.all()
-    courses = Course.objects.all()
-
-    return render(request, 'base.html', {
-        'categories': categories,
-        'course_types': course_types,
-        'courses': courses,
-        })
+        'search_query': search_query, 
+    })

@@ -26,10 +26,14 @@
             </div>
         </div>
         <div class="rs_coursepage">
-            <div class="rs_course-searchbar">
-                <input type="search" placeholder="Search for a course">
-                <button id="rs_search">Search</button>
+           
+            <form method="GET">
+                <div class="rs_course-searchbar">
+                <input type="search" name="query" placeholder="Search for a course" oninput="this.form.submit()" value="{{ search_query }}">
+                <button type="submit" id="rs_search">Search</button>
             </div>
+            </form>
+        
             <div class="rs_course-para">
                 <p>Choose your career path</p>
             </div>
@@ -43,27 +47,27 @@
                 {% endfor %}
             </div>
             <div class="rs_card-container">
-                {% for course in courses %}
-                <div class="rs_course-AI">
-                    <img src="{{ MEDIA_URL }}{{ course.topic_image.url }}" class="rs_ai-img" alt="{{ course.title }}">
-                    <div class="rs_content">
-                        <div class="rs_heading">
-                            <p>{{ course.title }}</p>
-                        </div>
-                        <div class="rs_Ai-para">
-                            <p id="rs_aip">{{ course.description }}</p>
-                        </div>
-                    </div>
-                    <div class="rs_aibutton">
-                        <a href="{% url 'course_detail' course.id %}">
-                            <button id="rs_course-1">Read More</button>
-                        </a>
-                    </div>
-                </div>
-                {% endfor %}
+    {% for course in courses %}
+    <div class="rs_course-AI {% if search_query and search_query|lower in course.title|lower %}highlight{% endif %}">
+        <img src="{{ MEDIA_URL }}{{ course.topic_image.url }}" class="rs_ai-img" alt="{{ course.title }}">
+        <div class="rs_content">
+            <div class="rs_heading">
+                <p>{{ course.title }}</p>
+            </div>
+            <div class="rs_Ai-para">
+                <p id="rs_aip">{{ course.description }}</p>
             </div>
         </div>
+        <div class="rs_aibutton">
+            <a href="{% url 'course_detail' course.id %}">
+                <button id="rs_course-1">Read More</button>
+            </a>
+        </div>
     </div>
+    {% endfor %}
+</div>
+         
+        </div>
 </body>
 {% endblock %}
 

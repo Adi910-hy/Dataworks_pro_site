@@ -1,11 +1,11 @@
-{% extends "base.html" %}
+{% extends "base.html"%}
 <!DOCTYPE html>
 <html>
 {% block content %}
 
 <head>
-    {% load static %}
     <title>AI Fundamentals dataworks</title>
+    {% load static %}
     <link rel="stylesheet" href="{% static 'assets/css/coursepage_testing.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
@@ -14,6 +14,8 @@
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 
@@ -21,16 +23,13 @@
     <div class="ra_entirepage">
         <div class="ra_Ai_page">
             <div class="ra_home">
-                <span class="ra_span1"><a href="{% url 'category_course' %}">Home</a></span>
-                <span class="ra_span2"><img src="{% static 'assets/images/course_page_images/right.png' %}" height="8px"
-                        width="-500px" style="color:gray"></span>
-                <span class="ra_span3"><a href="{% url 'foundations_test' %}">Courses</a></span>
-                <span class="ra_span4"><img src="{% static 'assets/images/course_page_images/right.png' %}" height="8px"
-                        width="-500px" style="color:gray"></span>
-                <span class="ra_span5"><a href="{% url 'foundations_test_filtered' 1 %}">Foundations</a></span>
+                <span class="ra_span1">Home </span><span class="ra_span2"><img
+                        src="{% static 'assets/images/course_page_images/right.png' %}" height="8px" width="-500px"
+                        style="color:gray"></span><span class="ra_span3"> Courses</span><span class="ra_span4"><img
+                        src="{% static 'assets/images/course_page_images/right.png' %}" height="8px" width="-500px"
+                        style="color:gray"></span><span class="ra_span5">Foundations</span>
                 <img src="{% static 'assets/images/course_page_images/right.png' %}" height="8px" width="-500px"
-                    style="color:gray">
-                <span class="span6"> AI Fundamentals</span>
+                    style="color:gray"></span><span class="ra_span6"> AI Fundamentals</span>
             </div>
             <div class="ra_Ai_main">
                 <div class="container-fluid">
@@ -95,8 +94,8 @@
                                         {% endfor %}
                                     </ul>
                                     <div class="read-more-btn">
-                                        <button id="see-more-btn">See More<i
-                                                class="fa-solid fa-angle-down"></i></button>
+                                        <button id="see-more-btn">See More<i class="fa-solid fa-angle-down"
+                                                style="margin-left:8px"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -156,8 +155,8 @@
                                     </div>
                                     {% endfor %}
                                     <div class="ra_button-1">
-                                        <button id="accordion-btn">See More<i
-                                                class="fa-solid fa-angle-down"></i></button>
+                                        <button id="accordion-btn">See More<i class="fa-solid fa-angle-down"
+                                                style="margin-left:8px"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -203,7 +202,7 @@
                     </div>
                 </div>
             </div>
-            <div class="ra_scrollbar">
+            <!-- <div class="ra_scrollbar">
                 <div class="ra_Hiring">
                     <h2>Hiring Partners</h2>
                 </div>
@@ -216,6 +215,28 @@
                     <div class="ra_vertical_bar"></div>
                     {% endif %}
                     {% endfor %}
+                </div>
+            </div> -->
+            <div class="ra_Hiring">
+                <h2>Hiring Partners</h2>
+            </div>
+            <div class="ra_body">
+                <div class="slider">
+                    <div class="slider-track">
+                        <!-- Original images -->
+                        <div class="slider-item"><img src="/static/assets/images/course_page_images/infosys.png"
+                                alt="Image 1"></div>
+                        <div class="slider-item"><img src="/static/assets/images/course_page_images/tcs.png"
+                                alt="Image 2"></div>
+                        <div class="slider-item"><img src="/static/assets/images/course_page_images/microsoft.png"
+                                alt="Image 3"></div>
+                        <div class="slider-item"><img src="/static/assets/images/course_page_images/tech.png"
+                                alt="Image 4"></div>
+                        <div class="slider-item"><img src="/static/assets/images/course_page_images/wipro.png"
+                                alt="Image 5"></div>
+                        <div class="slider-item"><img src="/static/assets/images/course_page_images/ibm.png"
+                                alt="Image 6" style="margin-top: 40px;"></div>
+                    </div>
                 </div>
             </div>
             <div class="container-fluid">
@@ -236,8 +257,8 @@
                                         </ul>
                                     </div>
                                     <div class="ra_button-2">
-                                        <button id="course_req_button">See more<i
-                                                class="fa-solid fa-angle-down"></i></button>
+                                        <button id="course_req_button">See more<i class="fa-solid fa-angle-down"
+                                                style="margin-left:8px"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -266,66 +287,129 @@
                                                 data-bs-parent="#accordionPanelsStayOpenExample">
                                                 <div class="accordion-body">
                                                     <ul>
-                                                        <li>{{ faq.faq_description }}</li>
+                                                        <li style="line-height:2em">{{ faq.faq_description }}</li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
                                         {% endfor %}
                                         <div class="ra_f_button">
-                                            <button id="faqs_button">See more<i
-                                                    class="fa-solid fa-angle-down"></i></button>
+                                            <button id="faqs_button">See more<i class="fa-solid fa-angle-down"
+                                                    style="margin-left:8px"></i></button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <!-- <div class="col-md-4">
+                        <div class="ra_earning-potential">
+                            <div class="ra_earnheading">
+                                <h2>Earning Potential</h2>
+                            </div>
+                    
+                            <ul>
+                                <li class="ra_minspan">
+                                    <div class="ra_pack">6 LPA</div>
+                                    <div class="progress-container">
+                                        <div class="progress-bar" id="min-progress"></div>
+                                    </div>
+                                    <p class="ra_minimum">min</p>
+                                </li>
+                                <li class="ra_avgspan">
+                                    <div class="ra_pack">12 LPA</div>
+                                    <div class="progress-container">
+                                        <div class="progress-bar" id="avg-progress"></div>
+                                    </div>
+                                    <p class="ra_average">avg</p>
+                                </li>
+                                <li class="ra_maxspan">
+                                    <div class="ra_pack">20 LPA</div>
+                                    <div class="progress-container">
+                                        <div class="progress-bar" id="max-progress"></div>
+                                    </div>
+                                    <p class="ra_maximum">max</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> -->
+                     <div class="col-md-4">
                         <div class="ra_earning-potential">
                             <div class="ra_earnheading">
                                 <h2>Earning Potential</h2>
                             </div>
 
-                            <ul>
-                                <div class="ra_minspan">
-                                    <div class="ra_pack">6 LPA</div>
-                                    <div class="progress" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                            <ul> 
+                                 <div class="ra_minspan">
+                                    <div class="ra_pack">6 LPA</div> 
+                                     <div class="progress" role="progressbar" aria-valuenow="25" aria-valuemin="0"
                                         aria-valuemax="100" style="height:8%">
                                         <div class="progress-bar " style="width: 25% ; background:  #e7075e">
                                         </div>
                                     </div>
+                                     <!-- <div class="progress-container">
+                                        <div class="progress-bar" id="min-progress"></div>
+                                        <span class="progress-label"></span>
+                                    </div> -->
                                     <p class="ra_minimum">min</p>
                                 </div>
                                 <div class="ra_avgspan">
-                                    <div class="ra_pack">12 LPA</div>
-                                    <div class="progress" role="progressbar" aria-label="Warning example"
+                                    <div class="ra_pack">12 LPA</div> 
+                                     <div class="progress" role="progressbar" aria-label="Warning example"
                                         aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="height: 8%">
                                         <div class="progress-bar" style="width: 75% ; background:#e7075e ">
                                         </div>
-                                    </div>
+                                    </div> 
+                                 <!-- <div class="progress-container">
+                                        <div class="progress-bar" id="min-progress"></div>
+                                        <span class="progress-label"></span>
+                                    </div> -->
                                     <p class="ra_average">avg</p>
                                 </div>
                                 <div class="ra_maxspan">
-                                    <div class="ra_pack">20 LPA</div>
-                                    <div class="progress" role="progressbar" aria-label="Danger example"
+                                    <div class="ra_pack">20 LPA</div> 
+                                     <div class="progress" role="progressbar" aria-label="Danger example"
                                         aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height:8%">
                                         <div class="progress-bar " style="width: 100% ; background: #e7075e">
                                         </div>
-                                    </div>
+                                    </div> 
+                                     <!-- <div class="progress-container">
+                                        <div class="progress-bar" id="min-progress"></div>
+                                        <span class="progress-label"></span>
+                                    </div> -->
                                     <p class="ra_maximum">max</p>
                                 </div>
                             </ul>
                         </div>
+                    </div> 
+                </div>
+            </div>
+            <!-- <div class="ra_configurations">
+                <div class="ra_tools"> -->
+            <div class="ra_Ai_tools">
+                <h2>AI Fundamental Tools Covered</h2>
+            </div>
+            <div class="ra_body1">
+                <div class="slider1">
+                    <div class="slider-track1">
+                        <!-- Original images -->
+                        <div class="slider-item1"><img src="/static/assets/images/course_page_images/tensorflow.png"
+                                alt="Image 1"></div>
+                        <div class="slider-item1"><img src="/static/assets/images/course_page_images/pytorch.png"
+                                alt="Image 2"></div>
+                        <div class="slider-item1"><img src="/static/assets/images/course_page_images/keras.png"
+                                alt="Image 3"></div>
+                        <div class="slider-item1"><img src="/static/assets/images/course_page_images/scikit.png"
+                                alt="Image 4"></div>
+                        <div class="slider-item1"><img src="/static/assets/images/course_page_images/opencv.png"
+                                alt="Image 5"></div>
+                        <div class="slider-item1"><img src="/static/assets/images/course_page_images/genism.png"
+                                alt="Image 6"></div>
                     </div>
                 </div>
             </div>
-            <div class="ra_configurations">
-                <div class="ra_tools">
-                    <div class="ra_Ai_tools">
-                        <h2>AI Fundamental Tools Covered</h2>
-                    </div>`
-                    <div class="ra_scroll1">
+
+            <!-- <div class="ra_scroll1">
                         <div class="container-fluid">
                             <div class="row">
                                 {% for tool in tools %}
@@ -337,106 +421,106 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="container-fluid">
-                    <div class="col-md-8">
-                        <div class="demo_para">
-                            <p>{{ demo_request.paragraph_text }}</p>
-                            <a href="{{ demo_request.button_url }}" class="ra_request">{{ demo_request.button_text}}</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                </div> -->
             <div class="container-fluid">
-                <div class="ra_certifications">
-                    <div class="row">
-                        <div class="col-md-7">
-                            <div class="ra_cert_para">
-                                <h2 class=" ra_course_cert">Course Certificate</h2>
-                                <p>{{ certificate.description }}</p>
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            {% if certificate.image %}
-                            <img class="ra_cert-img" src="{{ certificate.image.url }}" height="400px" width="550px">
-                            {% endif %}
-                        </div>
+                <div class="col-md-8">
+                    <div class="demo_para">
+                        <p>{{ demo_request.paragraph_text }}</p>
+                        <a href="{{ demo_request.button_url }}" class="ra_request">{{ demo_request.button_text}}</a>
                     </div>
                 </div>
             </div>
-            <div class="ra_review_setting">
-                <h2>Course Reviews</h2>
-            </div>
-            <div class="container-fluid all_reviews">
+        </div>
+        <div class="container-fluid">
+            <div class="ra_certifications">
                 <div class="row">
-                    {% for review in reviews %}
-                    <div class="col-md-3">
-                        <div class="ra_reviews">
-                            <div class="ra_coursereview">
-                                <div class="ra_review ra_review{{ forloop.counter }}">
-                                    <div class="ra_review_img ra_review_img{{ forloop.counter }}">
-                                        <img src="{% static 'assets/images/course_page_images/pic.png' %}" width="63px"
-                                            height="63px" style="margin:-20px; border-radius: 5px;">
-                                        <div class="ra_name ra_rname{{ forloop.counter }}">{{ review.reviewer_name }}
-                                        </div>
-                                    </div>
-                                    <p class="ra_para ra_para{{ forloop.counter }}">{{ review.review_text }}</p>
-                                    <div class="starchecked">
-                                        {% for i in "1" %}
-                                        <span
-                                            class="fa fa-star {% if forloop.counter <= review.star_rating %}checked{% endif %}"></span>
-                                        {% endfor %}
-                                        <span>{{ review.star_rating }} Star Ratings</span>
-                                        <span class="ra_r_date">12 Apr 2024</span>
+                    <div class="col-md-7">
+                        <div class="ra_cert_para">
+                            <h2 class=" ra_course_cert">Course Certificate</h2>
+                            <p>{{ certificate.description }}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        {% if certificate.image %}
+                        <img class="ra_cert-img" src="{{ certificate.image.url }}" height="400px" width="550px">
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ra_review_setting">
+            <h2>Course Reviews</h2>
+        </div>
+        <div class="container-fluid all_reviews">
+            <div class="row">
+                {% for review in reviews %}
+                <div class="col">
+                    <div class="ra_reviews">
+                        <div class="ra_coursereview">
+                            <div class="ra_review ra_review{{ forloop.counter }}">
+                                <div class="ra_review_img ra_review_img{{ forloop.counter }}">
+                                    <img src="{% static 'assets/images/course_page_images/pic.png' %}" width="63px"
+                                        height="63px" style="margin:-20px; border-radius: 5px;">
+                                    <div class="ra_name ra_rname{{ forloop.counter }}">{{ review.reviewer_name }}
                                     </div>
                                 </div>
+                                <p class="ra_para ra_para{{ forloop.counter }}">{{ review.review_text }}</p>
+                                <div class="starchecked">
+                                    {% for i in "1" %}
+                                    <span
+                                        class="fa fa-star {% if forloop.counter <= review.star_rating %}checked{% endif %}"></span>
+                                    {% endfor %}
+                                    <span>{{ review.star_rating }} Star Ratings</span>
+                                    <span class="ra_r_date">12 Apr 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="ra_cardshead">
+            <h2>Recommended Courses</h2>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="ra_recommended_courses">
+                    {% for mention in mentions %}
+                    <div class="col-3">
+                        <div class="ra_AI_container">
+                            <img src="{{ mention.image.url }}" class="ra_ai-img">
+                            <div class="ra_line_img">
+                                <img class="ra_dotted_bar" src="{%static 'assets/images/course_page_images/card1.png'%}"
+                                    height="53px">
+                                <div class="ra_card_1">
+                                    <p class="ra_cards_para">{{ mention.point1 }}</p>
+                                    <p class="ra_cards_para">{{ mention.point2 }}</p>
+                                </div>
+                            </div>
+                            <div class="ra_heading">
+                                <h5><strong>{{ mention.course_title }}</strong></h>
+                            </div>
+                            <div class="ra_some_container">
+                                <div class="ra_people_img">
+                                    <img src="{%static 'assets/images/course_page_images/card2.png'%}" width="25px"
+                                        height="25px">
+                                    <p class="ra_people_text">1.7K+</p>
+                                </div>
+                                <div class="ra_star_img">
+                                    <img src="{%static 'assets/images/course_page_images/Star 14.png'%}" width="20px"
+                                        height="20px">
+                                    <p class="ra_star_text">5.0</p>
+                                </div>
+                                <button class="ra_cont_button">Enroll</button>
                             </div>
                         </div>
                     </div>
                     {% endfor %}
                 </div>
             </div>
-            <div class="ra_cardshead">
-                <h2>Recommended Courses</h2>
-            </div>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="ra_recommended_courses">
-                        {% for mention in mentions %}
-                        <div class="col-md-3 p-0">
-                            <div class="ra_AI_container">
-                                <img src="{{ mention.image.url }}" class="ra_ai-img">
-                                <div class="ra_line_img">
-                                    <img class="ra_dotted_bar"
-                                        src="{%static 'assets/images/course_page_images/card1.png'%}" height="53px">
-                                    <div class="ra_card_1">
-                                        <p class="ra_cards_para">{{ mention.point1 }}</p>
-                                        <p class="ra_cards_para">{{ mention.point2 }}</p>
-                                    </div>
-                                </div>
-                                <div class="ra_heading">
-                                    <h5><strong>{{ mention.course_title }}</strong></h>
-                                </div>
-                                <div class="ra_some_container">
-                                    <div class="ra_people_img">
-                                        <img src="{%static 'assets/images/course_page_images/card2.png'%}" width="25px"
-                                            height="25px">
-                                        <p class="ra_people_text">1.7K+</p>
-                                    </div>
-                                    <div class="ra_star_img">
-                                        <img src="{%static 'assets/images/course_page_images/Star 14.png'%}"
-                                            width="20px" height="20px">
-                                        <p class="ra_star_text">5.0</p>
-                                    </div>
-                                    <button class="ra_cont_button">Enroll</button>
-                                </div>
-                            </div>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
         </div>
+    </div>
     </div>
 
     <script>
@@ -509,6 +593,129 @@
             }
             faq_expanded = !faq_expanded;
         });
+
+
+        const track = document.querySelector('.slider-track');
+        const items = document.querySelectorAll('.slider-item');
+        const itemWidth = items[0].offsetWidth; // Width of each image
+        const itemMargin = parseInt(getComputedStyle(items[0]).marginRight); // Margin between images
+        const moveDistance = itemWidth + itemMargin; // Distance to move per image
+        const totalItems = items.length; // Total number of images
+        const trackWidth = moveDistance * totalItems; // Total width of the track
+        let currentPosition = 0;
+        let cloneCount = 0;
+
+        // Clone the images to make the track seamless
+        function cloneItems() {
+            const itemsToClone = Array.from(items).map(item => item.cloneNode(true));
+            itemsToClone.forEach(item => track.appendChild(item));
+            cloneCount = itemsToClone.length;
+        }
+
+        // Initialize cloning of images
+        cloneItems();
+
+        // Adjust the width of the track to account for the cloned items
+        track.style.width = `${trackWidth * 2}px`;
+
+        function moveSlider() {
+            currentPosition -= moveDistance; // Move the slider to the left
+
+            // If the entire first set of images has scrolled out of view
+            if (Math.abs(currentPosition) >= trackWidth) {
+                currentPosition = 0; // Reset position
+                track.style.transition = 'none'; // Disable transition for instant reset
+                track.style.transform = `translateX(${currentPosition}px)`; // Reset position
+
+                // Continue movement after a frame to avoid visible jump
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        track.style.transition = 'transform 1s linear'; // Re-enable transition
+                        moveSlider(); // Continue the movement
+                    });
+                });
+            } else {
+                // Move the slider with continuous scrolling
+                track.style.transform = `translateX(${currentPosition}px)`;
+                requestAnimationFrame(() => {
+                    setTimeout(moveSlider, 2000); // Adjust delay as needed for smoother scrolling
+                });
+            }
+        }
+
+        // Start the movement after page load
+        moveSlider();
+
+
+        const track1 = document.querySelector('.slider-track1');
+        const items1 = document.querySelectorAll('.slider-item1');
+        const itemWidth1 = items1[0].offsetWidth; // Width of each image
+        const itemMargin1 = parseInt(getComputedStyle(items1[0]).marginRight); // Margin between images
+        const moveDistance1 = itemWidth1 + itemMargin1; // Distance to move per image
+        const totalItems1 = items1.length; // Total number of images
+        const trackWidth1 = moveDistance1 * totalItems1; // Total width of the track
+        let currentPosition1 = 0;
+        let cloneCount1 = 0;
+
+        // Clone the images to make the track seamless
+        function cloneItems1() {
+            const itemsToClone1 = Array.from(items1).map(item1 => item1.cloneNode(true));
+            itemsToClone1.forEach(item1 => track1.appendChild(item1));
+            cloneCount1 = itemsToClone1.length;
+        }
+
+        // Initialize cloning of images
+        cloneItems1();
+
+        // Adjust the width of the track to account for the cloned items
+        track1.style.width = `${trackWidth1 * 2}px`;
+
+        function moveSlider1() {
+            currentPosition1 -= moveDistance1; // Move the slider to the left
+
+            // If the entire first set of images has scrolled out of view
+            if (Math.abs(currentPosition1) >= trackWidth1) {
+                currentPosition1 = 0; // Reset position
+                track1.style.transition = 'none'; // Disable transition for instant reset
+                track1.style.transform = `translateX(${currentPosition1}px)`; // Reset position
+
+                // Continue movement after a frame to avoid visible jump
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        track1.style.transition = 'transform 1s linear'; // Re-enable transition
+                        moveSlider1(); // Continue the movement
+                    });
+                });
+            } else {
+                // Move the slider with continuous scrolling
+                track1.style.transform = `translateX(${currentPosition1}px)`;
+                requestAnimationFrame(() => {
+                    setTimeout(moveSlider1, 2000); // Adjust delay as needed for smoother scrolling
+                });
+            }
+        }
+
+        // Start the movement after page load
+        moveSlider1();
+
+
+        function animateProgress() {
+    const minProgress = document.getElementById('min-progress');
+    const avgProgress = document.getElementById('avg-progress');
+    const maxProgress = document.getElementById('max-progress');
+
+    // Use setTimeout to ensure the animation occurs after the page has fully loaded
+    setTimeout(() => {
+        minProgress.style.width = '25%';
+        avgProgress.style.width = '75%';
+        maxProgress.style.width = '100%';
+    }, 100); // Delay to ensure the browser has rendered the initial 0% state
+}
+
+// Call the function to start the animation when the page loads
+window.addEventListener('DOMContentLoaded', animateProgress);
+
+
     </script>
 </body>
 {% endblock %}
