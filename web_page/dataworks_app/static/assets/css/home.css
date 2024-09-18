@@ -905,6 +905,10 @@ body {
 .home_Choose_us2 {
     margin-top: 10.625rem;
 }
+.home_ins_ns{
+    display: flex;
+    
+}
 .home_in_im{
     width:104%;
 }
