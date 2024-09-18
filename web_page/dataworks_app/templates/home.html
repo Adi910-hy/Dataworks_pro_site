@@ -37,11 +37,12 @@
                                 Software Professional
                             </p>
                         </div>
-                 
+
                         <button type="button" class="Started_button">
-                            <a href="{% url 'foundations_test' %}">Get Started<i class="fa-solid fa-angle-right"></i></a>
+                            <a href="{% url 'foundations_test' %}">Get Started<i
+                                    class="fa-solid fa-angle-right"></i></a>
                         </button>
-                  
+
                         <div class="home_Designed1">
                             <p>
                                 Recognized as the Best Brand in
@@ -306,7 +307,7 @@
 
         <section>
             <div class="container text-center">
-                <div class="row choose" >
+                <div class="row choose">
                     <div class="col home_Choose_us">
                         <h1 class="home_instructor">Why Choose us?</h1>
                         <p class="home_instructor01">Unlock transformative education at DataWorks, guided by
@@ -315,45 +316,47 @@
                             the tech realm, investing in a future where your skills match the cutting edge</p>
                         <p><a href="" class="home_instructor02">LEARN MORE</a></p>
                     </div>
-                    <div class="col home_Choose_us1">
-                        <!-- <div class="home_instructor03">
+                    <div class="home_whole">
+                        <div class="col home_Choose_us1">
+                            <!-- <div class="home_instructor03">
                             <i class="fa-solid fa-gear"></i>
                         </div> -->
-                        <div class="home_in_im">
-                            <img src="{% static 'assets/images/home_page_images/setting-2.png' %}" class="home_in_ns"
-                                height="50" width="50">
-                            <span class="home_instructor04">High Quality Courses</span>
-                        </div>
-                        <p class="home_instructor05">Explore our top-notch courses, offering cuttingedge content
-                            for practical skill development ensuring you excel in your chosen field.</p>
-                        <div>
-                            <img src="{% static 'assets/images/home_page_images/document.png' %}" class="home_in_ns"
-                                height="50" width="50">
-                            <span class="home_instructor07">Life Time Access</span>
-                        </div>
-                        <p class="home_instructor08">Enjoy lifelong learning with unlimited access to extensive
-                            resources, allowing you to revisit materials and stay updated at your own pace.</p>
-                    </div>
-                    <div class="col home_Choose_us2">
-                        <div>
-                            <img src="{% static 'assets/images/home_page_images/user.png' %}" class="home_in_ns"
-                                height="50" width="50">
-                            <span class="home_instructor10">Expert Instructors</span>
+                            <div class="home_in_im">
+                                <img src="{% static 'assets/images/home_page_images/setting-2.png' %}"
+                                    class="home_in_ns" height="50" width="50">
+                                <span class="home_instructor04">High Quality Courses</span>
+                            </div>
+                            <p class="home_instructor05">Explore our top-notch courses, offering cuttingedge content
+                                for practical skill development ensuring you excel in your chosen field.</p>
                             <div>
-                                <p class="home_instructor11">Learn from industry leaders who provide real world
-                                    insights,
-                                    enriching your understanding of the subject matter for a guided path to
-                                    success.</p>
+                                <img src="{% static 'assets/images/home_page_images/document.png' %}" class="home_in_ns"
+                                    height="50" width="50">
+                                <span class="home_instructor07">Life Time Access</span>
+                            </div>
+                            <p class="home_instructor08">Enjoy lifelong learning with unlimited access to extensive
+                                resources, allowing you to revisit materials and stay updated at your own pace.</p>
+                        </div>
+                        <div class="col home_Choose_us2">
+                            <div>
+                                <img src="{% static 'assets/images/home_page_images/user.png' %}" class="home_in_ns"
+                                    height="50" width="50">
+                                <span class="home_instructor10">Expert Instructors</span>
                                 <div>
-                                    <img src="{% static 'assets/images/home_page_images/security-safe.png' %}"
-                                        class="home_in_ns" height="50" width="50">
-                                    <span class="home_instructor13">Dedicated Support</span>
+                                    <p class="home_instructor11">Learn from industry leaders who provide real world
+                                        insights,
+                                        enriching your understanding of the subject matter for a guided path to
+                                        success.</p>
+                                    <div>
+                                        <img src="{% static 'assets/images/home_page_images/security-safe.png' %}"
+                                            class="home_in_ns" height="50" width="50">
+                                        <span class="home_instructor13">Dedicated Support</span>
+                                    </div>
+                                    <p class="home_instructor14">Experience unwavering assistance with our support
+                                        system,
+                                        ensuring you receive help precisely when needed for a seamless learning
+                                        journey.
+                                    </p>
                                 </div>
-                                <p class="home_instructor14">Experience unwavering assistance with our support
-                                    system,
-                                    ensuring you receive help precisely when needed for a seamless learning
-                                    journey.
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -526,55 +529,55 @@
         moveSlider();
 
         const track2 = document.querySelector('.slider-track2');
-const items2 = document.querySelectorAll('.slider-item2');
-const itemWidth2 = items2[0].offsetWidth; // Width of each image
-const itemMargin2 = parseInt(getComputedStyle(items2[0]).marginRight); // Margin between images
-const moveDistance2 = itemWidth2 + itemMargin2; // Distance to move per image
-const totalItems2 = items2.length; // Total number of images
-const trackWidth2 = moveDistance2 * totalItems2; // Total width of the track
-let currentPosition2 = 0;
-let cloneCount2 = 0;
+        const items2 = document.querySelectorAll('.slider-item2');
+        const itemWidth2 = items2[0].offsetWidth; // Width of each image
+        const itemMargin2 = parseInt(getComputedStyle(items2[0]).marginRight); // Margin between images
+        const moveDistance2 = itemWidth2 + itemMargin2; // Distance to move per image
+        const totalItems2 = items2.length; // Total number of images
+        const trackWidth2 = moveDistance2 * totalItems2; // Total width of the track
+        let currentPosition2 = 0;
+        let cloneCount2 = 0;
 
-// Clone the images to make the track seamless
-function cloneItems2() {
-    const itemsToClone2 = Array.from(items2).map(item2 => item2.cloneNode(true));
-    itemsToClone2.forEach(item2 => track2.appendChild(item2));
-    cloneCount2 = itemsToClone2.length;
-}
+        // Clone the images to make the track seamless
+        function cloneItems2() {
+            const itemsToClone2 = Array.from(items2).map(item2 => item2.cloneNode(true));
+            itemsToClone2.forEach(item2 => track2.appendChild(item2));
+            cloneCount2 = itemsToClone2.length;
+        }
 
-// Initialize cloning of images
-cloneItems2();
+        // Initialize cloning of images
+        cloneItems2();
 
-// Adjust the width of the track to account for the cloned items
-track2.style.width = `${trackWidth2 * 2}px`;
+        // Adjust the width of the track to account for the cloned items
+        track2.style.width = `${trackWidth2 * 2}px`;
 
-function moveSlider2() {
-    currentPosition2 -= moveDistance2; // Move the slider to the left
+        function moveSlider2() {
+            currentPosition2 -= moveDistance2; // Move the slider to the left
 
-    // If the entire first set of images has scrolled out of view
-    if (Math.abs(currentPosition2) >= trackWidth2) {
-        currentPosition2 = 0; // Reset position
-        track2.style.transition = 'none'; // Disable transition for instant reset
-        track2.style.transform = `translateX(${currentPosition2}px)`; // Reset position
+            // If the entire first set of images has scrolled out of view
+            if (Math.abs(currentPosition2) >= trackWidth2) {
+                currentPosition2 = 0; // Reset position
+                track2.style.transition = 'none'; // Disable transition for instant reset
+                track2.style.transform = `translateX(${currentPosition2}px)`; // Reset position
 
-        // Continue movement after a frame to avoid visible jump
-        requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-                track2.style.transition = 'transform 1s linear'; // Re-enable transition
-                moveSlider2(); // Continue the movement
-            });
-        });
-    } else {
-        // Move the slider with continuous scrolling
-        track2.style.transform = `translateX(${currentPosition2}px)`;
-        requestAnimationFrame(() => {
-            setTimeout(moveSlider2, 3000); // Adjust delay as needed for smoother scrolling
-        });
-    }
-}
+                // Continue movement after a frame to avoid visible jump
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        track2.style.transition = 'transform 1s linear'; // Re-enable transition
+                        moveSlider2(); // Continue the movement
+                    });
+                });
+            } else {
+                // Move the slider with continuous scrolling
+                track2.style.transform = `translateX(${currentPosition2}px)`;
+                requestAnimationFrame(() => {
+                    setTimeout(moveSlider2, 3000); // Adjust delay as needed for smoother scrolling
+                });
+            }
+        }
 
-// Start the movement after page load
-moveSlider2();
+        // Start the movement after page load
+        moveSlider2();
 
     </script>
 

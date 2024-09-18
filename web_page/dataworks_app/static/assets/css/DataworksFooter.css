@@ -168,11 +168,7 @@ padding-right: 4.5rem;
     padding-left: 0.5rem;
 }
 
-@media (max-width: 425px){
-.btn_inside{
-    display: none;
-}
-}
+
 
 @media screen and (min-width: 320px) and (max-width:405px){
     .btn_inside{
