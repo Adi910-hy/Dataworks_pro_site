@@ -598,3 +598,32 @@ input[type=search] {
         height:80%;
     }
 }
+
+p {
+    text-align: justify;
+    hyphens: auto;
+    word-spacing: -0.05em;
+    letter-spacing: 0.02em;
+    max-width: 800px;
+}
+
+.rs_sub-buttons :active {
+    background-color: #e70054;
+}
+
+
+.category-button {
+    background-color: #f0f3ff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.category-button.active {
+    background-color: #e70054;  /* Red color for active state */
+    color: white;               /* White text when active */
+}

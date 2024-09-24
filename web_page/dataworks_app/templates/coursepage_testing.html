@@ -136,12 +136,12 @@
                                         <h2 class="accordion-header" id="heading{{ forloop.counter }}">
                                             <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse"
-                                                data-bs-target="#collapse{{ forloop.counter }}" aria-expanded="false"
+                                                data-bs-target="#collapse{{ forloop.counter }}" aria-expanded="true"
                                                 aria-controls="collapse{{ forloop.counter }}">
                                                 {{ forloop.counter }}. {{ content.heading }}
                                             </button>
                                         </h2>
-                                        <div id="collapse{{ forloop.counter }}" class="accordion-collapse collapse"
+                                         <div id="collapse{{ forloop.counter }}" class="accordion-collapse collapse"
                                             aria-labelledby="heading{{ forloop.counter }}"
                                             data-bs-parent="#accordionExample">
                                             <div class="accordion-body">
@@ -202,40 +202,17 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="ra_scrollbar">
-                <div class="ra_Hiring">
-                    <h2>Hiring Partners</h2>
-                </div>
-                <div class="ra_scroll">
-                    {% for partner in hiring_partners %}
-                    <div class="ra_hiring_images">
-                        <img src="{{ partner.logo.url }}" alt="{{ partner.name }}" width="100%">
-                    </div>
-                    {% if not forloop.last %}
-                    <div class="ra_vertical_bar"></div>
-                    {% endif %}
-                    {% endfor %}
-                </div>
-            </div> -->
             <div class="ra_Hiring">
                 <h2>Hiring Partners</h2>
             </div>
             <div class="ra_body">
                 <div class="slider">
                     <div class="slider-track">
-                        <!-- Original images -->
-                        <div class="slider-item"><img src="/static/assets/images/course_page_images/infosys.png"
-                                alt="Image 1"></div>
-                        <div class="slider-item"><img src="/static/assets/images/course_page_images/tcs.png"
-                                alt="Image 2"></div>
-                        <div class="slider-item"><img src="/static/assets/images/course_page_images/microsoft.png"
-                                alt="Image 3"></div>
-                        <div class="slider-item"><img src="/static/assets/images/course_page_images/tech.png"
-                                alt="Image 4"></div>
-                        <div class="slider-item"><img src="/static/assets/images/course_page_images/wipro.png"
-                                alt="Image 5"></div>
-                        <div class="slider-item"><img src="/static/assets/images/course_page_images/ibm.png"
-                                alt="Image 6" style="margin-top: 40px;"></div>
+                        {% for partner in hiring_partners %}
+                        <div class="slider-item">
+                            <img src="{{ partner.logo.url }}" alt="{{ partner.name }}" width="100%">
+                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
@@ -302,224 +279,161 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="col-md-4">
-                        <div class="ra_earning-potential">
-                            <div class="ra_earnheading">
-                                <h2>Earning Potential</h2>
-                            </div>
-                    
-                            <ul>
-                                <li class="ra_minspan">
-                                    <div class="ra_pack">6 LPA</div>
-                                    <div class="progress-container">
-                                        <div class="progress-bar" id="min-progress"></div>
-                                    </div>
-                                    <p class="ra_minimum">min</p>
-                                </li>
-                                <li class="ra_avgspan">
-                                    <div class="ra_pack">12 LPA</div>
-                                    <div class="progress-container">
-                                        <div class="progress-bar" id="avg-progress"></div>
-                                    </div>
-                                    <p class="ra_average">avg</p>
-                                </li>
-                                <li class="ra_maxspan">
-                                    <div class="ra_pack">20 LPA</div>
-                                    <div class="progress-container">
-                                        <div class="progress-bar" id="max-progress"></div>
-                                    </div>
-                                    <p class="ra_maximum">max</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div> -->
-                     <div class="col-md-4">
+
+
+                    <div class="col-md-4">
                         <div class="ra_earning-potential">
                             <div class="ra_earnheading">
                                 <h2>Earning Potential</h2>
                             </div>
 
-                            <ul> 
-                                 <div class="ra_minspan">
-                                    <div class="ra_pack">6 LPA</div> 
-                                     <div class="progress" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                            <ul>
+                                <div class="ra_minspan">
+                                    <div class="ra_pack">6 LPA</div>
+                                    <div class="progress" role="progressbar" aria-valuenow="25" aria-valuemin="0"
                                         aria-valuemax="100" style="height:8%">
                                         <div class="progress-bar " style="width: 25% ; background:  #e7075e">
                                         </div>
                                     </div>
-                                     <!-- <div class="progress-container">
-                                        <div class="progress-bar" id="min-progress"></div>
-                                        <span class="progress-label"></span>
-                                    </div> -->
                                     <p class="ra_minimum">min</p>
                                 </div>
                                 <div class="ra_avgspan">
-                                    <div class="ra_pack">12 LPA</div> 
-                                     <div class="progress" role="progressbar" aria-label="Warning example"
+                                    <div class="ra_pack">12 LPA</div>
+                                    <div class="progress" role="progressbar" aria-label="Warning example"
                                         aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="height: 8%">
                                         <div class="progress-bar" style="width: 75% ; background:#e7075e ">
                                         </div>
-                                    </div> 
-                                 <!-- <div class="progress-container">
-                                        <div class="progress-bar" id="min-progress"></div>
-                                        <span class="progress-label"></span>
-                                    </div> -->
+                                    </div>
                                     <p class="ra_average">avg</p>
                                 </div>
                                 <div class="ra_maxspan">
-                                    <div class="ra_pack">20 LPA</div> 
-                                     <div class="progress" role="progressbar" aria-label="Danger example"
+                                    <div class="ra_pack">20 LPA</div>
+                                    <div class="progress" role="progressbar" aria-label="Danger example"
                                         aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height:8%">
                                         <div class="progress-bar " style="width: 100% ; background: #e7075e">
                                         </div>
-                                    </div> 
-                                     <!-- <div class="progress-container">
-                                        <div class="progress-bar" id="min-progress"></div>
-                                        <span class="progress-label"></span>
-                                    </div> -->
+                                    </div>
+
                                     <p class="ra_maximum">max</p>
                                 </div>
                             </ul>
                         </div>
-                    </div> 
+                    </div>
                 </div>
             </div>
-            <!-- <div class="ra_configurations">
-                <div class="ra_tools"> -->
             <div class="ra_Ai_tools">
-                <h2>AI Fundamental Tools Covered</h2>
+                <h2>{{course_page.title}} Tools Covered</h2>
             </div>
             <div class="ra_body1">
                 <div class="slider1">
                     <div class="slider-track1">
-                        <!-- Original images -->
-                        <div class="slider-item1"><img src="/static/assets/images/course_page_images/tensorflow.png"
-                                alt="Image 1"></div>
-                        <div class="slider-item1"><img src="/static/assets/images/course_page_images/pytorch.png"
-                                alt="Image 2"></div>
-                        <div class="slider-item1"><img src="/static/assets/images/course_page_images/keras.png"
-                                alt="Image 3"></div>
-                        <div class="slider-item1"><img src="/static/assets/images/course_page_images/scikit.png"
-                                alt="Image 4"></div>
-                        <div class="slider-item1"><img src="/static/assets/images/course_page_images/opencv.png"
-                                alt="Image 5"></div>
-                        <div class="slider-item1"><img src="/static/assets/images/course_page_images/genism.png"
-                                alt="Image 6"></div>
+                        {% for tool in tools %}
+                        <div class="slider-item1">
+                            <img src="{{ tool.image.url }}" class="ra_tool1" height="75%" width="75%">
+                            <p class="ra_toolspara">{{ tool.tool_name }}</p>
+                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
-
-            <!-- <div class="ra_scroll1">
-                        <div class="container-fluid">
-                            <div class="row">
-                                {% for tool in tools %}
-                                <div class="col-md-2">
-                                    <img src="{{ tool.image.url }}" class="ra_tool1" height="75%" width="75%">
-                                    <p class="ra_toolspara">{{ tool.tool_name }}</p>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="col-md-8">
+            <div class="demo_para">
+                <p>{{ demo_request.paragraph_text }}</p>
+                <a href="{{ demo_request.button_url }}" class="ra_request">{{ demo_request.button_text}}</a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container-fluid">
+        <div class="ra_certifications">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="ra_cert_para">
+                        <h2 class=" ra_course_cert">Course Certificate</h2>
+                        <p>{{ certificate.description }}</p>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    {% if certificate.image %}
+                    <img class="ra_cert-img" src="{{ certificate.image.url }}" height="400px" width="550px">
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ra_review_setting">
+        <h2>Course Reviews</h2>
+    </div>
+    <div class="container-fluid all_reviews">
+        <div class="row">
+            {% for review in reviews %}
+            <div class="col">
+                <div class="ra_reviews">
+                    <div class="ra_coursereview">
+                        <div class="ra_review ra_review{{ forloop.counter }}">
+                            <div class="ra_review_img ra_review_img{{ forloop.counter }}">
+                                <img src="{% static 'assets/images/course_page_images/pic.png' %}" width="63px"
+                                    height="63px" style="margin:-20px; border-radius: 5px;">
+                                <div class="ra_name ra_rname{{ forloop.counter }}">{{ review.reviewer_name }}
                                 </div>
+                            </div>
+                            <p class="ra_para ra_para{{ forloop.counter }}">{{ review.review_text }}</p>
+                            <div class="starchecked">
+                                {% for i in "1" %}
+                                <span
+                                    class="fa fa-star {% if forloop.counter <= review.star_rating %}checked{% endif %}"></span>
                                 {% endfor %}
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-            <div class="container-fluid">
-                <div class="col-md-8">
-                    <div class="demo_para">
-                        <p>{{ demo_request.paragraph_text }}</p>
-                        <a href="{{ demo_request.button_url }}" class="ra_request">{{ demo_request.button_text}}</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="ra_certifications">
-                <div class="row">
-                    <div class="col-md-7">
-                        <div class="ra_cert_para">
-                            <h2 class=" ra_course_cert">Course Certificate</h2>
-                            <p>{{ certificate.description }}</p>
-                        </div>
-                    </div>
-                    <div class="col-md-5">
-                        {% if certificate.image %}
-                        <img class="ra_cert-img" src="{{ certificate.image.url }}" height="400px" width="550px">
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="ra_review_setting">
-            <h2>Course Reviews</h2>
-        </div>
-        <div class="container-fluid all_reviews">
-            <div class="row">
-                {% for review in reviews %}
-                <div class="col">
-                    <div class="ra_reviews">
-                        <div class="ra_coursereview">
-                            <div class="ra_review ra_review{{ forloop.counter }}">
-                                <div class="ra_review_img ra_review_img{{ forloop.counter }}">
-                                    <img src="{% static 'assets/images/course_page_images/pic.png' %}" width="63px"
-                                        height="63px" style="margin:-20px; border-radius: 5px;">
-                                    <div class="ra_name ra_rname{{ forloop.counter }}">{{ review.reviewer_name }}
-                                    </div>
-                                </div>
-                                <p class="ra_para ra_para{{ forloop.counter }}">{{ review.review_text }}</p>
-                                <div class="starchecked">
-                                    {% for i in "1" %}
-                                    <span
-                                        class="fa fa-star {% if forloop.counter <= review.star_rating %}checked{% endif %}"></span>
-                                    {% endfor %}
-                                    <span>{{ review.star_rating }} Star Ratings</span>
-                                    <span class="ra_r_date">12 Apr 2024</span>
-                                </div>
+                                <span>{{ review.star_rating }} Star Ratings</span>
+                                <span class="ra_r_date">12 Apr 2024</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                {% endfor %}
             </div>
+            {% endfor %}
         </div>
-        <div class="ra_cardshead">
-            <h2>Recommended Courses</h2>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="ra_recommended_courses">
-                    {% for mention in mentions %}
-                    <div class="col-3">
-                        <div class="ra_AI_container">
-                            <img src="{{ mention.image.url }}" class="ra_ai-img">
-                            <div class="ra_line_img">
-                                <img class="ra_dotted_bar" src="{%static 'assets/images/course_page_images/card1.png'%}"
-                                    height="53px">
-                                <div class="ra_card_1">
-                                    <p class="ra_cards_para">{{ mention.point1 }}</p>
-                                    <p class="ra_cards_para">{{ mention.point2 }}</p>
-                                </div>
-                            </div>
-                            <div class="ra_heading">
-                                <h5><strong>{{ mention.course_title }}</strong></h>
-                            </div>
-                            <div class="ra_some_container">
-                                <div class="ra_people_img">
-                                    <img src="{%static 'assets/images/course_page_images/card2.png'%}" width="25px"
-                                        height="25px">
-                                    <p class="ra_people_text">1.7K+</p>
-                                </div>
-                                <div class="ra_star_img">
-                                    <img src="{%static 'assets/images/course_page_images/Star 14.png'%}" width="20px"
-                                        height="20px">
-                                    <p class="ra_star_text">5.0</p>
-                                </div>
-                                <button class="ra_cont_button">Enroll</button>
-                            </div>
+    </div>
+    <div class="ra_cardshead">
+        <h2>Recommended Courses</h2>
+    </div>
+    <div class="container-fluid">
+        <div class="review">
+            {% for mention in mentions %}
+            <div class="uma">
+                <div class="ra_AI_container">
+                    <img src="{{ mention.image.url }}" class="ra_ai-img">
+                    <div class="ra_line_img">
+                        <img class="ra_dotted_bar" src="{%static 'assets/images/course_page_images/card1.png'%}"
+                            height="53px">
+                        <div class="ra_card_1">
+                            <p class="ra_cards_para">{{ mention.point1 }}</p>
+                            <p class="ra_cards_para">{{ mention.point2 }}</p>
                         </div>
                     </div>
-                    {% endfor %}
+                    <div class="ra_heading">
+                        <h5><strong>{{ mention.course_title }}</strong></h>
+                    </div>
+                    <div class="ra_some_container">
+                        <div class="ra_people_img">
+                            <img src="{%static 'assets/images/course_page_images/card2.png'%}" width="25px"
+                                height="25px">
+                            <p class="ra_people_text">1.7K+</p>
+                        </div>
+                        <div class="ra_star_img">
+                            <img src="{%static 'assets/images/course_page_images/Star 14.png'%}" width="20px"
+                                height="20px">
+                            <p class="ra_star_text">5.0</p>
+                        </div>
+                        <button class="ra_cont_button">Enroll</button>
+                    </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
+    </div>
     </div>
     </div>
 
@@ -700,20 +614,33 @@
 
 
         function animateProgress() {
-    const minProgress = document.getElementById('min-progress');
-    const avgProgress = document.getElementById('avg-progress');
-    const maxProgress = document.getElementById('max-progress');
+            const minProgress = document.getElementById('min-progress');
+            const avgProgress = document.getElementById('avg-progress');
+            const maxProgress = document.getElementById('max-progress');
 
-    // Use setTimeout to ensure the animation occurs after the page has fully loaded
-    setTimeout(() => {
-        minProgress.style.width = '25%';
-        avgProgress.style.width = '75%';
-        maxProgress.style.width = '100%';
-    }, 100); // Delay to ensure the browser has rendered the initial 0% state
-}
+            // Use setTimeout to ensure the animation occurs after the page has fully loaded
+            setTimeout(() => {
+                minProgress.style.width = '25%';
+                avgProgress.style.width = '75%';
+                maxProgress.style.width = '100%';
+            }, 100); // Delay to ensure the browser has rendered the initial 0% state
+        }
 
-// Call the function to start the animation when the page loads
-window.addEventListener('DOMContentLoaded', animateProgress);
+        // Call the function to start the animation when the page loads
+        window.addEventListener('DOMContentLoaded', animateProgress);
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var accordionButtons = document.querySelectorAll('.accordion-button');
+
+            accordionButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    var expanded = button.getAttribute('aria-expanded') === 'true';
+                    button.setAttribute('aria-expanded', !expanded);
+                    button.classList.toggle('collapsed');
+                });
+            });
+        });
+
 
 
     </script>

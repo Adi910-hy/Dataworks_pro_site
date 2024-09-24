@@ -87,7 +87,7 @@ def course_detail(request, course_id):
     faqs = course.faqs.all()
     reviews = course.reviews.all()
     hiring_partners = HiringPartner.objects.all()
-    tools = Tool.objects.all()
+    tools = course.tools.all()
     requirements = course.requirements.all()
     course_outcomes = course.course_info.all()
     certificate = getattr(course, 'certificate', None)
@@ -193,8 +193,10 @@ def blog_header_view(request):
         'course_types': course_types,
         'courses': courses,
         })
-
 def foundations_test(request, course_type_id=None):
+    course_types = CourseType.objects.all()
+    selected_course_type = course_type_id
+
     if course_type_id:
         course_type = get_object_or_404(CourseType, id=course_type_id)
         courses = Course.objects.filter(category=course_type)
@@ -215,9 +217,14 @@ def foundations_test(request, course_type_id=None):
     return render(request, 'foundations_test.html', {
         'courses': courses,
         'course_types': course_types,
+        'selected_course_type': selected_course_type,
         'selected_course_type_id': course_type_id,
         'search_query': search_query, 
     })
+
+
+def blog_list_view(request):
+    content = Blog_List.objects.firs
 
 
 def blog_list_view(request):

@@ -698,7 +698,7 @@ li::marker {
     font-weight: 500;
     font-size: 20px;
     text-align: center;
-    margin-right: 12%;
+    margin-left: -80px;
 }
 
 .ra_request {
@@ -858,6 +858,11 @@ li::marker {
     box-shadow: 5px 5px 5px whitesmoke;
     width: 90%;
 }
+.ra_coursereview:hover{
+    transform: scale(1.03);
+    transition: ease 0.5s;
+    cursor: pointer;
+}
 
 .ra_review_setting {
     color: #e7075e;
@@ -914,7 +919,7 @@ li::marker {
 }
 
 .ra_AI_container {
-    width: 78%;
+    width: 335px;
     background-color: white;
     border: 2px solid black;
     border-radius: 20px;
@@ -923,6 +928,16 @@ li::marker {
     text-align: center;
     box-shadow: -0.75px -0.75px -0.75px -0.75px #00004d;
     margin-left: 8%;
+}
+.ra_AI_container:hover{
+    transform: scale(1.03);
+    transition: ease 0.5s;
+    cursor: pointer;
+}
+.review{
+    display:flex;
+    gap:90px;
+    margin-left:85px;
 }
 .ra_ai-img {
     padding: 5px;
@@ -943,6 +958,9 @@ li::marker {
     margin-left: 9%;
     margin-bottom: 7%;
     text-align: left;
+    /* text-overflow:ellipsis;
+    overflow: hidden;
+    white-space: nowrap; */
 }
 
 .ra_some_container {
@@ -1593,29 +1611,29 @@ li::marker {
         margin-top: 0;
     }
 
-    .all_reviews {
+     .all_reviews {
         padding: 0 0 0 20px !important;
-    }
+    } 
 
     .ra_reviews {
         margin-bottom: 20px;
         width:100%;
     }
 
-    .ra_recommended_courses {
+    .review {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         margin-left: 14px;
-        margin-bottom: 20px;
+        row-gap:5px;
     }
 
     .ra_AI_container {
-        width: 305px;
+        width: 275px;
     }
 
     .ra_ai-img {
         height: 150px;
-        width: 300px;
+        width: 270px;
     }
 
     .ra_people_img img {
@@ -1782,11 +1800,11 @@ li::marker {
 
     .ra_reviews {
         margin-bottom: 20px;
-        width: 70%;
+        width: 105%;
         margin-left:15%;
     }
 
-    .ra_recommended_courses {
+    .review {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         margin-left: 15%;

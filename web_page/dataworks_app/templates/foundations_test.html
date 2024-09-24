@@ -38,14 +38,20 @@
                 <p>Choose your career path</p>
             </div>
             <div class="rs_course-buttons">
-                <a href="{% url 'foundations_test' %}" class="rs_course-all">All</a>
+                <a href="{% url 'foundations_test' %}" 
+                   class="rs_course-all category-button {% if not selected_course_type %}active{% endif %}">
+                    All
+                </a>
+            
                 {% for course_type in course_types %}
-                <a href="{% url 'foundations_test_filtered' course_type.id %}" class="rs_sub-buttons"
-                    id="course-type-{{ forloop.counter }}">
+                <a href="{% url 'foundations_test_filtered' course_type.id %}" 
+                   class="rs_sub-buttons category-button {% if course_type.id == selected_course_type %}active{% endif %}" 
+                   id="course-type-{{ forloop.counter }}">
                     {{ course_type.name }}
                 </a>
                 {% endfor %}
             </div>
+            
             <div class="rs_card-container">
     {% for course in courses %}
     <div class="rs_course-AI {% if search_query and search_query|lower in course.title|lower %}highlight{% endif %}">
@@ -68,6 +74,22 @@
 </div>
          
         </div>
+
+<script>
+        const buttons = document.querySelectorAll('.category-button');
+
+        // Add click event listener to each button
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove 'active' class from all buttons
+                buttons.forEach(btn => btn.classList.remove('active'));
+        
+                // Add 'active' class to the clicked button
+                this.classList.add('active');
+            });
+        });
+        </script>
+            
 </body>
 {% endblock %}
 

@@ -101,7 +101,7 @@ body {
     display: flex;
     transition: transform 1s linear;
     white-space: nowrap;
-    margin: 20%;
+    /* margin: 20%; */
 }
 
 .slider-item {
@@ -299,8 +299,8 @@ body {
 
 .dotted_bar {
     margin-top: 3%;
-    width: 5%;
-    height: 5%;
+    height: 5rem;
+    width: 0.8rem;
 }
 
 .course-elite {
@@ -667,7 +667,22 @@ body {
     color: #0A1147;
     font-weight: 700;
 }
-
+.home_in_ns{
+    position: relative;
+    top: -5px;
+}
+.home_in_ns4{
+    position: relative;
+    top: -5px;
+}
+.home_in_ns1{
+    position: relative;
+    top: -5px;
+}
+.home_in_ns3{
+    position: relative;
+    top: -5px;
+}
 .home_testimonial2 {
     text-align: center;
     margin-top: 1.875rem;
@@ -867,8 +882,8 @@ body {
 
 .home_instructor02:hover {
     background-color: #0056b3;
+    color: white;
 }
-
 
 .home_instructor04,
 .home_instructor13 {
@@ -877,7 +892,6 @@ body {
     margin-left: 0rem;
     margin-right: 50px;
     font-weight: 400;
-
 }
 
 .home_instructor07 {
@@ -904,10 +918,6 @@ body {
 .home_Choose_us1,
 .home_Choose_us2 {
     margin-top: 10.625rem;
-}
-.home_ins_ns{
-    display: flex;
-    
 }
 .home_in_im{
     width:104%;
@@ -957,7 +967,10 @@ body {
     color: #767777;
     font-size: 1.3rem;
 }
-
+.home_calendar{
+    position: relative;
+    top: -5px;
+}
 .home_crd {
     padding-left: 18rem;
 }
@@ -1182,19 +1195,42 @@ body {
     .home_subscribe_search button {
         padding: 10px 43px;
     }
-
-    .home_in_ns img {
-        width: 30px;
-        height: 30px;
-        margin-left: 50%;
+    .home_in_ns{
+        margin-left: -40px;
+        height: 20px;
+        width: 20px;
+        margin-top:10px;
     }
+    .home_in_ns4{
+        margin-left: -40px;
+        height: 20px;
+        width: 20px;
+        margin-top:10px;
+    }
+    .home_in_ns3{
+        margin-left: -60px;
+        height: 20px;
+        width: 20px;
+        margin-top:10px;
 
-     .home_instructor04,
+    }
+    .home_in_ns1{
+        margin-left: -60px;
+        height: 20px;
+        width: 20px;
+        margin-top:10px;
+
+
+    }
+     .home_instructor04{
+        font-size: 15px;
+        margin-left: 0rem;
+     }
     .home_instructor07,
     .home_instructor10,
     .home_instructor13 {
         font-size: 15px;
-        margin-left: 1rem;
+        margin-left: 0rem;
     }
     .home_whole{
         margin-left: -1rem !important;
@@ -1208,12 +1244,13 @@ body {
 
     .home_instructor05{
         font-size: 10px; 
-        margin-left: 4rem;
+        margin-left: 2rem;
     }
     .home_instructor08,
     .home_instructor11,
     .home_instructor14 {
         font-size: 10px;
+        margin-left: -2rem;
     }
 
     .home_Choose_us2 {
@@ -1245,7 +1282,11 @@ body {
     .card-text {
         font-size: 19px;
     }
-
+    .home_calendar{
+        height: 18px;
+        width: 18px;
+        margin-top: 6px;
+    }
     .card_date {
         font-size: 1rem;
     }
@@ -1379,6 +1420,7 @@ body {
 
     .home_Designed3 {
         width: 25rem;
+        
     }
 
     .home_logo {
@@ -1536,24 +1578,53 @@ body {
     .home_in_ns {
         width: 30px;
         height: 30px;
-        margin-left: -6rem;
+        margin-left: 0rem;
+    }
+    .home_in_ns3 {
+        width: 30px;
+        height: 30px;
+        margin-left: -2rem;
+    }
+    .home_in_ns4{
+        width: 30px;
+        height: 30px;
+        position: relative;
+        top: 45px;
+        left: -2rem;
     }
 
     .home_instructor04,
-    .home_instructor07,
-    .home_instructor10,
     .home_instructor13 {
         font-size: 25px;
         margin-left: 0rem;
     }
-
-    .home_instructor05,
-    .home_instructor08,
-    .home_instructor11,
-    .home_instructor14 {
+    .home_instructor07{
+        font-size: 25px;
+        margin-left: 0rem; 
+    }
+    .home_instructor10{
+        font-size: 25px;
+        margin-left: -2rem;
+        text-align: start;
+       position: relative;
+       top: 3rem;
+    }
+    .home_instructor05 {
         font-size: 16px;
     }
-
+    .home_instructor14{
+        font-size: 16px;
+        margin-left: -2rem;
+    }
+    .home_instructor08{
+        font-size: 16px;
+        margin-left: -2rem;
+    }
+    .home_instructor11{
+        font-size: 16px;
+        margin-top: 3rem;
+        margin-left: -2rem;
+    }
     .home_Choose_us1 {
         margin-top: 3rem;
     }
@@ -1587,7 +1658,11 @@ body {
     .card-text {
         font-size: 17px;
     }
-
+    .home_calendar{
+        height: 18px;
+        width: 18px;
+        margin-top: 6px;
+    }
     .card_date {
         font-size: 1rem;
         /* margin-left: 10rem; */
@@ -1637,13 +1712,13 @@ body {
         padding-left: 0.7rem;
         padding-right: 0;
     }
-
     .home_Designed_best1 {
-        padding-right: 1rem;
+        padding-right: 1rem;  
     }
-
     .home_Designed2 {
         height: 20rem;
+        width: 18rem;
+        margin-left: -3.5rem;
     }
 
     .home_Designed3 {
@@ -1778,7 +1853,7 @@ body {
         height: 30px;
     }
 
-    .home_in_ns {
+    .home_in_ns,.home_in_ns1,.home_in_ns3,.home_in_ns4 {
         margin-left: -21%;
     }
 
@@ -2038,8 +2113,10 @@ body {
         position: relative;
         right: 20px;
     }
-
-    .home_instructor05,
+    .home_instructor05{
+        font-size: 17px;
+        margin-left: 2rem;
+    }
     .home_instructor08,
     .home_instructor11,
     .home_instructor14 {
@@ -2049,15 +2126,27 @@ body {
 
     .card {
         width: 310px;
-        height: 480px;
-        padding: 6px
+        height: 540px;
+        padding: 6px;
+        position: relative;
+        right: 1.8rem;
+    }
+    .home_crd {
+        display: flex;
     }
 
-    .card_date {
-        padding-left: 11rem;
-        color: #767777;
+    .home_crd {
+        padding-left: 7rem;
     }
-
+    .card-title_blog{
+        font-size: 1.5rem;
+    }
+    .card-text{
+        font-size: 1rem;
+    }
+    .home_calendar{
+        margin-top: 0.5rem;
+    }
     .home_Featured2 {
         margin-left: -1.5rem;
     }
@@ -2081,3 +2170,50 @@ body {
         margin-top: -9rem;
     }
 }
+
+
+  /* @media screen and (min-width: 1236px){
+    .dotted_bar {
+        height: 5rem;
+        width: 0.8rem;
+    }
+
+    .some_container {
+        width: 95%
+    }
+
+    .people_text {
+        font-size: 15px;
+        position: relative;
+        left: 0.5rem;
+    }
+
+    .people_img {
+        height: 5px;
+        width: 5px;
+    }
+
+    .star_text {
+        font-size: 15px !important;
+        position: relative;
+        top: -5px;
+        left: 1rem;
+    }
+
+    .star_img img {
+        height: 20px;
+        width: 20px;
+        margin-top: 2px;
+        position:relative;
+        left: 1rem;
+    }
+
+    .cont_button {
+        position: relative;
+        left: 5%;
+        padding: 3px 15px 5px 15px;
+       
+
+    }
+
+}    */
