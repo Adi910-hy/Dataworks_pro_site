@@ -45,8 +45,14 @@ footer{
 .follow_sec .f_join{
     padding-bottom: 8px;
 }
+.f_msgus:hover{
+    color: #E7005E !important;
+    cursor: pointer;
+}
+
 .follow_sec .f_join, .f_stay-up{
 color: white;
+text-decoration: none;
 }
 .follow_sec .f_stay-up{
     padding-right: 3rem;
