@@ -82,6 +82,8 @@ def course_type_detail(request, course_type_id):
     })
 
 def course_detail(request, course_id):
+    course_types = CourseType.objects.all()
+    courses = Course.objects.all()
     course = get_object_or_404(Course, pk=course_id)
     course_contents = course.course_content.all()
     faqs = course.faqs.all()
@@ -107,6 +109,8 @@ def course_detail(request, course_id):
         form = EnrollmentForm()
 
     return render(request, 'coursepage_testing.html', {
+        'course_types': course_types,
+        'courses': courses,
         'course_page': course,
         'form': form,
         'course_contents': course_contents,
@@ -141,12 +145,24 @@ def category_course(request):
     })
 
 def corporate_view(request):
-    return render(request, 'corporate_page.html')
+    course_types = CourseType.objects.all()
+    courses = Course.objects.all()
+    return render(request, 'corporate_page.html', {
+        'course_types': course_types,
+        'courses': courses,
+        })
 
 def contact_view(request):
-    return render(request, 'contact_page.html')
+    course_types = CourseType.objects.all()
+    courses = Course.objects.all()
+    return render(request, 'contact_page.html', {
+        'course_types': course_types,
+        'courses': courses,
+        })
 
 def blog_detail(request, pk):
+    course_types = CourseType.objects.all()
+    courses = Course.objects.all()
     post = get_object_or_404(Blog_Page, pk=pk)
     blogs = Blog_Page.objects.all()
     content = Blog_List.objects.first()
@@ -176,7 +192,9 @@ def blog_detail(request, pk):
         'blogs': blogs,
         'content': content,
         'sections': sections,
-        'updated_content': updated_content
+        'updated_content': updated_content,
+        'course_types': course_types,
+        'courses': courses,
     })
 
 def extract_first_50_words(html_content):
@@ -230,6 +248,7 @@ def blog_list_view(request):
 def blog_list_view(request):
     content = Blog_List.objects.first()
     courses = Course.objects.all()
+    course_types = CourseType.objects.all()
 
     search_query = request.GET.get('query', '').strip()
 
@@ -250,6 +269,7 @@ def blog_list_view(request):
     return render(request, 'blog_list.html', {
         'content': content,
         'courses': courses,
+        'course_types': course_types,
         'blogs': blogs,
         'search_query': search_query, 
     })
