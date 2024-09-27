@@ -194,7 +194,7 @@ body {
 }
 
 .train-img_kpr {
-  margin-top: 6rem;
+  margin-top: 1rem;
   width: auto;
   height: auto;
 }
@@ -221,7 +221,7 @@ body {
 }
 
 .slider {
-  width: 800px; /* Adjust width as needed */
+  width: 1130px; /* Adjust width as needed */
   overflow: hidden;
   position: relative;
 }
@@ -302,7 +302,7 @@ body {
   border: none;
   background-color: #f3f8ff;
   color:#3690B2;
-  margin-right: 80%;
+  margin-right: 75%;
   position: relative;
   top:110px
 
@@ -311,7 +311,7 @@ body {
   border: none;
   background-color: #f3f8ff;
   color:#3690B2;
-  margin-left: 80%;
+  margin-left: 75%;
   position: relative;
   top:-110px
 
