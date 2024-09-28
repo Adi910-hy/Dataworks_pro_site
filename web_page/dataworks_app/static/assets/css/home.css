@@ -528,7 +528,7 @@ body {
 .home_foundation_card:hover {
     transform: scale(1.03);
     transition: ease 0.5s;
-    box-shadow: 0.0625rem 0.0625rem 0.5625rem #2E2056;
+    box-shadow: 0.0325rem 0.0325rem 0.2625rem #2E2056;
 }
 
 .home_foundation_card_img {
@@ -978,7 +978,9 @@ body {
 .card-title_blog {
     font-weight: 700;
 }
-
+.card-title_blog:hover {
+    color: #e7075e;
+}
 .card-text {
     font-size: 23px;
     margin-top: 5%;

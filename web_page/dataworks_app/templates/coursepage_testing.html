@@ -141,7 +141,7 @@
                                                 {{ forloop.counter }}. {{ content.heading }}
                                             </button>
                                         </h2>
-                                         <div id="collapse{{ forloop.counter }}" class="accordion-collapse collapse"
+                                        <div id="collapse{{ forloop.counter }}" class="accordion-collapse collapse"
                                             aria-labelledby="heading{{ forloop.counter }}"
                                             data-bs-parent="#accordionExample">
                                             <div class="accordion-body">
@@ -281,7 +281,7 @@
                     </div>
 
 
-                    <div class="col-md-4">
+                    <!-- <div class="col-md-4">
                         <div class="ra_earning-potential">
                             <div class="ra_earnheading">
                                 <h2>Earning Potential</h2>
@@ -318,7 +318,43 @@
                                 </div>
                             </ul>
                         </div>
+                    </div> -->
+
+                    <div class="col-md-4">
+                        <div class="ra_earning-potential">
+                            <div class="ra_earnheading">
+                                <h2>Earning Potential</h2>
+                            </div>
+                    
+                            <ul>
+                                <div class="ra_minspan">
+                                    <div class="ra_pack">6 LPA</div>
+                                    <div class="progress" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                                        aria-valuemax="100" style="height:8%">
+                                        <div class="progress-bar" id="progress-min" style="width: 0%; background:  #e7075e"></div>
+                                    </div>
+                                    <p class="ra_minimum">min</p>
+                                </div>
+                                <div class="ra_avgspan">
+                                    <div class="ra_pack">12 LPA</div>
+                                    <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75"
+                                        aria-valuemin="0" aria-valuemax="100" style="height: 8%">
+                                        <div class="progress-bar" id="progress-avg" style="width: 0%; background:#e7075e"></div>
+                                    </div>
+                                    <p class="ra_average">avg</p>
+                                </div>
+                                <div class="ra_maxspan">
+                                    <div class="ra_pack">20 LPA</div>
+                                    <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100"
+                                        aria-valuemin="0" aria-valuemax="100" style="height:8%">
+                                        <div class="progress-bar" id="progress-max" style="width: 0%; background: #e7075e"></div>
+                                    </div>
+                                    <p class="ra_maximum">max</p>
+                                </div>
+                            </ul>
+                        </div>
                     </div>
+                    
                 </div>
             </div>
             <div class="ra_Ai_tools">
@@ -613,33 +649,114 @@
         moveSlider1();
 
 
-        function animateProgress() {
-            const minProgress = document.getElementById('min-progress');
-            const avgProgress = document.getElementById('avg-progress');
-            const maxProgress = document.getElementById('max-progress');
+        // function animateProgress() {
+        //     const minProgress = document.getElementById('min-progress');
+        //     const avgProgress = document.getElementById('avg-progress');
+        //     const maxProgress = document.getElementById('max-progress');
 
-            // Use setTimeout to ensure the animation occurs after the page has fully loaded
-            setTimeout(() => {
-                minProgress.style.width = '25%';
-                avgProgress.style.width = '75%';
-                maxProgress.style.width = '100%';
-            }, 100); // Delay to ensure the browser has rendered the initial 0% state
-        }
+        //     // Use setTimeout to ensure the animation occurs after the page has fully loaded
+        //     setTimeout(() => {
+        //         minProgress.style.width = '25%';
+        //         avgProgress.style.width = '75%';
+        //         maxProgress.style.width = '100%';
+        //     }, 100); // Delay to ensure the browser has rendered the initial 0% state
+        // }
 
-        // Call the function to start the animation when the page loads
-        window.addEventListener('DOMContentLoaded', animateProgress);
+        // // Call the function to start the animation when the page loads
+        // window.addEventListener('DOMContentLoaded', animateProgress);
 
-        document.addEventListener('DOMContentLoaded', function () {
-            var accordionButtons = document.querySelectorAll('.accordion-button');
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     var accordionButtons = document.querySelectorAll('.accordion-button');
 
-            accordionButtons.forEach(function (button) {
-                button.addEventListener('click', function () {
-                    var expanded = button.getAttribute('aria-expanded') === 'true';
-                    button.setAttribute('aria-expanded', !expanded);
-                    button.classList.toggle('collapsed');
-                });
-            });
+        //     accordionButtons.forEach(function (button) {
+        //         button.addEventListener('click', function () {
+        //             var expanded = button.getAttribute('aria-expanded') === 'true';
+        //             button.setAttribute('aria-expanded', !expanded);
+        //             button.classList.toggle('collapsed');
+        //         });
+        //     });
+        // });
+
+
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     const progressMin = document.getElementById('progress-min');
+        //     const progressAvg = document.getElementById('progress-avg');
+        //     const progressMax = document.getElementById('progress-max');
+
+        //     // Function to fill the progress bars
+        //     const fillProgressBars = (entries) => {
+        //         entries.forEach(entry => {
+        //             if (entry.isIntersecting) {
+        //                 if (entry.target.id === 'progress-min') {
+        //                     progressMin.style.width = '25%'; // Min LPA
+        //                 }
+        //                 if (entry.target.id === 'progress-avg') {
+        //                     progressAvg.style.width = '75%'; // Avg LPA
+        //                 }
+        //                 if (entry.target.id === 'progress-max') {
+        //                     progressMax.style.width = '100%'; // Max LPA
+        //                 }
+        //             }
+        //         });
+        //     };
+
+        //     // Intersection Observer to observe when progress bars come into view
+        //     const observer = new IntersectionObserver(fillProgressBars, {
+        //         threshold: 0.5 // Trigger when 50% of the progress bar is visible
+        //     });
+
+        //     // Observe each progress bar
+        //     observer.observe(progressMin);
+        //     observer.observe(progressAvg);
+        //     observer.observe(progressMax);
+        // });
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+    const progressMin = document.getElementById('progress-min');
+    const progressAvg = document.getElementById('progress-avg');
+    const progressMax = document.getElementById('progress-max');
+
+    // Function to fill or reset the progress bars
+    const handleProgressBars = (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Progress bar enters the viewport, animate to fill
+                if (entry.target.id === 'progress-min') {
+                    progressMin.style.width = '25%'; // Min LPA
+                }
+                if (entry.target.id === 'progress-avg') {
+                    progressAvg.style.width = '75%'; // Avg LPA
+                }
+                if (entry.target.id === 'progress-max') {
+                    progressMax.style.width = '100%'; // Max LPA
+                }
+            } else {
+                // Progress bar exits the viewport, reset the width to 0%
+                if (entry.target.id === 'progress-min') {
+                    progressMin.style.width = '0%'; // Reset Min LPA
+                }
+                if (entry.target.id === 'progress-avg') {
+                    progressAvg.style.width = '0%'; // Reset Avg LPA
+                }
+                if (entry.target.id === 'progress-max') {
+                    progressMax.style.width = '0%'; // Reset Max LPA
+                }
+            }
         });
+    };
+
+    // Intersection Observer to observe when progress bars come into view
+    const observer = new IntersectionObserver(handleProgressBars, {
+        threshold: 0.5 // Trigger when 50% of the progress bar is visible
+    });
+
+    // Observe each progress bar
+    observer.observe(progressMin);
+    observer.observe(progressAvg);
+    observer.observe(progressMax);
+});
+
 
 
 

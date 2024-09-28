@@ -1955,3 +1955,21 @@ li::marker {
         width: 400px;
     }   
     }
+
+    .ra_earning-potential {
+        margin: 20px 0;
+    }
+    
+    .progress-bar {
+        transition: width 1s ease-in-out;
+        height: 8px;
+    }
+    
+    .ra_minspan, .ra_avgspan, .ra_maxspan {
+        margin-bottom: 20px;
+    }
+    .progress-bar {
+        transition: width 1s ease-in-out;
+        height: 8px; /* Adjust height as necessary */
+    }
+    
