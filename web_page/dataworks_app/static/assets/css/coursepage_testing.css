@@ -1968,8 +1968,23 @@ li::marker {
     .ra_minspan, .ra_avgspan, .ra_maxspan {
         margin-bottom: 20px;
     }
-    .progress-bar {
+    /* .progress-bar {
         transition: width 1s ease-in-out;
-        height: 8px; /* Adjust height as necessary */
+        height: 8px; 
+    } */
+    .progress {
+        background-color: #e9ecef; /* Background of the entire progress bar */
+        border-radius: 5px;
+        overflow: hidden;
+        height: 20px; /* Total height of the progress bar container */
     }
+    
+    .progress-bar {
+        height: 100%; /* Ensures the progress bar fills the full height */
+        width: 0%; /* Start with 0% width (animation will fill it dynamically) */
+        transition: width 1s ease-in-out; /* Smooth transition for the width */
+        background-color: #e7075e; /* The color of the progress bar */
+        border-radius: 5px;
+    }
+    
     
