@@ -3,6 +3,7 @@ body {
     overflow-x: hidden;
 }
 
+
 .header_img {
     position: relative;
     bottom: 0.5rem;
@@ -36,10 +37,7 @@ body {
 }
 
 .menu-item:hover .mega-menus {
-    display: flex !important;
-}
-
-.bg-light {
+    display: flex;
     background-color: white !important;
 }
 
@@ -52,10 +50,7 @@ body {
 
 .icon_col {
     color: #E7005E;
-}
-
-
-
+}    
 
 .portal {
     background-color: #F3F8FF;
@@ -176,7 +171,7 @@ body {
     color: #130f40;
     font-size: 1.1rem;
     font-weight: 500;
-    margin-top: 3px;
+    margin-top: 2px;
     border: 1px solid grey;
     border-radius: 10px;
     padding-right: 20px;

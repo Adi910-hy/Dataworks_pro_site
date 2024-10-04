@@ -185,7 +185,7 @@ def blog_detail(request, pk):
         soup = BeautifulSoup(blog.content_description, 'html.parser')
         first_image_tag = soup.find('img')
         blog.image_url = first_image_tag['src'] if first_image_tag else None
-        blog.truncated_description = extract_first_50_words(blog.content_description)
+        blog.truncated_description = extract_first_40_words(blog.content_description)
 
     return render(request, 'blog_detail.html', {
         'post': post,
@@ -197,11 +197,11 @@ def blog_detail(request, pk):
         'courses': courses,
     })
 
-def extract_first_50_words(html_content):
+def extract_first_40_words(html_content):
     soup = BeautifulSoup(html_content, 'html.parser')
     text = soup.get_text()
     words = text.split()
-    return ' '.join(words[:50]) + '...' if len(words) > 50 else text
+    return ' '.join(words[:40]) + '...' if len(words) > 40 else text
 
 def blog_header_view(request):
     course_types = CourseType.objects.all()
@@ -264,7 +264,7 @@ def blog_list_view(request):
         soup = BeautifulSoup(blog.content_description, 'html.parser')
         first_image_tag = soup.find('img')
         blog.image_url = first_image_tag['src'] if first_image_tag else None
-        blog.truncated_description = extract_first_50_words(blog.content_description)
+        blog.truncated_description = extract_first_40_words(blog.content_description)
 
     return render(request, 'blog_list.html', {
         'content': content,

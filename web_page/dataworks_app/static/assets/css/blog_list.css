@@ -58,7 +58,7 @@ small {
     padding: 10% 10%;
     overflow-y: scroll; 
     scrollbar-width: none;
-    height: 60rem;
+    height:55rem;
 }
 .class1_bl_tej ul a {
     text-decoration: none;
@@ -66,7 +66,7 @@ small {
 }
 .class1_bl_tej ul li {
     border-radius: 16px; 
-    padding: 10% 6%;
+    padding: 8% 6%;
 }
 .all_blogs_bl_tej {
     color: #E7005E;
@@ -114,7 +114,7 @@ small {
 
 .card_body_bl_tej {
     position: relative; /* Allows the button to be positioned inside the card */
-    padding: 1.5rem;
+    /* padding: 1.5rem; */
     padding-bottom: 5rem; /* Space for the button */
 }
 

@@ -208,7 +208,7 @@ input[type=search] {
 }
 
 
-.rs_heading {
+.rs_heading h5{
     position: relative;
     color: #2E2056;
     font-size: 22px;
@@ -219,6 +219,13 @@ input[type=search] {
     top: -4px;
     padding-left: 25px;
     text-align: left;
+}
+.rs_heading h5{
+        hyphens: auto;
+        word-spacing: -0.05em;
+        letter-spacing: 0.02em;
+        max-width: 800px;
+ 
 }
 
 
@@ -244,6 +251,7 @@ input[type=search] {
     line-clamp: 4;
     max-height: calc(1.2em * 4);
     line-height: 1.2em;
+    word-spacing: 0.2em;
 }
 
 #rs_aip {
